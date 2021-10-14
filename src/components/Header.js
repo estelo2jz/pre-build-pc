@@ -25,14 +25,17 @@ export default function Header() {
             </div>
 
             <div className="logo">
-                <h1><Link to="/products">Citizen</Link></h1>
+                <h1><Link to="/products">PRE-BUILD HQ</Link></h1>
             </div>
             <ul style={styleMenu}>
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="/products">Products</Link></li>
-                <li><Link to="/">About</Link></li>
-                <li><Link to="/">Contact</Link></li>
-                <li><Link to="/">Login / Register</Link></li>
+                <li><Link to="/pages/build-your-pc">Build Your PC</Link></li>
+                <li><Link to="/pages/review">Reviews</Link></li>
+                <li><Link id="best-sellers" to="/pages/review">Best Sellers</Link></li>
+                <li><Link to="/pages/financing">Financing</Link></li>
+                <li><Link to="/pages/support">Support</Link></li>
+                <li><Link to="/pages/why-pre-build">About Us</Link></li>
                 <li onClick={toggleMenu}>
                     <img src={Close} alt="" width="30" className="menu" />
                 </li>
