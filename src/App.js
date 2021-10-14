@@ -32,7 +32,7 @@ function App() {
               <Route path="/pages/support" exact element={ <Support /> } />
               <Route path="/pages/why-pre-build" exact element={ <About /> } />
 
-              <Route path="products" exact element={ <Products /> } />
+              <Route path="/products" exact element={ <Products /> } />
               <Route path="products/:id" exact element={ <Details /> } />
 
               <Route path="cart" exact element={ <Cart /> } />
