@@ -6,6 +6,8 @@ import {DataProvider} from './components/DataProvider'
 import Details from './components/Details'
 import Cart from './components/Cart'
 
+import Home from './components/Home/Home';
+
 import About from './components/pages/AboutUs/About';
 import BuildPC from './components/pages/BuildPC/BuildPC';
 import Financing from './components/pages/Financing/Financing';
@@ -22,13 +24,16 @@ function App() {
 
           <section>
             <Routes>
+              <Route path="/" exact element={ <Home /> } />
+
+              <Route path="/pages/build-your-pc" exact element={ <BuildPC /> } />
+              <Route path="/pages/review" exact element={ <Review /> } />
+              <Route path="/pages/financing" exact element={ <Financing /> } />
+              <Route path="/pages/support" exact element={ <Support /> } />
+              <Route path="/pages/why-pre-build" exact element={ <About /> } />
+
               <Route path="products" exact element={ <Products /> } />
               <Route path="products/:id" exact element={ <Details /> } />
-              <Route path="about" exact element={ <About /> } />
-              <Route path="build-your-pc" exact element={ <BuildPC /> } />
-              <Route path="financing" exact element={ <Financing /> } />
-              <Route path="review" exact element={ <Review /> } />
-              <Route path="support" exact element={ <Support /> } />
 
               <Route path="cart" exact element={ <Cart /> } />
             </Routes>
