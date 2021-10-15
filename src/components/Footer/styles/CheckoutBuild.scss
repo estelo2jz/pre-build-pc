@@ -1,0 +1,158 @@
+.checkout-build {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #fff;
+  height: 50vh;
+  position: absolute;
+  width: 100%;
+  z-index: 0;
+    text-align: center;
+    // padding: 40px 20px;
+    padding-top: 20px;
+
+  .checkout-build__top {
+    padding: 20px 20px;
+    // font-size: clamp(3rem, 2vw, 1rem);
+    p {
+      font-size:50px;
+      font-style: italic;
+      font-family: 'Anton',
+        sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+    }
+  }
+
+  .checkout-build__btn {
+    padding: 20px 20px;
+
+    button {
+      padding: 10px 80px;
+      border-radius: 10px;
+      outline: none;
+      border: none;
+      font-size: 16px;
+      font-weight: 700;
+      color: rgb(255, 255, 255);
+      background: #b740e2;
+      border: 1px solid #c25be9;
+      background-position: center;
+      letter-spacing: 2px;
+    }
+  }
+
+  .checkout-build__bottom {
+    padding: 20px 20px;
+    display: none;
+
+    p {
+      font-size: 50px;
+      font-style: italic;
+      font-family: 'Anton',
+        sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+    }
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .checkout-build {
+
+    .checkout-build__top {
+      
+      p {
+        font-size: 30px;
+      }
+    }
+
+    .checkout-build__btn {
+
+      button {
+      }
+    }
+
+    .checkout-build__bottom {
+      display: block;
+      padding: 40px 40px;
+      p {
+        font-size: 25px !important;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .checkout-build {
+    // height: 60vh;
+
+    .checkout-build__top {
+
+      p {
+        font-size: 30px;
+      }
+    }
+
+    .checkout-build__btn {
+
+      button {}
+    }
+
+    .checkout-build__bottom {
+
+      p {
+        font-size: 30px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .checkout-build {
+    // height: 60vh;
+
+    .checkout-build__top {
+
+      p {
+        font-size: 25px !important;
+      }
+    }
+
+    .checkout-build__btn {
+
+      button {}
+    }
+
+    .checkout-build__bottom {
+
+      p {
+        font-size: 20px !important;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .checkout-build {
+
+    .checkout-build__top {
+
+      p {
+        font-size: 15px !important;
+      }
+    }
+
+    .checkout-build__btn {
+
+      button {}
+    }
+
+    .checkout-build__bottom {
+
+      p {
+        font-size: 15px !important;
+      }
+    }
+  }
+}
