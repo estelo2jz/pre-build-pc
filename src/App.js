@@ -13,6 +13,7 @@ import BuildPC from './components/pages/BuildPC/BuildPC';
 import Financing from './components/pages/Financing/Financing';
 import Review from './components/pages/Review/Review';
 import Support from './components/pages/Support/Support';
+import Footer from './components/Footer/Footer';
 
 
 function App() {
@@ -38,6 +39,7 @@ function App() {
               <Route path="cart" exact element={ <Cart /> } />
             </Routes>
           </section>
+          <Footer />
         </Router>
       </div>
     </DataProvider>
