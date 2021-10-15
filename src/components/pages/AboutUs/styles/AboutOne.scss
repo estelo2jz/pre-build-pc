@@ -27,17 +27,17 @@
 
       h4 {
         font-size: 3rem;
-        font-weight: 700;
         font-style: italic;
-
-      // width: 100%;
-      padding: 20px 80px;
+        font-family: 'Anton', sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        padding: 20px 80px;
       }
 
       p {
-      // width: 100%;
+        // width: 100%;
         font-size: 1.1rem;
-        padding: 0px 80px;
+        padding: 0px 40px;
         text-align: left;
       }
     }
@@ -71,16 +71,19 @@
       height: 300px;
 
       .about__top-contents {
-        padding:0px 20px;
-        margin:0px;
+        padding: 0px 10px;
+        margin: 0px;
+
         h4 {
           font-size: 2rem;
           text-align: center;
+          padding: 0px !important;
+
         }
 
         p {
           font-size: 0.9rem;
-        text-align: center;
+          text-align: center;
         }
       }
     }
@@ -91,6 +94,36 @@
       .about__bottom-contents {
         img {
           width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .about {
+
+    .about__top {
+
+      .about__top-contents {
+        width: 100%;
+        
+        h4 {
+          width: 100%;
+          // font-size: 1.5rem;
+          padding: 0px !important;
+        
+        }
+        
+        p {
+        }
+      }
+    }
+
+    .about__bottom {
+
+      .about__bottom-contents {
+        img {
         }
       }
     }
