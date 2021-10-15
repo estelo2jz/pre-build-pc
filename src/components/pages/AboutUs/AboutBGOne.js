@@ -9,6 +9,8 @@ import Avatar1 from '../../../assets/images/about/avatar1.jpg';
 import Avatar2 from '../../../assets/images/about/avatar2.jpg';
 import Avatar3 from '../../../assets/images/about/avatar3.jpg';
 
+import './styles/AboutOne.scss';
+
 const AboutBGOne = () => {
   return (
     <div className="about">

@@ -11,13 +11,18 @@ import Avatar3 from '../../../assets/images/about/avatar3.jpg';
 
 import AboutBGOne from './AboutBGOne';
 import AboutBGTwo from './AboutBGTwo';
+import AboutBGThree from './AboutBGThree';
+import AboutBottom from './AboutBottom';
+
+import './styles/About.scss';
 
 const About = () => {
   return (
-    <div className="">
-      <div className="">
+    <div className="about-page">
       <AboutBGOne />
-      </div>
+      <AboutBGTwo />
+      <AboutBGThree />
+      <AboutBottom />
     </div>
   );
 };
