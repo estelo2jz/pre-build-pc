@@ -37,38 +37,47 @@ const AboutBGOne = () => {
         </div>
         <div className="about-bottom__top-cards">
           <div className="about-bottom__top-container">
-            <div className="about-bottom__top-box">
-              <div className="about-bottom__top-img">
-                <img src={Avatar1} alt="" />
-              </div>
-              <div className="about-bottom__top-price">
-                <p>Starting at $1,433</p>
-                <p>Or as low as $46 monthly</p>
-                <button>GOOD</button>
-              </div>
-            </div>
-          </div>
-          <div className="about-bottom__top-container">
-            <div className="about-bottom__top-box">
-              <div className="about-bottom__top-img">
-                <img src={Avatar2} alt="" />
-              </div>
-              <div className="about-bottom__top-price">
-                <p>Starting at $1,748</p>
-                <p>Or as low as $56 monthly</p>
-                <button>BETTER</button>
+            <div className="about-bottom__top-power">
+              <p className="about-bottom__top-good">GOOD.</p>
+              <div className="about-bottom__top-box">
+                <div className="about-bottom__top-img">
+                  <img src={Avatar1} alt="" />
+                </div>
+                <div className="about-bottom__top-price">
+                  <p className="about-bottom__top-price-child">Starting at $1,433</p>
+                  <p className="about-bottom__top-price-child">Or as low as $46 monthly</p>
+                  <button>VIEW BUILD</button>
+                </div>
               </div>
             </div>
           </div>
           <div className="about-bottom__top-container">
-            <div className="about-bottom__top-box">
-              <div className="about-bottom__top-img">
-                <img src={Avatar3} alt="" />
+            <div className="about-bottom__top-power">
+              <p className="about-bottom__top-good">BETTER.</p>
+              <div className="about-bottom__top-box">
+                <div className="about-bottom__top-img">
+                  <img src={Avatar2} alt="" />
+                </div>
+                <div className="about-bottom__top-price">
+                  <p className="about-bottom__top-price-child">Starting at $1,748</p>
+                  <p className="about-bottom__top-price-child">Or as low as $56 monthly</p>
+                  <button>VIEW BUILD</button>
+                </div>
               </div>
-              <div className="about-bottom__top-price">
-                <p>Starting at $2,733</p>
-                <p>Or as low as $88 monthly</p>
-                <button>BEST</button>
+            </div>
+          </div>
+          <div className="about-bottom__top-container">
+            <div className="about-bottom__top-power">
+              <p className="about-bottom__top-good">BEST.</p>
+              <div className="about-bottom__top-box">
+                <div className="about-bottom__top-img">
+                  <img src={Avatar3} alt="" />
+                </div>
+                <div className="about-bottom__top-price">
+                  <p className="about-bottom__top-price-child">Starting at $2,733</p>
+                  <p className="about-bottom__top-price-child">Or as low as $88 monthly</p>
+                  <button>VIEW BUILD</button>
+                </div>
               </div>
             </div>
           </div>
