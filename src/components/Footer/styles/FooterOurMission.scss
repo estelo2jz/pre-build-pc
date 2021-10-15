@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+.footer-our-mission {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  // background-color: red;
+  padding: 40px;
+  z-index: 1000;
+  position: relative;
+  margin-top: 220px;
+
+  .footer-our-mission__left {
+    width: 50%;
+    text-align: right;
+
+    img {
+      width: 100%;
+      border-radius: 10px;
+    }
+  }
+
+  .footer-our-mission__right {
+    padding: 0px 40px;
+    display: flex;
+    width: 50%;
+    align-items: center;
+    // justify-content: center;
+    flex-direction: column;
+
+    .footer-our-mission__right-p {
+      padding: 20px 0px;
+      padding-bottom: 100px;
+
+      p {
+        color: rgb(0, 0, 0);
+        // font-weight: 600;
+        font-size: 1.875rem;
+        font-style: italic;
+        font-family: 'Anton', sans-serif;
+        text-transform: uppercase;
+
+      }
+    }
+
+    .footer-our-mission__right-btn {
+      padding-bottom: 200px;
+      padding: 40px 0px;;
+      button {
+        padding: 15px 50px;
+        border-radius: 10px;
+        outline: none;
+        border: none;
+        font-size: 16px;
+        font-weight: 700;
+        color: rgb(255, 255, 255);
+        background: #b740e2;
+        border: 1px solid #c25be9;
+        background-position: center;
+        letter-spacing: 2px;
+      }
+    }
+  }
+}
+
+
+
+@media screen and (max-width: 1100px) {
+  .footer-our-mission {
+    display: flex;
+    flex-direction: column;
+    margin-top: 300px;
+    
+    .footer-our-mission__left {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      // text-align: right;
+
+      img {
+        width: 60%;
+      }
+    }
+
+    .footer-our-mission__right {
+      width: 100%;
+
+      .footer-our-mission__right-p {
+        display: none;
+        p {}
+      }
+
+      .footer-our-mission__right-btn {
+        button {}
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .footer-our-mission {
+    display: flex;
+    flex-direction: column;
+    margin-top: 320px;
+    
+    .footer-our-mission__left {
+      width: 100%;
+      text-align: right;
+
+      img {
+        width: 70%;
+      }
+    }
+
+    .footer-our-mission__right {
+      width: 100%;
+
+      .footer-our-mission__right-p {
+        p {
+          display: none;          
+        }
+      }
+
+      .footer-our-mission__right-btn {
+        button {
+          padding: 10px 20px;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
