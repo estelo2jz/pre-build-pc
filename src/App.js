@@ -1,12 +1,16 @@
 import React, {components} from 'react';
-import Header from './components/Header'
-import Products from './components/Products'
+import Header from './components/Header/Header'
+// import Products from './components/Products'
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
-import {DataProvider} from './components/DataProvider'
-import Details from './components/Details'
-import Cart from './components/Cart'
+// import {DataProvider} from './components/DataProvider'
+// import Details from './components/Details'
+import Cart from './components/Products/Cart'
 
 import Home from './components/Home/Home';
+
+import Products from './components/Products//Products';
+import {DataProvider} from './components/Products/Data/DataProvider';
+import Details from './components/Products/Details/Details';
 
 import About from './components/pages/AboutUs/About';
 import BuildPC from './components/pages/BuildPC/BuildPC';
@@ -34,7 +38,7 @@ function App() {
               <Route path="/pages/why-pre-build" exact element={ <About /> } />
 
               <Route path="/products" exact element={ <Products /> } />
-              <Route path="products/:id" exact element={ <Details /> } />
+              <Route path="/products/:id" exact element={ <Details /> } />
 
               <Route path="cart" exact element={ <Cart /> } />
             </Routes>
