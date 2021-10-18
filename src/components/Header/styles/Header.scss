@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+
+
+header {
+  // padding: 0 15px;
+  width: 100%;
+  min-height: 100px;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #ccc;
+  /* margin-bottom: 20px; */
+  z-index: 100;
+  // background-color: #581b98;
+
+  .menu {
+    font-size:30px;
+    .menu-bars {
+      color: rgb(0, 0, 0);
+    }
+  }
+  .menu-close {
+    font-size:30px;
+
+  }
+  ul {
+
+  }
+
+  ul {
+    
+    li {
+      list-style: none;
+      display: inline-block;
+      padding: 0 15px;
+
+      a {
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+        font-size: 20px;
+      }
+
+    }
+  }
+
+  .logo {
+    .logo-img {
+      img {
+        width: 130px;
+        top: -20px;
+        left: 170px;
+      }
+    }
+    a {
+      color: rgb(255, 255, 255);
+      text-decoration: none;
+      font-family: 'Anton', sans-serif;
+    }
+  }
+
+  .cart-icon {
+    position: relative;
+    margin-right: 15px;
+    .cart-img {
+      font-size: 30px;
+      color: rgb(0, 0, 0) !important;
+
+    }
+
+    span {
+      // background: rgb(255, 255, 255);
+      // border-radius: 20px;
+      color: rgb(0, 0, 0);
+      position: absolute;
+      top: -20px;
+      right: -15px;
+      font-size: 20px;
+      padding: 5px;
+      font-weight: 700;
+    }
+  }
+}
+
+// .menu{
+//   display: none;
+// }
+
+@media (max-width: 700px){
+  header{
+    justify-content: space-between;
+    padding: 0px 10px;
+  }
+  ul{
+    position: fixed;
+    top:0;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    background: #581b98;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    opacity: 0.98;
+    z-index: 99;
+    transition: 0.5s ease-in;
+  }
+  a {
+    color: white;
+  }
+  .menu{
+    display: block;
+    cursor: pointer;
+  }
+  ul li .menu{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+  }
+  ul {
+    li {
+      font-size: 20px;
+    }
+  }
+}
