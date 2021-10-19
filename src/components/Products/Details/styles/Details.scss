@@ -4,7 +4,7 @@
   display: flex;
   justify-content: space-evenly;
   height: 100%;
-  padding: 40px 0px;
+  padding: 100px 0px;
 
 
 
@@ -210,7 +210,7 @@
           background-position: center;
           min-width: 1px;
           // margin-top: 10px;
-          font-size: .75em;
+          font-size: clamp(17px, 2.5vw, 20px);
           padding: 8px;
           text-decoration: none;
           position: relative;
@@ -301,7 +301,8 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    border-radius: 0px;
+    border: 0px;
+    
 
     .img-container {
       // height: 300px;
@@ -309,13 +310,15 @@
 
     .details__img-container {
       border-top-right-radius: 0px;
-      border-top-right-radius: 00px;
+      border-top-right-radius: 0px;
+      border-bottom-right-radius: 0px;
 
       .box-details__heading {
         border-bottom-right-radius: 0px;
-        border-bottom-right-radius: 00px;
+        border-bottom-right-radius: 0px;
 
         .box-details__desc {
+
           .box-details__desc-outer {
             .box-details__left {
               span {}
@@ -356,17 +359,19 @@
 
 @media screen and (max-width: 500px) {
   .details {
+    
     .img-container {
       height: 400px;
       &:hover {
         background-size: 110%;
-  
+        
       }
     }
-
+    
     border: 0px !important;
-
+    
     .details__img-container {
+      border-bottom-right-radius: 0px;
       border: 0px !important;
 
       .box-details__heading {
