@@ -4,6 +4,8 @@ import Colors from "./Colors";
 import Sizes from "./Sizes";
 import { Link } from "react-router-dom";
 
+import './styles/Cart.scss';
+
 export default function Cart() {
   const value = useContext(DataContext);
   const [cart, setCart] = value.cart;
