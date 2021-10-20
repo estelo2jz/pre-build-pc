@@ -1,9 +1,10 @@
-import React from 'react'
+import React from 'react';
+import ReviewComponent from '../../Home/Review';
 
 const Review = () => {
   return (
     <div>
-      review
+      <ReviewComponent />
       {/* reviews top header */}
       {/* reviews data */}
     </div>
