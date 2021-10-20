@@ -1,5 +1,5 @@
 .specs {
-  background-color: #1f4287;
+  background-color: #071a52;
   display: flex;
   flex-direction: column;
   border-top-left-radius: 50px;
@@ -36,7 +36,7 @@
     align-items: left;
     padding: 5px 5px;
     width: 100%;
-    border-bottom: 1px solid #333;
+    border-bottom: 1px solid rgb(0, 0, 0);
 
     .specs__item {
       width: 100%;
@@ -145,6 +145,21 @@
             }
           }
         }
+      }
+    }
+  }
+
+  .specs__essentials {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .specs__essentials-heading {
+      padding-top: 50px;
+      padding-bottom: 10px;
+      color: white;
+      font-size: clamp(20px, 1.5vw, 40px);
+      p {
       }
     }
   }
