@@ -1,6 +1,8 @@
 import React from "react";
 import "./styles/Review.scss";
 
+import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
+
 import Review1 from "../../assets/images/review/review1.jpg";
 import Review2 from "../../assets/images/review/review2.jpg";
 import Review3 from "../../assets/images/review/review3.jpg";
@@ -75,7 +77,15 @@ const Review = () => {
                 <img src={Review1} alt="" />
               </div>
               <div className="review__top-opinion">
-                <p>{reviewOpinion1}</p>
+                <p>
+                  <span>
+                    <FaQuoteLeft />
+                  </span>
+                  {reviewOpinion1}
+                  <span>
+                    <FaQuoteRight />
+                  </span>
+                </p>
               </div>
             </div>
           </div>
@@ -102,7 +112,15 @@ const Review = () => {
                 <img src={Review2} alt="" />
               </div>
               <div className="review__top-opinion">
-                <p>{reviewOpinion2}</p>
+                <p>
+                  <span>
+                    <FaQuoteLeft />
+                  </span>
+                  {reviewOpinion1}
+                  <span>
+                    <FaQuoteRight />
+                  </span>
+                </p>
               </div>
             </div>
           </div>
@@ -129,7 +147,15 @@ const Review = () => {
                 <img src={Review3} alt="" />
               </div>
               <div className="review__top-opinion">
-                <p>{reviewOpinion3}</p>
+                <p>
+                  <span>
+                    <FaQuoteLeft />
+                  </span>
+                  {reviewOpinion1}
+                  <span>
+                    <FaQuoteRight />
+                  </span>
+                </p>
               </div>
             </div>
           </div>
@@ -157,7 +183,15 @@ const Review = () => {
                 <img src={Review4} alt="" />
               </div>
               <div className="review__top-opinion">
-                <p>{reviewOpinion4}</p>
+                <p>
+                  <span>
+                    <FaQuoteLeft />
+                  </span>
+                  {reviewOpinion1}
+                  <span>
+                    <FaQuoteRight />
+                  </span>
+                </p>
               </div>
             </div>
           </div>
@@ -184,7 +218,15 @@ const Review = () => {
                 <img src={Review5} alt="" />
               </div>
               <div className="review__top-opinion">
-                <p>{reviewOpinion5}</p>
+                <p>
+                  <span>
+                    <FaQuoteLeft />
+                  </span>
+                  {reviewOpinion1}
+                  <span>
+                    <FaQuoteRight />
+                  </span>
+                </p>
               </div>
             </div>
           </div>
@@ -211,7 +253,15 @@ const Review = () => {
                 <img src={Review6} alt="" />
               </div>
               <div className="review__top-opinion">
-                <p>{reviewOpinion6}</p>
+                <p>
+                  <span>
+                    <FaQuoteLeft />
+                  </span>
+                  {reviewOpinion1}
+                  <span>
+                    <FaQuoteRight />
+                  </span>
+                </p>
               </div>
             </div>
           </div>
@@ -238,7 +288,15 @@ const Review = () => {
                 <img src={Review7} alt="" />
               </div>
               <div className="review__top-opinion">
-                <p>{reviewOpinion7}</p>
+                <p>
+                  <span>
+                    <FaQuoteLeft />
+                  </span>
+                  {reviewOpinion1}
+                  <span>
+                    <FaQuoteRight />
+                  </span>
+                </p>
               </div>
             </div>
           </div>
@@ -265,7 +323,15 @@ const Review = () => {
                 <img src={Review8} alt="" />
               </div>
               <div className="review__top-opinion">
-                <p>{reviewOpinion8}</p>
+                <p>
+                  <span>
+                    <FaQuoteLeft />
+                  </span>
+                  {reviewOpinion1}
+                  <span>
+                    <FaQuoteRight />
+                  </span>
+                </p>
               </div>
             </div>
           </div>
