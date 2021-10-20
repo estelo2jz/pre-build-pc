@@ -1,0 +1,120 @@
+.review {
+  background-image: url('https://cdn.shopify.com/s/files/1/0408/5792/7834/files/Ambassador_mobile_750x.jpg?v=1600137927');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  // padding: 100px 0px;
+
+  .review__heading {}
+
+  .review__outer {
+    display: flex;
+    // align-items: center;
+    overflow-x: scroll;
+    padding: 100px 0px;
+
+    .review__card {
+      border-radius: 10px;
+      background-color: #e2f3f5;
+      // width: 400px;
+      height: 100%;
+      margin: 5px;
+      // height: 500px;
+
+      .review__top-container {
+        .review__top {
+          .review__top-img {
+
+            img {
+              border-top-left-radius: 10px;
+              border-top-right-radius: 10px;
+              width: 350px;
+              // height: 200px;
+              height: 100%;
+            }
+
+          }
+
+          .review__top-opinion {
+            padding: 10px 20px;
+            font-size: 13px;
+          }
+        }
+      }
+
+      .review__bottom-container {
+        .review__bottom {
+          display: flex;
+          align-items: center;
+
+          .review__bottom-img {
+            padding: 10px 20px;
+
+            img {
+              border-radius: 50%;
+              width: 50px
+            }
+
+          }
+
+          .review__bottom-prpfile {}
+
+          .review__bottom-name {
+            padding: 10px 20px;
+
+            p {
+              font-weight: 700;
+              font-size: 20px;
+            }
+          }
+
+          .review__bottom-bio {
+            padding: 10px 20px;
+            font-size: 11px;
+          }
+        }
+      }
+    }
+
+    .review__card::-webkit-scrollbar {
+      display: none;
+    }
+
+    .review {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+      /* Firefox */
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .review {
+    .review__heading {}
+
+    .review__outer {
+      .review__card {
+        .review__top-container {
+          .review__top {
+            .review__top-img {}
+
+            .review__top-opinion {}
+          }
+        }
+
+        .review__bottom-container {
+          .review__bottom {
+            .review__bottom-img {}
+
+            .review__bottom-prpfile {
+              .review__bottom-name {}
+
+              .review__bottom-bio {}
+            }
+          }
+        }
+      }
+    }
+  }
+}
