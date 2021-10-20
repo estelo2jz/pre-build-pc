@@ -60,14 +60,14 @@ export default function Details() {
                   </div>
                   <div className="box-details__center">
                     <div className="box-details__content">
-                      <p>${product.monthly}</p>
+                      <p>${product.totalPrice}</p>
                       <span>Total Price</span>
                     </div>
                   </div>
                   <div className="box-details__right">
                     <div>
                       <span>Per month as low as</span>
-                      <p>${product.totalPrice}</p>
+                      <p>${product.monthly}</p>
                     </div>
                     <div className="box-details__right-btn">
                       <button>GET MY RATE</button>
@@ -104,6 +104,11 @@ export default function Details() {
                 wifi={product.wifi}
                 windows={product.windows}
                 warranty={product.warranty}
+                essentialsOne={product.essentialsOne}
+                essentialsTwo={product.essentialsTwo}
+                essentialsThree={product.essentialsThree}
+                essentialsFour={product.essentialsFour}
+                essentialsFive={product.essentialsFive}
                 setIndex={setIndex}
               />
             </div>
