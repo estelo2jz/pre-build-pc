@@ -36,6 +36,8 @@ import GoodMOTHERBOARD from "../../../assets/images/pc/good/ASUSX570P_71db4b81-6
 import GoodWIFI from "../../../assets/images/pc/good/WifiCard_63x.png";
 import GoodWINDOWS from "../../../assets/images/pc/good/Windows10Home_63x.png";
 import GoodWARRANTY from "../../../assets/images/pc/good/redux-logo_63x.png";
+import GoodProfilePic from "../../../assets/images/pc/good/Good-1_117x117.jpg";
+import GoodBg from "../../../assets/images/pc/good/Good_400x.jpg";
 
 import Keyboard from "../../../assets/images/pc/good/KEYBOARD-MOUSE_200x.png";
 import MouseNormal from "../../../assets/images/pc/good/mouse-normal_200x.png";
@@ -48,10 +50,9 @@ export const DataContext = createContext();
 export const DataProvider = (props) => {
   const [products, setProducts] = useState([
     {
-      _id: "1",
+      _id: "build=good",
       title: "GOOD",
       images: [Good1, Good2, Good3, Good4, Good5],
-      essentials: [Keyboard, MouseNormal, MouseLarge, Headset, HeadsetStand],
       description:
         "A great starting point for those getting into a gaming PC. This well-balanced PC is designed to provide excellent performance to explore all the perks of PC gaming without a large budget.",
       content:
@@ -62,6 +63,38 @@ export const DataProvider = (props) => {
       "monthly": "42.66",
       "totalPrice": "1,322",
       count: 1,
+      graphics: "80",
+      processor: "95",
+      memorySize: "80",
+      storage: "70",
+      goodProfilePic: GoodProfilePic,
+      goodBg: GoodBg,
+      monthlyFinance: "43",
+      essentialsOne: [
+        { keyboardMouseImg: Keyboard },
+        { keyboardMouseName: "Keyboard & Mouse Bundle" },
+        { keyboardMousePrice: "$39" },
+      ],
+      essentialsTwo: [
+        { keyboardMouseImg: MouseNormal },
+        { keyboardMouseName: "Mouse Pad - Extra Large" },
+        { keyboardMousePrice: "$29" },
+      ],
+      essentialsThree: [
+        { keyboardMouseImg: MouseLarge },
+        { keyboardMouseName: "Mouse Pad - Standard" },
+        { keyboardMousePrice: "$19" },
+      ],
+      essentialsFour: [
+        { keyboardMouseImg: Headset },
+        { keyboardMouseName: "Headset" },
+        { keyboardMousePrice: "$25" },
+      ],
+      essentialsFive: [
+        { keyboardMouseImg: HeadsetStand },
+        { keyboardMouseName: "Headset with RGB Stand" },
+        { keyboardMousePrice: "$35" },
+      ],
       cpu: [
         { CPUimg: GoodCPU },
         { CPUname: "AMD RYZEN 5 5600X 6-CORE" },
@@ -124,7 +157,7 @@ export const DataProvider = (props) => {
       ],
     },
     {
-      _id: "2",
+      _id: "build=better",
       title: "BETTER",
       images: [
         Better1,
@@ -142,7 +175,39 @@ export const DataProvider = (props) => {
         "Welcome to our channel Dev AT. Here you can learn web designing, UI/UX designing, html css tutorials, css animations and css effects, javascript and jquery tutorials and related so on.",
       price: 1637,
       count: 1,
-            cpu: [
+      graphics: "80",
+      processor: "95",
+      memorySize: "80",
+      storage: "70",
+      goodProfilePic: GoodProfilePic,
+      goodBg: GoodBg,
+      monthlyFinance: "43",
+      essentialsOne: [
+        { keyboardMouseImg: Keyboard },
+        { keyboardMouseName: "Keyboard & Mouse Bundle" },
+        { keyboardMousePrice: "$39" },
+      ],
+      essentialsTwo: [
+        { keyboardMouseImg: MouseNormal },
+        { keyboardMouseName: "Mouse Pad - Extra Large" },
+        { keyboardMousePrice: "$29" },
+      ],
+      essentialsThree: [
+        { keyboardMouseImg: MouseLarge },
+        { keyboardMouseName: "Mouse Pad - Standard" },
+        { keyboardMousePrice: "$19" },
+      ],
+      essentialsFour: [
+        { keyboardMouseImg: Headset },
+        { keyboardMouseName: "Headset" },
+        { keyboardMousePrice: "$25" },
+      ],
+      essentialsFive: [
+        { keyboardMouseImg: HeadsetStand },
+        { keyboardMouseName: "Headset with RGB Stand" },
+        { keyboardMousePrice: "$35" },
+      ],
+      cpu: [
         { CPUimg: GoodCPU },
         { CPUname: "AMD RYZEN 5 5600X 6-CORE" },
         { CPUprice: "299" },
@@ -204,7 +269,7 @@ export const DataProvider = (props) => {
       ],
     },
     {
-      _id: "3",
+      _id: "build=best",
       title: "BEST",
       images: [Best1, Best2, Best3, Best4, Best5, Best6, Best7, Best8],
       description:
@@ -213,7 +278,39 @@ export const DataProvider = (props) => {
         "Welcome to our channel Dev AT. Here you can learn web designing, UI/UX designing, html css tutorials, css animations and css effects, javascript and jquery tutorials and related so on.",
       price: 2733,
       count: 1,
-            cpu: [
+      graphics: "80",
+      processor: "95",
+      memorySize: "80",
+      storage: "70",
+      goodProfilePic: GoodProfilePic,
+      goodBg: GoodBg,
+      monthlyFinance: "43",
+      essentialsOne: [
+        { keyboardMouseImg: Keyboard },
+        { keyboardMouseName: "Keyboard & Mouse Bundle" },
+        { keyboardMousePrice: "$39" },
+      ],
+      essentialsTwo: [
+        { keyboardMouseImg: MouseNormal },
+        { keyboardMouseName: "Mouse Pad - Extra Large" },
+        { keyboardMousePrice: "$29" },
+      ],
+      essentialsThree: [
+        { keyboardMouseImg: MouseLarge },
+        { keyboardMouseName: "Mouse Pad - Standard" },
+        { keyboardMousePrice: "$19" },
+      ],
+      essentialsFour: [
+        { keyboardMouseImg: Headset },
+        { keyboardMouseName: "Headset" },
+        { keyboardMousePrice: "$25" },
+      ],
+      essentialsFive: [
+        { keyboardMouseImg: HeadsetStand },
+        { keyboardMouseName: "Headset with RGB Stand" },
+        { keyboardMousePrice: "$35" },
+      ],
+      cpu: [
         { CPUimg: GoodCPU },
         { CPUname: "AMD RYZEN 5 5600X 6-CORE" },
         { CPUprice: "299" },
