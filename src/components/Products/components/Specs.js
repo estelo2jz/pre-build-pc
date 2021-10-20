@@ -1,6 +1,8 @@
 import React from "react";
 
-import Essentials from './Essentials';
+import Essentials from "./Essentials";
+
+import EssentialsProducts from "./EssentialsProducts";
 
 import "./styles/Specs.scss";
 
@@ -131,7 +133,6 @@ export default function Colors({
           </div>
         </div>
 
-
         <div className="specs__right">
           <div className="specs__items">
             {pcCase.map((item, index) => (
@@ -237,98 +238,11 @@ export default function Colors({
           </div>
         </div>
       </div>
-      
-      <div className="essentials">
-        <div className="essentials__header">
+      <div className="specs__essentials">
+        <div className="specs__essentials-heading">
           <p>RECOMMENDED ESSENTIALS</p>
         </div>
-        <div className="essentials__outer">
-          <div className="essentials__container">
-            {essentialsOne.map((item, index) => (
-              <div className="essentials__item">
-                <div className="essentials__item-img">
-                  <img src={item.keyboardMouseImg} alt="" />
-                </div>
-                <div className="essentials__item-name-container">
-                  <div className="essentials__item-name">
-                    <p>{item.keyboardMouseName}</p>
-                  </div>
-                  <div className="essentials__item-price">
-                    <p>{item.keyboardMousePrice}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="essentials__container">
-            {essentialsTwo.map((item, index) => (
-              <div className="essentials__item">
-                <div className="essentials__item-img">
-                  <img src={item.keyboardMouseImg} alt="" />
-                </div>
-                <div className="essentials__item-name-container">
-                  <div className="essentials__item-name">
-                    <p>{item.keyboardMouseName}</p>
-                  </div>
-                  <div className="essentials__item-price">
-                    <p>{item.keyboardMousePrice}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="essentials__container">
-            {essentialsThree.map((item, index) => (
-              <div className="essentials__item">
-                <div className="essentials__item-img">
-                  <img src={item.keyboardMouseImg} alt="" />
-                </div>
-                <div className="essentials__item-name-container">
-                  <div className="essentials__item-name">
-                    <p>{item.keyboardMouseName}</p>
-                  </div>
-                  <div className="essentials__item-price">
-                    <p>{item.keyboardMousePrice}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="essentials__container">
-            {essentialsFour.map((item, index) => (
-              <div className="essentials__item">
-                <div className="essentials__item-img">
-                  <img src={item.keyboardMouseImg} alt="" />
-                </div>
-                <div className="essentials__item-name-container">
-                  <div className="essentials__item-name">
-                    <p>{item.keyboardMouseName}</p>
-                  </div>
-                  <div className="essentials__item-price">
-                    <p>{item.keyboardMousePrice}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="essentials__container">
-            {essentialsFive.map((item, index) => (
-              <div className="essentials__item">
-                <div className="essentials__item-img">
-                  <img src={item.keyboardMouseImg} alt="" />
-                </div>
-                <div className="essentials__item-name-container">
-                  <div className="essentials__item-name">
-                    <p>{item.keyboardMouseName}</p>
-                  </div>
-                  <div className="essentials__item-price">
-                    <p>{item.keyboardMousePrice}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+        <EssentialsProducts />
       </div>
     </div>
   );
