@@ -31,13 +31,13 @@ function App() {
             <Routes>
               <Route path="/" exact element={ <Home /> } />
 
-              <Route path="/pages/build-your-pc" exact element={ <BuildPC /> } />
+              <Route path="/products" exact element={ <BuildPC /> } />
               <Route path="/pages/review" exact element={ <Review /> } />
               <Route path="/pages/financing" exact element={ <Financing /> } />
               <Route path="/pages/support" exact element={ <Support /> } />
               <Route path="/pages/why-pre-build" exact element={ <About /> } />
 
-              <Route path="/products" exact element={ <Products /> } />
+              {/* <Route path="/products" exact element={ <Products /> } /> */}
               <Route path="/products/:id" exact element={ <Details /> } />
 
               <Route path="cart" exact element={ <Cart /> } />
