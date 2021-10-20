@@ -10,8 +10,9 @@ const Home = () => {
     <div>
       {/* top header with BG */}
       <TopHeader />
-      {/* Pricing component */}
-      {/* review component */}
+      <Pricing />
+      <Review />
+      <BestSellers />
       {/* best sellers component*/}
       {/* follow component */}
       {/* from  */}
