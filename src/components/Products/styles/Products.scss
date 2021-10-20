@@ -8,12 +8,13 @@
   // grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   // margin: 0 -15px;
   .products__card {
+    // background-image: {'goodBg'};
     background-image: url('https://cdn.shopify.com/s/files/1/0408/5792/7834/files/Best_400x.jpg?v=1600827946');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     background-color: #775ada;
-    margin: 20px 5px;
+    margin: 50px 5px;
     width: 450px;
     -webkit-box-shadow: 0px 0px 5px 1px rgba(97, 97, 97, 1);
     -moz-box-shadow: 0px 0px 5px 1px rgba(97, 97, 97, 1);
@@ -23,6 +24,11 @@
     align-items: center;
     text-align: center;
     border-radius: 10px;
+    // img {
+    //   position: absolute;
+    //   margin-top: -100px;
+    //   // z-index: 1;
+    // }
 
     .products__img {
       position: absolute;
