@@ -39,6 +39,36 @@ import GoodWARRANTY from "../../../assets/images/pc/good/redux-logo_63x.png";
 import GoodProfilePic from "../../../assets/images/pc/good/Good-1_117x117.jpg";
 import GoodBg from "../../../assets/images/pc/good/Good_400x.jpg";
 
+import BetterCPU from "../../../assets/images/pc/better/Ryzen5_63x.png";
+import BetterGPU from "../../../assets/images/pc/better/rtx-3060_63x.png";
+import BetterRAM from "../../../assets/images/pc/better/RAM_63x.png";
+import BetterMEMORY from "../../../assets/images/pc/better/M2_63x.png";
+import BetterCPUCOOLER from "../../../assets/images/pc/better/Hyper212_63x.png";
+import BetterFANS from "../../../assets/images/pc/better/4xFan_63x.png";
+import BetterCASE from "../../../assets/images/pc/better/TD500CASE_63x.png";
+import BetterPOWER from "../../../assets/images/pc/better/600WPSU_63x.png";
+import BetterMOTHERBOARD from "../../../assets/images/pc/better/ASUSX570P_71db4b81-67e8-4b73-bb3d-bc2f85bb1b54_63x.png";
+import BetterWIFI from "../../../assets/images/pc/better/WifiCard_63x.png";
+import BetterWINDOWS from "../../../assets/images/pc/better/Windows10Home_63x.png";
+import BetterWARRANTY from "../../../assets/images/pc/better/redux-logo_63x.png";
+import BetterProfilePic from "../../../assets/images/pc/better/Better-1_117x117.jpg";
+import BetterBg from "../../../assets/images/pc/better/Better_400x.jpg";
+
+import BestCPU from "../../../assets/images/pc/best/Ryzen7_63x.png";
+import BestGPU from "../../../assets/images/pc/best/3080-ti_63x.png";
+import BestRAM from "../../../assets/images/pc/best/RAM_63x.png";
+import BestMEMORY from "../../../assets/images/pc/best/M2_42cfb077-ffdd-4300-8af3-b1fb2c03b83c_63x.png";
+import BestCPUCOOLER from "../../../assets/images/pc/best/ML2402_63x.png";
+import BestFANS from "../../../assets/images/pc/best/4xFan_63x.png";
+import BestCASE from "../../../assets/images/pc/best/TD500CASE_63x.png";
+import BestPOWER from "../../../assets/images/pc/best/600WPSU_a434a461-6c03-43ad-9d62-9d4fffd92911_63x.png";
+import BestMOTHERBOARD from "../../../assets/images/pc/best/ASUSX570P_63x.png";
+import BestWIFI from "../../../assets/images/pc/best/WifiCard_63x.png";
+import BestWINDOWS from "../../../assets/images/pc/best/Windows10Home_63x.png";
+import BestWARRANTY from "../../../assets/images/pc/best/redux-logo_63x.png";
+import BestProfilePic from "../../../assets/images/pc/best/Best-1_117x117.jpg";
+import BestBg from "../../../assets/images/pc/best/Best_400x.jpg";
+
 import Keyboard from "../../../assets/images/pc/good/KEYBOARD-MOUSE_200x.png";
 import MouseNormal from "../../../assets/images/pc/good/mouse-normal_200x.png";
 import MouseLarge from "../../../assets/images/pc/good/mouse-lage_200x.png";
@@ -58,14 +88,14 @@ export const DataProvider = (props) => {
       content:
         "Welcome to our channel Dev AT. Here you can learn web designing, UI/UX designing, html css tutorials, css animations and css effects, javascript and jquery tutorials and related so on.",
       price: 1322,
-      "componentsCosts": "1,247",
-      "buildFee": "75",
-      "monthly": "42.66",
-      "totalPrice": "1,322",
+      componentsCosts: "1,247",
+      buildFee: "75",
+      monthly: "42.66",
+      totalPrice: "1,322",
       count: 1,
       graphics: "80",
-      processor: "95",
-      memorySize: "80",
+      processor: "85",
+      memorySize: "70",
       storage: "70",
       goodProfilePic: GoodProfilePic,
       goodBg: GoodBg,
@@ -174,13 +204,17 @@ export const DataProvider = (props) => {
       content:
         "Welcome to our channel Dev AT. Here you can learn web designing, UI/UX designing, html css tutorials, css animations and css effects, javascript and jquery tutorials and related so on.",
       price: 1637,
+      componentsCosts: "1,562",
+      buildFee: "75",
+      monthly: "52.82",
+      totalPrice: "1,637",
       count: 1,
-      graphics: "80",
+      graphics: "90",
       processor: "95",
       memorySize: "80",
       storage: "70",
-      goodProfilePic: GoodProfilePic,
-      goodBg: GoodBg,
+      goodProfilePic: BetterProfilePic,
+      goodBg: BetterBg,
       monthlyFinance: "43",
       essentialsOne: [
         { keyboardMouseImg: Keyboard },
@@ -208,62 +242,62 @@ export const DataProvider = (props) => {
         { keyboardMousePrice: "$35" },
       ],
       cpu: [
-        { CPUimg: GoodCPU },
+        { CPUimg: BetterCPU },
         { CPUname: "AMD RYZEN 5 5600X 6-CORE" },
         { CPUprice: "299" },
       ],
       gpu: [
-        { GPUimg: GoodGPU },
+        { GPUimg: BetterGPU },
         { GPUname: "NVIDIA GEFORCE GTX 1650 4GB" },
-        { GPUprice: "309" },
+        { GPUprice: "624" },
       ],
       ram: [
-        { RAMimg: GoodRAM },
+        { RAMimg: BetterRAM },
         { RAMname: "16GB DDR4 DUAL CHANNEL" },
         { RAMprice: "85" },
       ],
       memory: [
-        { MEMORYimg: GoodMEMORY },
+        { MEMORYimg: BetterMEMORY },
         { MEMORYname: "500GB NVME M.2" },
         { MEMORYprice: "74" },
       ],
       cpuCooler: [
-        { CPUCOOLERimg: GoodCPUCOOLER },
+        { CPUCOOLERimg: BetterCPUCOOLER },
         { CPUCOOLERname: "COOLER MASTER HYPER 212 EVO" },
         { CPUCOOLERprice: "35" },
       ],
       fans: [
-        { FANSimg: GoodFANS },
+        { FANSimg: BetterFANS },
         { FANSname: "FREE 4X CM MASTERFANS RGB ($72 VALUE)" },
         { FANSprice: "0" },
       ],
       pcCase: [
-        { CASEimg: GoodCASE },
+        { CASEimg: BetterCASE },
         { CASEname: "COOLER MASTER TD500 RGB" },
         { CASEprice: "99" },
       ],
       power: [
-        { POWERimg: GoodPOWER },
+        { POWERimg: BetterPOWER },
         { POWERname: "600W ATX 80 PLUS GOLD" },
         { POWERprice: "79" },
       ],
       motherboard: [
-        { MOTHERBOARDimg: GoodMOTHERBOARD },
+        { MOTHERBOARDimg: BetterMOTHERBOARD },
         { MOTHERBOARDname: "B550 CHIPSET | AMD" },
         { MOTHERBOARDprice: "129" },
       ],
       wifi: [
-        { WIFIimg: GoodWIFI },
+        { WIFIimg: BetterWIFI },
         { WIFIname: "WIRELESS 802.11AC" },
         { WIFIprice: "29" },
       ],
       windows: [
-        { WINDOWSimg: GoodWINDOWS },
+        { WINDOWSimg: BetterWINDOWS },
         { WINDOWSname: "WINDOWS 10 HOME + USB RECOVERY" },
         { WINDOWSprice: "109" },
       ],
       warranty: [
-        { WARRANTYimg: GoodWARRANTY },
+        { WARRANTYimg: BetterWARRANTY },
         { WARRANTYname: "BUILD + SETUP + TESTING + WARRANTY" },
         { WARRANTYprice: "75" },
       ],
@@ -277,13 +311,17 @@ export const DataProvider = (props) => {
       content:
         "Welcome to our channel Dev AT. Here you can learn web designing, UI/UX designing, html css tutorials, css animations and css effects, javascript and jquery tutorials and related so on.",
       price: 2733,
+      componentsCosts: "2,658",
+      buildFee: "75",
+      monthly: "88.19",
+      totalPrice: "2,733",
       count: 1,
-      graphics: "80",
+      graphics: "95",
       processor: "95",
       memorySize: "80",
-      storage: "70",
-      goodProfilePic: GoodProfilePic,
-      goodBg: GoodBg,
+      storage: "80",
+      goodProfilePic: BestProfilePic,
+      goodBg: BestBg,
       monthlyFinance: "43",
       essentialsOne: [
         { keyboardMouseImg: Keyboard },
@@ -311,64 +349,110 @@ export const DataProvider = (props) => {
         { keyboardMousePrice: "$35" },
       ],
       cpu: [
-        { CPUimg: GoodCPU },
+        { CPUimg: BestCPU },
         { CPUname: "AMD RYZEN 5 5600X 6-CORE" },
-        { CPUprice: "299" },
+        { CPUprice: "449" },
       ],
       gpu: [
-        { GPUimg: GoodGPU },
+        { GPUimg: BestGPU },
         { GPUname: "NVIDIA GEFORCE GTX 1650 4GB" },
-        { GPUprice: "309" },
+        { GPUprice: "1,349" },
       ],
       ram: [
-        { RAMimg: GoodRAM },
+        { RAMimg: BestRAM },
         { RAMname: "16GB DDR4 DUAL CHANNEL" },
         { RAMprice: "85" },
       ],
       memory: [
-        { MEMORYimg: GoodMEMORY },
+        { MEMORYimg: BestMEMORY },
         { MEMORYname: "500GB NVME M.2" },
-        { MEMORYprice: "74" },
+        { MEMORYprice: "124" },
       ],
       cpuCooler: [
-        { CPUCOOLERimg: GoodCPUCOOLER },
+        { CPUCOOLERimg: BestCPUCOOLER },
         { CPUCOOLERname: "COOLER MASTER HYPER 212 EVO" },
-        { CPUCOOLERprice: "35" },
+        { CPUCOOLERprice: "75" },
       ],
       fans: [
-        { FANSimg: GoodFANS },
+        { FANSimg: BestFANS },
         { FANSname: "FREE 4X CM MASTERFANS RGB ($72 VALUE)" },
         { FANSprice: "0" },
       ],
       pcCase: [
-        { CASEimg: GoodCASE },
+        { CASEimg: BestCASE },
         { CASEname: "COOLER MASTER TD500 RGB" },
         { CASEprice: "99" },
       ],
       power: [
-        { POWERimg: GoodPOWER },
+        { POWERimg: BestPOWER },
         { POWERname: "600W ATX 80 PLUS GOLD" },
-        { POWERprice: "79" },
+        { POWERprice: "139" },
       ],
       motherboard: [
-        { MOTHERBOARDimg: GoodMOTHERBOARD },
+        { MOTHERBOARDimg: BestMOTHERBOARD },
         { MOTHERBOARDname: "B550 CHIPSET | AMD" },
-        { MOTHERBOARDprice: "129" },
+        { MOTHERBOARDprice: "200" },
       ],
       wifi: [
-        { WIFIimg: GoodWIFI },
+        { WIFIimg: BestWIFI },
         { WIFIname: "WIRELESS 802.11AC" },
         { WIFIprice: "29" },
       ],
       windows: [
-        { WINDOWSimg: GoodWINDOWS },
+        { WINDOWSimg: BestWINDOWS },
         { WINDOWSname: "WINDOWS 10 HOME + USB RECOVERY" },
         { WINDOWSprice: "109" },
       ],
       warranty: [
-        { WARRANTYimg: GoodWARRANTY },
+        { WARRANTYimg: BestWARRANTY },
         { WARRANTYname: "BUILD + SETUP + TESTING + WARRANTY" },
         { WARRANTYprice: "75" },
+      ],
+    },
+
+    {
+      _id: "4",
+      title: "Keyboard & Mouse Bundle",
+      images: [Keyboard],
+      price: 39,
+      count: 1,
+      goodBg: Keyboard,
+    },
+    {
+      _id: "5",
+      title: "Mouse Pad - Extra Large",
+      images: [MouseNormal],
+      price: 29,
+      count: 1,
+      goodBg: MouseNormal,
+    },
+    {
+      _id: "6",
+      title: "Mouse Pad - Standard",
+      images: [MouseLarge],
+      price: 19,
+      count: 1,
+      goodBg: MouseLarge,
+    },
+    {
+      _id: "7",
+      title: "Headset",
+      images: [Headset],
+      price: 25,
+      count: 1,
+      goodBg: Headset,
+    },
+    {
+      _id: "8",
+      title: "Headset with RGB Stand",
+      images: [HeadsetStand],
+      price: 35,
+      count: 1,
+      goodBg: HeadsetStand,
+      essentialsFive: [
+        { keyboardMouseImg: HeadsetStand },
+        { keyboardMouseName: "Headset with RGB Stand" },
+        { keyboardMousePrice: "$35" },
       ],
     },
   ]);
