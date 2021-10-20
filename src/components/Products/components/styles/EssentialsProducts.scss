@@ -1,0 +1,94 @@
+.essentials__container {
+  width: 100%;
+  // background-color: #c25be9;
+  .essentials {
+    display: flex;
+    justify-content: center;
+    align-content: left;
+    text-align: left;
+    width: 100%;
+
+    .essentials__outer {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      .essentials__card {
+        padding-top: 20px;
+        display: flex;
+    text-align: left;
+
+        // background-color: red;
+        justify-content: space-between;
+        // flex-direction: column;
+        align-items: center;
+        padding: 0px 20px;
+        width: 100%;
+        color: #fff;
+        margin: 5px;
+        .essentials__img {
+          img {
+            width: 80%;
+          }
+    
+        }
+        .essentials__title {
+          // margin-right: 10px;
+          width: 100%;
+
+          p {
+            font-weight: 500;
+          }
+    
+        }
+        .essentials__price {
+          width: 100%;
+
+          // margin-right: 10px;
+
+          p {
+            font-weight: 700;
+          }
+        }
+        .essentials__box {
+          width: 100%;
+          button {
+            padding: 10px 40px;
+            border-radius: 10px;
+            color: rgb(255, 255, 255);
+            background: #c25be9;
+            border: 1px solid #c25be9;
+            background-position: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .essentials__container {
+    .essentials {
+      .essentials__card {
+        flex-direction: column;
+        .essentials__img {
+          img {
+            // width: 80%;
+          }
+    
+        }
+        .essentials__title {
+        }
+        .essentials__desc {
+    
+        }
+        .essentials__box {
+          width: 100%;
+          button {
+          width: 100%;
+
+          }
+        }
+      }
+    }
+  }
+}
