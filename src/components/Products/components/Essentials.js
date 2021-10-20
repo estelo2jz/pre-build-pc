@@ -2,12 +2,14 @@ import React from 'react';
 
 import './styles/Essentials.scss';
 
-const Essentials = () => {
+const Essentials = ({ essentials }) => {
   return (
-    <div className="essentials">
-      <div className="essentials__container">
-        
-      </div>
+    <div className="essentials-thumb">
+      {
+        essentials.map((img, index) => (
+          <img src={img} alt="" key={index} />
+        ))
+      }
     </div>
   )
 }
