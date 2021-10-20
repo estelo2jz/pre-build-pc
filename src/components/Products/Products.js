@@ -7,7 +7,7 @@ import ProcessorLogo from "../../assets/images/pc/cpu-tower.png";
 import StorageLogo from "../../assets/images/pc/ram.png";
 import MemoryLogo from "../../assets/images/pc/ssd.png";
 
-import './styles/Products.scss';
+import "./styles/Products.scss";
 
 export default function Products() {
   const value = useContext(DataContext);
@@ -16,8 +16,9 @@ export default function Products() {
 
   return (
     <div className="products">
-      {products.map((product) => (
+      {products.slice(0, 3).map((product) => (
         <div className="products__card" key={product._id}>
+          {/* <img src={product.goodBg} alt="" /> */}
           {/* <Link to={`/products/${product._id}`}>
             <img src={product.images[0]} alt="" />
           </Link> */}
@@ -25,14 +26,10 @@ export default function Products() {
             <img src={product.goodProfilePic} alt="" />
           </div>
           <div className="products__title">
-            <h3 title={product.title}>
-              {product.title}.
-            </h3>
+            <h3 title={product.title}>{product.title}.</h3>
           </div>
           <div className="products__desc">
-            <p>
-              {product.description}
-            </p>
+            <p>{product.description}</p>
           </div>
           <div className="products__stats">
             <div className="products__stats-item">
@@ -46,7 +43,9 @@ export default function Products() {
                   <span>GRAPHICS</span>
                 </div>
                 <div className="products__stats-graphics-container">
-                  <p className="products__stats-graphics">{product.graphics}/100</p>
+                  <p className="products__stats-graphics">
+                    {product.graphics}/100
+                  </p>
                 </div>
               </div>
             </div>
@@ -61,7 +60,9 @@ export default function Products() {
                   <span>PROCESSOR</span>
                 </div>
                 <div className="products__stats-processor-container">
-                  <p className="products__stats-processor">{product.processor}/100</p>
+                  <p className="products__stats-processor">
+                    {product.processor}/100
+                  </p>
                 </div>
               </div>
             </div>
@@ -76,7 +77,9 @@ export default function Products() {
                   <span>MEMORY</span>
                 </div>
                 <div className="products__stats-memory-size-container">
-                  <p className="products__stats-memory-size">{product.memorySize}/100</p>
+                  <p className="products__stats-memory-size">
+                    {product.memorySize}/100
+                  </p>
                 </div>
               </div>
             </div>
@@ -91,7 +94,9 @@ export default function Products() {
                   <span>STORAGE</span>
                 </div>
                 <div className="products__stats-storage-container">
-                  <p className="products__stats-storage">{product.storage}/100</p>
+                  <p className="products__stats-storage">
+                    {product.storage}/100
+                  </p>
                 </div>
               </div>
             </div>
@@ -111,6 +116,13 @@ export default function Products() {
             </h3>
           </div>
           {/* <div className="products__box">
+            <Link
+              to="/cart"
+              // className="cart"
+              onClick={() => addCart(product._id)}
+            >
+              <button>Add to cart</button>
+            </Link>
             <button onClick={() => addCart(product._id)}>Add to cart</button>
           </div> */}
         </div>
