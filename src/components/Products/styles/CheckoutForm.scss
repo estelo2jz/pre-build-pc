@@ -1,6 +1,7 @@
 .checkout {
   width: 100%;
   .checkout__form {
+    width: 100% !important;
     * input {
       padding: 15px 10px;
       border-radius: 5px;
@@ -151,11 +152,18 @@
         display: flex;
         justify-content: space-between;
         width: 100%;
+        padding: 10px 0px;
 
-        .checkout__form-contact-top-head {}
+        .checkout__form-contact-top-head {
+          font-size: 20px;
+          color: #333333;
+        }
 
         .checkout__form-contact-top-bottom {
           display: flex;
+          font-size: 14px;
+          p {
+          }
 
           a {
             margin-left: 10px;
@@ -176,7 +184,11 @@
 
         .checkout__form-contact-bottom-radio {
           display: flex;
+          padding: 10px 0px;
+          font-size: 14px;  
+          align-items: center;
           p {
+          color: #545454;
             margin-left: 10px;
           }
         }
@@ -187,7 +199,11 @@
       width: 100%;
 
       .checkout__form-address-top-head {
-        .checkout__form-address-top-p {}
+        .checkout__form-address-top-p {
+          font-size: 20px;
+          padding: 10px 0px;
+          color: #333333;
+        }
 
         .checkout__form-address-top-head-input {
           display: flex;
@@ -242,7 +258,12 @@
 
       .checkout__form-address-input-radio {
         display: flex;
+        padding: 10px 0px;
+        font-size: 14px;
+        align-items: center;
+
         p {
+          color: #545454;
           margin-left: 10px;
         }
       }
