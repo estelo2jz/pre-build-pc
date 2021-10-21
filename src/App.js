@@ -24,34 +24,34 @@ import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
-      <DataProvider>
-        <div className="App">
-          <Router>
-            <ScrollToTop>
-              <section>
-                <Header />
-                <Routes>
-                  <Route path="/" exact element={<Home />} />
+    <DataProvider>
+      <div className="App">
+        <Router>
+          <Header />
+          <section>
+            <Routes>
+              <ScrollToTop>
+                <Route path="/" exact element={<Home />} />
 
-                  <Route path="/products" exact element={<BuildPC />} />
-                  <Route path="/pages/review" exact element={<Review />} />
-                  <Route path="/pages/financing" exact element={<Financing />} />
-                  <Route path="/pages/support" exact element={<Support />} />
-                  <Route path="/pages/why-pre-build" exact element={<About />} />
-                  <Route path="/checkout" exact element={<Checkout />} />
+                <Route path="/products" exact element={<BuildPC />} />
+                <Route path="/pages/review" exact element={<Review />} />
+                <Route path="/pages/financing" exact element={<Financing />} />
+                <Route path="/pages/support" exact element={<Support />} />
+                <Route path="/pages/why-pre-build" exact element={<About />} />
+                <Route path="/checkout" exact element={<Checkout />} />
 
-                  {/* <Route path="/cart" exact render={() => <Redirect to="/cart" />} /> */}
-                  {/* <Route path="/products" exact element={ <Products /> } /> */}
+                {/* <Route path="/cart" exact render={() => <Redirect to="/cart" />} /> */}
+                {/* <Route path="/products" exact element={ <Products /> } /> */}
 
-                  <Route path="/products/:id" exact element={<Details />} />
-                  <Route path="cart" exact element={<Cart />} />
-                </Routes>
-              </section>
-              <Footer />
-            </ScrollToTop>
-          </Router>
-        </div>
-      </DataProvider>
+                <Route path="/products/:id" exact element={<Details />} />
+                <Route path="cart" exact element={<Cart />} />
+              </ScrollToTop>
+            </Routes>
+          </section>
+          <Footer />
+        </Router>
+      </div>
+    </DataProvider>
   );
 }
 
