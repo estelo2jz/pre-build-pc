@@ -105,12 +105,12 @@ const CheckoutForm = () => {
             <input type="text" placeholder="City" />
           </div>
           <div className="checkout__form-address-right-input">
-            <select id="country" name="country" class="form-control">
+            {/* <select id="country" name="country" class="form-control">
               <option value="United States">United States</option>
-            </select>
-            {/* <input type="country" placeholder="Country/region" /> */}
-            {/* <input type="text" placeholder="State" /> */}
-              <select id="state" name="state">
+            </select> */}
+            <input type="country" placeholder="Country/region" />
+            <input type="text" placeholder="State" />
+              {/* <select id="state" name="state">
                 <option value="---">State</option>
                 <option value="Alabama">Alabama</option>
                 <option value="Alaska">Alaska</option>
@@ -171,7 +171,7 @@ const CheckoutForm = () => {
                 <option value="West Virginia">West Virginia</option>
                 <option value="Wisconsin">Wisconsin</option>
                 <option value="Wyoming">Wyoming</option>
-              </select>
+              </select> */}
             <input type="text" placeholder="ZIP code" />
           </div>
           <div className="checkout__form-address-input-phone">
