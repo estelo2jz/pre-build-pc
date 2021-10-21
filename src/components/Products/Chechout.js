@@ -2,6 +2,10 @@ import React, { useContext, useState, useEffect } from "react";
 import { DataContext } from "./Data/DataProvider";
 import { Link } from "react-router-dom";
 
+import CheckoutForm from "./CheckoutForm";
+
+import Top from "../../assets/images/cart/top3.jpg";
+
 import { AiFillQuestionCircle } from "react-icons/ai";
 
 import "./styles/Checkout.scss";
@@ -56,74 +60,16 @@ export default function Checkout() {
 
   return (
     <>
+      <div className="checkout__form-header">
+        <img src={Top} alt="" />
+      </div>
       <div className="checkout__main">
         <div className="checkout__form">
-          <div>
-            <div>Cart > Informantion > Shipping > Payment</div>
+          <div className="checkout__total-subtotal">
+            <p>Order summary total:</p>
+            <p>${total}.99</p>
           </div>
-          <div className="checkout__">
-            <div className="checkout__form">
-              <div className="checkout__">
-                <button>PayPal</button>
-              </div>
-              <div className="checkout__">
-                <button>GPay</button>
-              </div>
-            </div>
-          </div>
-          <div>
-            <p>OR</p>
-          </div>
-          <div>
-            <div>
-              <div>
-                <p>Contact information</p>
-              </div>
-              <div>
-                <p>Already have an account?</p>
-                <a href="#">Log in</a>
-              </div>
-            </div>
-            <div>
-              <div>
-                <input type="text" placeholder="Email or mobile phone number" />
-              </div>
-              <div>
-                <input type="radio" />
-                <p>Email me with news and offers</p>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div>
-              <p>Shipping address</p>
-            </div>
-            <div>
-              <input type="text" placeholder="First name" />
-              <input type="text" placeholder="Last name" />
-            </div>
-          </div>
-          <div>
-            <input type="text" placeholder="Company (optional)" />
-            <input type="text" placeholder="Address" />
-            <input
-              type="text"
-              placeholder="Apartment, suite, etc. (optional)"
-            />
-            <input type="text" placeholder="City" />
-          </div>
-          <div>
-            <input type="text" placeholder="Country/region" />
-            <input type="text" placeholder="State" />
-            <input type="text" placeholder="ZIP code" />
-          </div>
-          <div>
-            <input type="text" placeholder="Phone" />
-          </div>
-          <div>
-            <input type="radio" />
-            <p>Save this information for next time</p>
-          </div>
+          <CheckoutForm />
         </div>
         <div className="checkout__outer">
           {cart.map((product) => (
@@ -175,7 +121,7 @@ export default function Checkout() {
               <div className="checkout__total-subtotal-shipping">
                 <div className="checkout__total-subtotal">
                   <p>Subtotal</p>
-                  <p>${total}</p>
+                  <p>${total}.99</p>
                 </div>
                 <div className="checkout__total-shipping">
                   <p>
@@ -190,17 +136,17 @@ export default function Checkout() {
               <div className="checkout__total-price">
                 <h3>Total</h3>
                 <h3>
-                  <span>USD</span> ${total}
+                  <span>USD</span> ${total}.99
                 </h3>
               </div>
-              <div className="checkout__total-link">
-                <div>
+              {/* <div className="checkout__total-link">
+                <div className="checkout__total-return">
                   <Link to="/cart">Return to cart</Link>
                 </div>
-                <div>
+                <div className="checkout__total-shipping">
                   <Link to="/shipping">Continue to shipping</Link>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
