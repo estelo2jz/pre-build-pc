@@ -1,9 +1,6 @@
 import React, { components } from "react";
 import Header from "./components/Header/Header";
-// import Products from './components/Products'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-// import {DataProvider} from './components/DataProvider'
-// import Details from './components/Details'
 import Cart from "./components/Products/Cart";
 import ScrollToTop from "./components/ScrollToTop";
 
@@ -31,7 +28,9 @@ function App() {
             <Header />
             <Routes>
               <ScrollToTop>
-                <Route path="/" exact element={<Home />} />
+                <Route path="/" exact element={<Home />}>
+                  <Home />
+                </Route>
 
                 <Route path="/products" exact element={<BuildPC />} />
                 <Route path="/pages/review" exact element={<Review />} />
