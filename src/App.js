@@ -28,9 +28,8 @@ function App() {
         <div className="App">
           <Router>
             <ScrollToTop>
-              <Header />
-
               <section>
+                <Header />
                 <Routes>
                   <Route path="/" exact element={<Home />} />
 
@@ -41,9 +40,10 @@ function App() {
                   <Route path="/pages/why-pre-build" exact element={<About />} />
                   <Route path="/checkout" exact element={<Checkout />} />
 
+                  {/* <Route path="/cart" exact render={() => <Redirect to="/cart" />} /> */}
                   {/* <Route path="/products" exact element={ <Products /> } /> */}
-                  <Route path="/products/:id" exact element={<Details />} />
 
+                  <Route path="/products/:id" exact element={<Details />} />
                   <Route path="cart" exact element={<Cart />} />
                 </Routes>
               </section>
