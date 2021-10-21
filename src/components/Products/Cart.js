@@ -1,10 +1,11 @@
 import React, { useContext, useState, useEffect } from "react";
 import { DataContext } from "./Data/DataProvider";
-import Colors from "./Colors";
-import Sizes from "./Sizes";
 import { Link } from "react-router-dom";
 
-import './styles/Cart.scss';
+import { AiFillQuestionCircle } from "react-icons/ai";
+import { BsFillCartFill } from "react-icons/bs";
+
+import "./styles/Cart.scss";
 
 export default function Cart() {
   const value = useContext(DataContext);
@@ -56,43 +57,65 @@ export default function Cart() {
 
   return (
     <>
-      {cart.map((product) => (
-        <div className="details cart" key={product._id}>
-          <div
-            className="img-container"
-            style={{ backgroundImage: `url(${product.images[0]})` }}
-          />
-
-          <div className="box-details">
-            <h2 title={product.title}>{product.title}</h2>
-            <h3>${product.price}</h3>
-            {/* <Colors colors={product.colors} /> */}
-            {/* <Sizes sizes={product.sizes} /> */}
-            <p>{product.description}</p>
-            <p>{product.content}</p>
-
-            <div className="amount">
-              <button className="count" onClick={() => reduction(product._id)}>
-                {" "}
-                -{" "}
-              </button>
-              <span>{product.count}</span>
-              <button className="count" onClick={() => increase(product._id)}>
-                {" "}
-                +{" "}
-              </button>
+      <div className="cart__main">
+        <div className="cart__header">
+          <div className="cart__header-top">
+            <p>YOUR CART</p>
+          </div>
+          <div className="cart__header-bottom">
+            <Link to="/products">continue shopping</Link>
+          </div>
+        </div>
+        <div className="cart__outer">
+          {cart.map((product) => (
+            <div className="cart" key={product._id}>
+              <div className="cart__details">
+                <div className="cart__details-left">
+                  <div className="cart__img">
+                    <img src={product.images[0]} alt="" />
+                  </div>
+                  <div className="cart__heading">
+                    <div>
+                      <h2 title={product.title}>{product.title}.</h2>
+                      {/* <p>{product.description}</p> */}
+                    </div>
+                    {/* <div className="cart__price">
+                        <p>Unit Price: ${product.price}</p>
+                      </div> */}
+                    <div
+                      className="cart__delete"
+                      onClick={() => removeProduct(product._id)}
+                    >
+                      <p>Remove</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="cart__details-right">
+                  <div className="cart__amount">
+                    <div className="cart__btn">
+                      <button onClick={() => reduction(product._id)}><span>-</span></button>
+                    </div>
+                    <span>{product.count}</span>
+                    <div className="cart__btn">
+                      <button onClick={() => increase(product._id)}><span>+</span></button>
+                    </div>
+                  </div>
+                  <div className="cart__price">
+                    <p>${product.price}</p>
+                  </div>
+                </div>
+              </div>
             </div>
-
-            <div className="delete" onClick={() => removeProduct(product._id)}>
-              X
+          ))}
+          <div className="cart__total-link">
+            <div className="cart__total-update">
+              <Link to="/cart"><p>UPDATE</p></Link>
+            </div>
+            <div className="cart__total-checkout">
+              <Link to="/checkout"><p><span><BsFillCartFill /></span>CHECK OUT</p></Link>
             </div>
           </div>
         </div>
-      ))}
-
-      <div className="total">
-        <Link to="/payment">Payment</Link>
-        <h3>Total: $ {total}</h3>
       </div>
     </>
   );
