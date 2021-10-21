@@ -1,7 +1,9 @@
 .checkout {
   width: 100%;
+
   .checkout__form {
     width: 100% !important;
+
     * input {
       padding: 15px 10px;
       border-radius: 5px;
@@ -9,6 +11,7 @@
       border: 0.5px solid rgb(162, 162, 162);
       margin: 5px 0px;
     }
+
     * select {
       padding: 15px 10px;
       border-radius: 5px;
@@ -16,9 +19,11 @@
       border: 0.5px solid rgb(162, 162, 162);
       margin: 5px 0px;
     }
+
     select:nth-child(1) {
       margin-right: 10px;
     }
+
     select:nth-child(2) {
       margin-right: 10px;
     }
@@ -138,6 +143,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+
       p {
         font-size: 12px;
         color: rgb(136, 136, 136);
@@ -162,8 +168,8 @@
         .checkout__form-contact-top-bottom {
           display: flex;
           font-size: 14px;
-          p {
-          }
+
+          p {}
 
           a {
             margin-left: 10px;
@@ -185,10 +191,11 @@
         .checkout__form-contact-bottom-radio {
           display: flex;
           padding: 10px 0px;
-          font-size: 14px;  
+          font-size: 14px;
           align-items: center;
+
           p {
-          color: #545454;
+            color: #545454;
             margin-left: 10px;
           }
         }
@@ -243,10 +250,19 @@
 
         input:nth-child(1) {
           margin-right: 15px;
+          // width: 30%;
+
         }
 
         input:nth-child(2) {
           margin-right: 15px;
+          // width: 30%;
+
+        }
+
+        input:nth-child(3) {
+          // margin-right: 15px;
+          // width: 30%;
         }
       }
 
