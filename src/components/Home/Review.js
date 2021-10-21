@@ -67,7 +67,7 @@ const Review = () => {
   return (
     <div className="review">
       <div className="review__heading">
-        <p>WE BUILD FOR THE BEST</p>
+        <p>WE BUILD FOR THE BEST.</p>
       </div>
       <div className="review__outer">
         <div className="review__card">
