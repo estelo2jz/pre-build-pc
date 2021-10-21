@@ -13,6 +13,8 @@ import Products from "./components/Products//Products";
 import { DataProvider } from "./components/Products/Data/DataProvider";
 import Details from "./components/Products/Details/Details";
 
+import Checkout from "./components/Products/Chechout";
+
 import About from "./components/pages/AboutUs/About";
 import BuildPC from "./components/pages/BuildPC/BuildPC";
 import Financing from "./components/pages/Financing/Financing";
@@ -37,6 +39,7 @@ function App() {
                   <Route path="/pages/financing" exact element={<Financing />} />
                   <Route path="/pages/support" exact element={<Support />} />
                   <Route path="/pages/why-pre-build" exact element={<About />} />
+                  <Route path="/checkout" exact element={<Checkout />} />
 
                   {/* <Route path="/products" exact element={ <Products /> } /> */}
                   <Route path="/products/:id" exact element={<Details />} />
