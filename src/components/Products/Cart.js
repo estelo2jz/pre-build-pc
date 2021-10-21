@@ -95,7 +95,7 @@ export default function Cart() {
                     <div className="cart__btn">
                       <button onClick={() => reduction(product._id)}><span>-</span></button>
                     </div>
-                    <span>{product.count}</span>
+                    <span>x{product.count}</span>
                     <div className="cart__btn">
                       <button onClick={() => increase(product._id)}><span>+</span></button>
                     </div>
