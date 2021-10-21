@@ -39,6 +39,15 @@ export default function Cart() {
     setCart([...cart]);
   };
 
+  // const emptyCart = (id) => {
+  //   cart.forEach((item) => {
+  //     if (item._id === id) {
+  //       item.count += 1;
+  //     }
+  //   });
+  //   setCart([...cart]);
+  // };
+
   const removeProduct = (id) => {
     // if(window.confirm("Do you want to delete this product?")){
     // }
