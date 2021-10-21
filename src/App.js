@@ -27,8 +27,8 @@ function App() {
     <DataProvider>
       <div className="App">
         <Router>
-          <Header />
           <section>
+            <Header />
             <Routes>
               <ScrollToTop>
                 <Route path="/" exact element={<Home />} />
