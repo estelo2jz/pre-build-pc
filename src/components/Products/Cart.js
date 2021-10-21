@@ -93,11 +93,15 @@ export default function Cart() {
                 <div className="cart__details-right">
                   <div className="cart__amount">
                     <div className="cart__btn">
-                      <button onClick={() => reduction(product._id)}><span>-</span></button>
+                      <button onClick={() => reduction(product._id)}>
+                        <span>-</span>
+                      </button>
                     </div>
                     <span>x{product.count}</span>
                     <div className="cart__btn">
-                      <button onClick={() => increase(product._id)}><span>+</span></button>
+                      <button onClick={() => increase(product._id)}>
+                        <span>+</span>
+                      </button>
                     </div>
                   </div>
                   <div className="cart__price">
@@ -108,11 +112,48 @@ export default function Cart() {
             </div>
           ))}
           <div className="cart__total-link">
-            <div className="cart__total-update">
-              <Link to="/cart"><p>UPDATE</p></Link>
-            </div>
-            <div className="cart__total-checkout">
-              <Link to="/checkout"><p><span><BsFillCartFill /></span>CHECK OUT</p></Link>
+            <div className="cart__total-link-outer">
+              <div className="cart__total-top">
+                <div className="cart__total-top-p">
+                  <p>Subtotal</p>
+                  <p>${total}.99 USD</p>
+                </div>
+                <div className="cart__total-top-down">
+                  <p>
+                    Taxes and <span>shipping</span> calculated at checkout
+                  </p>
+                </div>
+              </div>
+              <div className="cart__total-bottom">
+                <div className="cart__total-update">
+                  <Link to="/products">
+                    <p>UPDATE</p>
+                  </Link>
+                </div>
+                <div className="cart__total-checkout">
+                  <Link to="/checkout">
+                    <p>
+                      <span>
+                        <BsFillCartFill />
+                      </span>
+                      CHECK OUT
+                    </p>
+                  </Link>
+                </div>
+                {/* <div className="cart__">
+                <div className="cart__form">
+                  <div className="cart__">
+                    <button>PayPal</button>
+                  </div>
+                  <div className="cart__">
+                    <button>GPay</button>
+                  </div>
+                </div>
+                </div> */}
+                      {/* <div>
+                  <p>OR</p>
+                </div> */}
+              </div>
             </div>
           </div>
         </div>
