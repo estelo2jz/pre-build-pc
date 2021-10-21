@@ -53,11 +53,6 @@ export default function Header() {
           <Link to="/pages/review">Reviews</Link>
         </li>
         <li>
-          <Link id="best-sellers" to="/pages/review">
-            Best Sellers
-          </Link>
-        </li>
-        <li>
           <Link to="/pages/financing">Financing</Link>
         </li>
         <li>
