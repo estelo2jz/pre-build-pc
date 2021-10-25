@@ -1,0 +1,36 @@
+.support-questions {
+  background-color: #fff;
+  color: #3a3a3a;
+  padding: 40px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  
+  .support-questions__heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    p {
+      font-size: clamp(30px, 3.5vw, 50px);
+      font-weight: 700;
+      font-style: italic;
+
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .support-questions {
+    
+    .support-questions__heading {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      p {
+  
+      }
+    }
+  }
+}
