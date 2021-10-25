@@ -7,7 +7,8 @@ import PreBuildLogo from "../../assets/images/prebuild.png";
 
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { GoThreeBars } from "react-icons/go";
-import { AiOutlineCloseCircle } from "react-icons/ai";
+import { FaSearch } from "react-icons/fa";
+import { IoIosPerson } from "react-icons/io";
 // AiOutlineCloseCircle
 
 import "./styles/Header.scss";
@@ -67,6 +68,12 @@ export default function Header() {
       </ul>
       <div className="cart-icon">
         <span>{cart.length}</span>
+        <Link className="cart-search" to="/#">
+          <FaSearch />
+        </Link>
+        <Link className="cart-person" to="/#">
+          <IoIosPerson />
+        </Link>
         <Link className="cart-img" to="/cart">
           <AiOutlineShoppingCart />
         </Link>
