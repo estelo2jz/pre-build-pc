@@ -1,0 +1,52 @@
+.support-guides {
+  background-image: url('../../../../assets/images/support/support3.jpg');
+  background-position: center;
+  background-size: cover;
+  height: 35vh;
+  display: flex;
+  // align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0px 50px;
+  color: #3a3a3a;
+
+  .support-guides__heading {
+    p {
+      font-size: clamp(30px, 3.5vw, 50px);
+      font-weight: 700;
+      font-style: italic;
+    }
+  }
+
+  .support-guides__text {
+    width: 50%;
+    padding: 10px 0px;
+    p {
+      // text-align: center;
+      font-size: clamp(10px, 3.5vw, 19px);
+    }
+  }
+}
+
+
+@media screen and (max-width: 500px) {
+  .support-guides {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    .support-guides__heading {
+      p {
+
+      }
+    }
+  
+    .support-guides__text {
+      text-align: center;
+      width: 100%;
+      padding: 10px 0px;
+      p {
+        // text-align: center;
+      }
+    }
+  }
+}
