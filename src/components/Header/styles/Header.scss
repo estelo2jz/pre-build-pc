@@ -14,7 +14,7 @@ header {
   // border-bottom: 1px solid #ccc;
   /* margin-bottom: 20px; */
   z-index: 100;
-  // background-color: #581b98;
+  // background-color: #581b98 !important;
   background-color: transparent;
   box-shadow:
   0 2.8px 2.2px rgba(0, 0, 0, 0.034),
@@ -28,7 +28,7 @@ header {
   .menu {
     font-size:30px;
     .menu-bars {
-      color: rgb(0, 0, 0);
+      color: rgb(255, 255, 255);
     }
   }
   .menu-close {
@@ -48,7 +48,7 @@ header {
 
       a {
         text-decoration: none;
-        color: rgb(0, 0, 0);
+        color: rgb(255, 255, 255);
         font-size: 20px;
       }
 
@@ -73,16 +73,30 @@ header {
   .cart-icon {
     position: relative;
     margin-right: 15px;
-    .cart-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .cart-search {
+      padding: 0px 10px;
+      font-size: 25px;
+      color: rgb(255, 255, 255) !important;
+    }
+    .cart-person {
+      padding: 0px 10px;
       font-size: 30px;
-      color: rgb(0, 0, 0) !important;
+      color: rgb(255, 255, 255) !important;
+    }
+    .cart-img {
+      padding-left: 10px;
+      font-size: 30px;
+      color: rgb(255, 255, 255) !important;
 
     }
 
     span {
       // background: rgb(255, 255, 255);
       // border-radius: 20px;
-      color: rgb(0, 0, 0);
+      color: rgb(255, 255, 255);
       position: absolute;
       top: -20px;
       right: -15px;
@@ -135,6 +149,23 @@ header {
   ul {
     li {
       font-size: 20px;
+    }
+  }
+}
+
+
+@media screen and (max-width: 500px) {
+  header {
+    .logo {
+      // display: none;
+    }
+  }
+  .cart-icon {
+    .cart-search {
+      display: none;
+    }
+    .cart-person {
+      display: none;
     }
   }
 }
