@@ -1,0 +1,134 @@
+.finance-top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  padding: 20px 0px;
+  height: 100%;
+  color: rgb(0, 0, 0);
+
+  .finance-top__top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // background-color: red;
+    width: 50%;
+    // height: 300px;
+    height: 100%;
+
+    .finance-top__top-contents {
+      padding: 30px 0px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      h4 {
+        font-size: 3rem;
+        font-style: italic;
+        font-family: 'Anton', sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        padding: 20px 80px;
+        color: #3a3a3a;
+      }
+
+      p {
+        // width: 100%;
+        font-size: 1.1rem;
+        padding: 0px 80px;
+        text-align: left;
+        color: #3a3a3a;
+
+      }
+    }
+  }
+
+  .finance-top__bottom {
+    width: 50%;
+
+    .finance-top__bottom-contents {
+      padding: 0px 100px;
+      img {
+        // width: 60%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .finance-top {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+
+    .finance-top__top {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      color: rgb(0, 0, 0);
+      // background-color: red;
+      width: 100%;
+      height: 300px;
+
+      .finance-top__top-contents {
+        padding: 0px 10px;
+        margin: 0px;
+
+        h4 {
+          font-size: 2rem;
+          text-align: center;
+          padding: 0px !important;
+
+        }
+
+        p {
+          font-size: 0.9rem;
+          text-align: center;
+        }
+      }
+    }
+
+    .finance-top__bottom {
+      width: 100%;
+
+      .finance-top__bottom-contents {
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .finance-top {
+
+    .finance-top__top {
+
+      .finance-top__top-contents {
+        width: 100%;
+        
+        h4 {
+          width: 100%;
+          // font-size: 1.5rem;
+          padding: 0px !important;
+        
+        }
+        
+        p {
+        }
+      }
+    }
+
+    .finance-top__bottom {
+
+      .finance-top__bottom-contents {
+        img {
+        }
+      }
+    }
+  }
+}
