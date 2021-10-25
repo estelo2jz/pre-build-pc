@@ -1,0 +1,41 @@
+.support-contact {
+  background-image: url('../../../../assets/images/support/support2.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 80px;
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 80vh;
+  color: #fff;
+  .support-contact__heading {
+    p {
+      font-size: clamp(30px, 3.5vw, 50px);
+      font-weight: 700;
+      font-style: italic;
+      
+    }
+  }
+  .support-contact__text {
+    p {
+      font-size: clamp(14px, 2.5vw, 18px);
+        
+      
+      span {
+        color: #c25be9;
+    
+        &:hover {
+          text-decoration: underline;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .support-contact {
+  background-position: right;
+  // background-size: contain;
+  }
+}
