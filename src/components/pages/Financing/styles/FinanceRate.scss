@@ -1,0 +1,123 @@
+.finance-rate {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  color: #3a3a3a;
+  padding: 20px 20px;
+  
+
+  .finance-rate__container {
+    .finance-rate__heading {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px 0px;
+      p {
+        font-size: clamp(25px, 2.5vw, 50px);
+        font-weight: 700;
+        font-style: italic;
+      }
+    }
+
+    .finance-rate__btn {
+      padding: 10px 0px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      button {
+        padding: 10px 80px;
+        border-radius: 10px;
+        outline: none;
+        border: none;
+        font-size: 16px;
+        font-weight: 700;
+        color: white;
+        background: #b740e2;
+        border: 1px solid #c25be9;
+        background-position: center;
+        letter-spacing: 2px;
+        font-size: clamp(15px, 2.5vw, 20px);
+        cursor: pointer;
+      }
+    }
+
+    .finance-rate__help {
+      padding: 10px 0px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 70px;
+      p {
+        font-size: clamp(25px, 2.5vw, 50px);
+        font-weight: 700;
+        font-style: italic;
+      }
+    }
+
+    .finance-rate__faq {
+      padding: 10px 0px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      p {
+        font-size: clamp(15px, 2.5vw, 20px);
+      }
+      span {
+        color: #c25be9;
+        cursor: pointer;
+        
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    
+    .finance-rate__subject {
+      padding: 10px 0px;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      p {
+        font-size: clamp(15px, 2.5vw, 20px);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .finance-rate {  
+    .finance-rate__container {
+      .finance-rate__heading {
+
+        p {
+
+        }
+      }
+  
+      .finance-rate__btn {
+
+        button {
+        }
+      }
+  
+      .finance-rate__help {
+
+      }
+  
+      .finance-rate__faq {
+
+        span {
+          
+          &:hover {
+          }
+        }
+      }
+      
+      .finance-rate__subject {
+        padding: 0px !important;
+      }
+    }
+  }
+}
