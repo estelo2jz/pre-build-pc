@@ -6,6 +6,10 @@ import DetailsThumb from "../DetailsThumb";
 import { Link } from "react-router-dom";
 import "./styles/Details.scss";
 
+import { IoMdSettings } from 'react-icons/io';
+import { BiPaperPlane } from 'react-icons/bi';
+import { AiOutlineShoppingCart } from "react-icons/ai";
+
 export default function Details() {
   const { id } = useParams();
   const value = useContext(DataContext);
@@ -28,6 +32,26 @@ export default function Details() {
 
   return (
     <>
+      <div className="details__top-heading">
+        <div className="details__top-recommended">
+          <p>Your Recommended Build.</p>
+        </div>
+        <div className="details__top-btn-container">
+          <div className="details__top-btns">
+            <div className="details__top-btn-customize">
+              <button><span><IoMdSettings /></span>CUSTOMIZE</button>
+            </div>
+            <div className="details__top-btn-save">
+              <button><span><BiPaperPlane /></span>SAVE&EMAIL</button>
+            </div>
+            <div className="details__top-btn-checkout">
+              <Link to="/checkout">
+                <button><span><AiOutlineShoppingCart /></span>CHECKOUT</button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
       {details.map((product) => (
         <div className="details" key={product._id}>
           <div className="details__img-container">
@@ -76,15 +100,16 @@ export default function Details() {
                 </div>
               </div>
               <div className="box-details__content-cart">
-                <Link
+                {/* <Link
                   to="/cart"
                   // className="cart"
-                  onClick={() => addCart(product._id)}
-                >
-                <button>
-                  Add to cart
-                </button>
-                </Link>
+                > */}
+                <div className="cart">
+                  <button  onClick={() => addCart(product._id)}>
+                    Add to cart
+                  </button>
+                </div>
+                {/* </Link> */}
               </div>
             </div>
           </div>
