@@ -1,0 +1,33 @@
+.support-support {
+  background: #f0f0f0;
+  padding: 55px 35px;
+  width: 50%;
+  display: flex;
+  // align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  .support-support__heading {
+    p {
+      font-size: clamp(15px, 3.5vw, 25px);
+      font-weight: 700;
+      font-style: italic;
+    }
+  }
+  .support-support__text {}
+}
+
+
+
+
+@media screen and (max-width: 500px) {
+  .support-support {
+    width: 100%;
+    .support-support__heading {
+      p {
+      }
+    }
+    .support-support__text {}
+  }
+  
+  
+}
