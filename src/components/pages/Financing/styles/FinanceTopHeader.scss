@@ -1,0 +1,47 @@
+.finance-top-header {
+  background-image: url('../../../../assets/images/finance/financebg.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  .finance-top-header__container {
+    .finance-top-header__top {
+      padding: 0px 20px;
+      p {
+        font-size: clamp(30px, 2.5vw, 80px) !important;
+        font-weight: 700;
+        letter-spacing:1px;
+        font-style: italic;
+     
+      }
+    }
+    .finance-top-header__center {
+      padding: 20px;
+      p {
+        font-size: clamp(12px, 2.5vw, 15px);
+      }
+    }
+    .finance-top-header__bottom {
+      padding: 20px;
+      button {
+        background: #c25be9;
+        background-position: center;
+        outline: none;
+        border: none;
+        font-size: clamp(20px, 2.5vw, 20px);
+        font-weight: 700;
+        letter-spacing:2px;
+        color: white;
+        padding: 15px 40px;
+        border-radius: 10px;
+        width: 100%;
+        cursor: pointer;
+      }
+
+    }
+  }
+}
