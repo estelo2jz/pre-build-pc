@@ -1,16 +1,18 @@
 .support-questions {
   background-color: #fff;
   color: #3a3a3a;
-  padding: 40px 10px;
+  padding: 0px 10px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding-bottom: 100px;
   
   .support-questions__heading {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 40px 0px;
     p {
       font-size: clamp(30px, 3.5vw, 50px);
       font-weight: 700;
