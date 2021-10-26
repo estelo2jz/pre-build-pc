@@ -71,7 +71,7 @@ export default function Header() {
         <Link className="cart-search" to="/#">
           <FaSearch />
         </Link>
-        <Link className="cart-person" to="/#">
+        <Link className="cart-person" to="/login">
           <IoIosPerson />
         </Link>
         <Link className="cart-img" to="/cart">
