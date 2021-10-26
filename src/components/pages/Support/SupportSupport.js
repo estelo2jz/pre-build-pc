@@ -1,5 +1,7 @@
 import React from "react";
 
+import AccordionSupport from './Data/AccordionSupport';
+
 import "./styles/SupportSupport.scss";
 
 const SupportSupport = () => {
@@ -16,6 +18,7 @@ const SupportSupport = () => {
           while playin
         </p>
       </div>
+      <AccordionSupport />
     </div>
   );
 };
