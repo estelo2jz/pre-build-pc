@@ -116,7 +116,7 @@ const Review = () => {
                   <span>
                     <FaQuoteLeft />
                   </span>
-                  {reviewOpinion1}
+                  {reviewOpinion2}
                   <span>
                     <FaQuoteRight />
                   </span>
@@ -151,7 +151,7 @@ const Review = () => {
                   <span>
                     <FaQuoteLeft />
                   </span>
-                  {reviewOpinion1}
+                  {reviewOpinion3}
                   <span>
                     <FaQuoteRight />
                   </span>
@@ -187,7 +187,7 @@ const Review = () => {
                   <span>
                     <FaQuoteLeft />
                   </span>
-                  {reviewOpinion1}
+                  {reviewOpinion4}
                   <span>
                     <FaQuoteRight />
                   </span>
@@ -222,7 +222,7 @@ const Review = () => {
                   <span>
                     <FaQuoteLeft />
                   </span>
-                  {reviewOpinion1}
+                  {reviewOpinion5}
                   <span>
                     <FaQuoteRight />
                   </span>
@@ -257,7 +257,7 @@ const Review = () => {
                   <span>
                     <FaQuoteLeft />
                   </span>
-                  {reviewOpinion1}
+                  {reviewOpinion6}
                   <span>
                     <FaQuoteRight />
                   </span>
@@ -292,7 +292,7 @@ const Review = () => {
                   <span>
                     <FaQuoteLeft />
                   </span>
-                  {reviewOpinion1}
+                  {reviewOpinion7}
                   <span>
                     <FaQuoteRight />
                   </span>
@@ -327,7 +327,7 @@ const Review = () => {
                   <span>
                     <FaQuoteLeft />
                   </span>
-                  {reviewOpinion1}
+                  {reviewOpinion8}
                   <span>
                     <FaQuoteRight />
                   </span>
