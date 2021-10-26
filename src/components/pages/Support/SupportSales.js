@@ -1,5 +1,7 @@
 import React from "react";
 
+import AccordionSales from './Data/AccordionSales';
+
 import "./styles/SupportSales.scss";
 
 const SupportSales = () => {
@@ -15,6 +17,7 @@ const SupportSales = () => {
           often. For additional help, contact our team for expert advice.
         </p>
       </div>
+      <AccordionSales />
     </div>
   );
 };
