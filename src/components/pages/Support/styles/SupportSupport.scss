@@ -17,7 +17,18 @@
 }
 
 
-
+@media screen and (max-width: 1000px) {
+  .support-support {
+    width: 100%;
+    .support-support__heading {
+      p {
+      }
+    }
+    .support-support__text {}
+  }
+  
+  
+}
 
 @media screen and (max-width: 500px) {
   .support-support {
