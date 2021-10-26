@@ -12,6 +12,7 @@ import Details from "./components/Products/Details/Details";
 
 import Checkout from "./components/Products/Chechout";
 
+import Login from './components/pages/Login/Login';
 import About from "./components/pages/AboutUs/About";
 import BuildPC from "./components/pages/BuildPC/BuildPC";
 import Financing from "./components/pages/Financing/Financing";
@@ -38,6 +39,7 @@ function App() {
                 <Route path="/pages/support" exact element={<Support />} />
                 <Route path="/pages/why-pre-build" exact element={<About />} />
                 <Route path="/checkout" exact element={<Checkout />} />
+                <Route path="/login" exact element={<Login />} />
 
                 {/* <Route path="/cart" exact render={() => <Redirect to="/cart" />} /> */}
                 {/* <Route path="/products" exact element={ <Products /> } /> */}
