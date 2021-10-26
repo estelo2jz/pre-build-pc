@@ -3,6 +3,7 @@
   padding: 55px 35px;
   width: 50%;
   display: flex;
+  height: 100%;
   // align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -18,7 +19,18 @@
 }
 
 
-
+@media screen and (max-width: 1000px) {
+  .support-sale {
+    width: 100%;
+    .support-sale__heading {
+      p {
+      }
+    }
+    .support-sale__text {}
+  }
+  
+  
+}
 
 @media screen and (max-width: 500px) {
   .support-sale {
