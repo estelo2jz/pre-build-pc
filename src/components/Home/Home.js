@@ -13,6 +13,7 @@ const Home = () => {
       <Pricing />
       <Review />
       <BestSellers />
+      <Follow />
       {/* best sellers component*/}
       {/* follow component */}
       {/* from  */}
