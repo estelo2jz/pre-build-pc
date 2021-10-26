@@ -1,4 +1,5 @@
 import React from "react";
+import ReactPlayer from 'react-player'
 import "./styles/Review.scss";
 
 import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
@@ -75,6 +76,7 @@ const Review = () => {
             <div className="review__top">
               <div className="review__top-img">
                 <img src={Review1} alt="" />
+                {/* <ReactPlayer controls="true" className="review__top-video" url='https://www.youtube.com/watch?v=ysz5S6PUM-U' /> */}
               </div>
               <div className="review__top-opinion">
                 <p>
