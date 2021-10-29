@@ -8,7 +8,7 @@
   flex-direction: column;
   padding: 100px 20px;
   overflow: hidden;
-  grid-gap: 10px;
+  grid-gap: 20px;
   background-color: #fff;
   
   .review-video__container {
@@ -16,9 +16,10 @@
     height: 100%;
     border-radius: 10px;
     transition: box-shadow .3s;
-    border-radius: 10px;
     // background: #fff;
     float: left;
+    // padding: 20px 10px;
+    // padding-bottom: 50px;
     
     &:hover {
       box-shadow: 0 0 11px rgba(33, 33, 33, .2);
@@ -113,7 +114,7 @@
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 300px) {
   .review-video {
     .review-video__container {
       .review-video__top {
