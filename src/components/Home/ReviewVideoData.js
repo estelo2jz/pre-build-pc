@@ -62,7 +62,7 @@ export const Data = [
     name: "Tech By Matt.",
     comments: "Thanks for the shout out @TechByMatt! We're glad you're loving the #BuildRedux PC.",
     img: ReviewAvatar8,
-    video: "https://cdn.shopify.com/s/files/1/0408/5792/7834/files/EmJIPphX0AMzzKG_800x.jpg?v=1615169785",
+    video: "https://www.youtube.com/watch?v=eERtcqmLkwY",
     summary: "This is a system I've been testing from @BuildRedux. They're a new prebuilt company selling systems for the cost of the parts + a $75 build fee. They have amazing systems with Ryzen 5000 series CPUs and 3070s available for pre-order now. P.S. check out that cable management!",
   },
 ];
