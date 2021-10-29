@@ -1,8 +1,4 @@
 .review {
-  background-image: url('https://cdn.shopify.com/s/files/1/0408/5792/7834/files/Ambassador_mobile_750x.jpg?v=1600137927');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
   height: 100%;
   // padding: 100px 0px;
   
@@ -13,13 +9,17 @@
     padding-top: 100px;
     padding-left: 40px;
     p {
-      font-size: 30px;
+      font-size: 45px;
       font-weight: 800;
       color: #fff;
       font-style: italic;
     }
   }
   
+  background-image: url('https://cdn.shopify.com/s/files/1/0408/5792/7834/files/Ambassador_mobile_750x.jpg?v=1600137927');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   .review__outer {
     display: flex;
     // align-items: center;
@@ -36,38 +36,23 @@
     .review__card {
       border-radius: 10px;
       background-color: #e2f3f5;
-      // width: 400px;
       height: 100%;
       margin: 5px;
       // height: 500px;
       
       .review__top-container {
+        width: 300px;
         .review__top {
           overflow: hidden;
-          // display: flex;
-          // align-items: center;
-          // justify-content:center;
-          .review__top-img {
-            width: 350px;
-            
-            img {
-              background-size: cover;
-              background-position: center;
-              height: 300px;
-              border-top-left-radius: 10px;
-              border-top-right-radius: 10px;
-              // height: 200px;
-              // height: 100%;
-            }
-
-          }
-
           .review__top-opinion {
-            padding: 10px 20px;
+            padding: 20px 20px;
             font-size: 13px;
-            height: 150px;
+            height: 100%;
             display: flex;
             justify-content: center;
+            p {
+              font-size: 15px;
+            }
             span {
               padding: 0px 10px;
               color: rgb(0, 217, 255);
@@ -80,8 +65,7 @@
         .review__bottom {
           display: flex;
           align-items: center;
-          padding-bottom: 20px;
-
+          padding-top: 10px;
           .review__bottom-img {
             padding: 10px 20px;
 
@@ -101,13 +85,8 @@
             p {
               font-weight: 700;
               font-size: 20px;
+              color: rgb(70, 69, 69);
             }
-          }
-
-          .review__bottom-bio {
-            padding: 10px 20px;
-            font-size: 11px;
-            height: 60px;
           }
         }
       }
