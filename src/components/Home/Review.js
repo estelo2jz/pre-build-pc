@@ -1,17 +1,10 @@
 import React from "react";
-import ReactPlayer from 'react-player'
+import { Data } from "./ReviewVideoData";
 import "./styles/Review.scss";
 
-import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
+import ReviewVideo from "./ReviewVideo";
 
-import Review1 from "../../assets/images/review/review1.jpg";
-import Review2 from "../../assets/images/review/review2.jpg";
-import Review3 from "../../assets/images/review/review3.jpg";
-import Review4 from "../../assets/images/review/review5.jpg";
-import Review5 from "../../assets/images/review/review6.jpg";
-import Review6 from "../../assets/images/review/review7.png";
-import Review7 from "../../assets/images/review/review8.png";
-import Review8 from "../../assets/images/review/review9.jpg";
+import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
 
 import ReviewAvatar1 from "../../assets/images/review/mrtop.jpg";
 import ReviewAvatar2 from "../../assets/images/review/shortcircuit.jpg";
@@ -71,289 +64,43 @@ const Review = () => {
         <p>WE BUILD FOR THE BEST.</p>
       </div>
       <div className="review__outer">
-        <div className="review__card">
-          <div className="review__top-container">
-            <div className="review__top">
-              <div className="review__top-img">
-                <img src={Review1} alt="" />
-                {/* <ReactPlayer controls="true" className="review__top-video" url='https://www.youtube.com/watch?v=ysz5S6PUM-U' /> */}
-              </div>
-              <div className="review__top-opinion">
-                <p>
-                  <span>
-                    <FaQuoteLeft />
-                  </span>
-                  {reviewOpinion1}
-                  <span>
-                    <FaQuoteRight />
-                  </span>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="review__bottom-container">
-            <div className="review__bottom">
-              <div className="review__bottom-img">
-                <img src={ReviewAvatar1} alt="" />
-              </div>
-              <div className="review__bottom-profile">
-                <div className="review__bottom-name">
-                  <p>{reviewName1}</p>
+        {Data.map((item, index) => {
+          return (
+            <>
+              <div className="review__card">
+                <div className="review__bottom-container">
+                  <div className="review__bottom">
+                    <div className="review__bottom-img">
+                      <img src={item.img} alt="" />
+                    </div>
+                    <div className="review__bottom-profile">
+                      <div className="review__bottom-name">
+                        <p>{item.name}</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div className="review__bottom-bio">
-                  <p>{reviewBio1}</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="review__card">
-          <div className="review__top-container">
-            <div className="review__top">
-              <div className="review__top-img">
-                <img src={Review2} alt="" />
-              </div>
-              <div className="review__top-opinion">
-                <p>
-                  <span>
-                    <FaQuoteLeft />
-                  </span>
-                  {reviewOpinion2}
-                  <span>
-                    <FaQuoteRight />
-                  </span>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="review__bottom-container">
-            <div className="review__bottom">
-              <div className="review__bottom-img">
-                <img src={ReviewAvatar2} alt="" />
-              </div>
-              <div className="review__bottom-profile">
-                <div className="review__bottom-name">
-                  <p>{reviewName2}</p>
-                </div>
-                <div className="review__bottom-bio">
-                  <p>{reviewBio2}</p>
+                <div className="review__top-container">
+                  <div className="review__top">
+                    <div className="review__top-opinion">
+                      <p>
+                        <span>
+                          <FaQuoteLeft />
+                        </span>
+                        {item.summary}
+                        <span>
+                          <FaQuoteRight />
+                        </span>
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-        <div className="review__card">
-          <div className="review__top-container">
-            <div className="review__top">
-              <div className="review__top-img">
-                <img src={Review3} alt="" />
-              </div>
-              <div className="review__top-opinion">
-                <p>
-                  <span>
-                    <FaQuoteLeft />
-                  </span>
-                  {reviewOpinion3}
-                  <span>
-                    <FaQuoteRight />
-                  </span>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="review__bottom-container">
-            <div className="review__bottom">
-              <div className="review__bottom-img">
-                <img src={ReviewAvatar3} alt="" />
-              </div>
-              <div className="review__bottom-profile">
-                <div className="review__bottom-name">
-                  <p>{reviewName3}</p>
-                </div>
-                <div className="review__bottom-bio">
-                  <p>{reviewBio3}</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="review__card">
-          <div className="review__top-container">
-            <div className="review__top">
-              <div className="review__top-img">
-                <img src={Review4} alt="" />
-              </div>
-              <div className="review__top-opinion">
-                <p>
-                  <span>
-                    <FaQuoteLeft />
-                  </span>
-                  {reviewOpinion4}
-                  <span>
-                    <FaQuoteRight />
-                  </span>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="review__bottom-container">
-            <div className="review__bottom">
-              <div className="review__bottom-img">
-                <img src={ReviewAvatar4} alt="" />
-              </div>
-              <div className="review__bottom-profile">
-                <div className="review__bottom-name">
-                  <p>{reviewName4}</p>
-                </div>
-                <div className="review__bottom-bio">
-                  <p>{reviewBio4}</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="review__card">
-          <div className="review__top-container">
-            <div className="review__top">
-              <div className="review__top-img">
-                <img src={Review5} alt="" />
-              </div>
-              <div className="review__top-opinion">
-                <p>
-                  <span>
-                    <FaQuoteLeft />
-                  </span>
-                  {reviewOpinion5}
-                  <span>
-                    <FaQuoteRight />
-                  </span>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="review__bottom-container">
-            <div className="review__bottom">
-              <div className="review__bottom-img">
-                <img src={ReviewAvatar5} alt="" />
-              </div>
-              <div className="review__bottom-profile">
-                <div className="review__bottom-name">
-                  <p>{reviewName5}</p>
-                </div>
-                <div className="review__bottom-bio">
-                  <p>{reviewBio5}</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="review__card">
-          <div className="review__top-container">
-            <div className="review__top">
-              <div className="review__top-img">
-                <img src={Review6} alt="" />
-              </div>
-              <div className="review__top-opinion">
-                <p>
-                  <span>
-                    <FaQuoteLeft />
-                  </span>
-                  {reviewOpinion6}
-                  <span>
-                    <FaQuoteRight />
-                  </span>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="review__bottom-container">
-            <div className="review__bottom">
-              <div className="review__bottom-img">
-                <img src={ReviewAvatar6} alt="" />
-              </div>
-              <div className="review__bottom-profile">
-                <div className="review__bottom-name">
-                  <p>{reviewName6}</p>
-                </div>
-                <div className="review__bottom-bio">
-                  <p>{reviewBio6}</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="review__card">
-          <div className="review__top-container">
-            <div className="review__top">
-              <div className="review__top-img">
-                <img src={Review7} alt="" />
-              </div>
-              <div className="review__top-opinion">
-                <p>
-                  <span>
-                    <FaQuoteLeft />
-                  </span>
-                  {reviewOpinion7}
-                  <span>
-                    <FaQuoteRight />
-                  </span>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="review__bottom-container">
-            <div className="review__bottom">
-              <div className="review__bottom-img">
-                <img src={ReviewAvatar7} alt="" />
-              </div>
-              <div className="review__bottom-profile">
-                <div className="review__bottom-name">
-                  <p>{reviewName7}</p>
-                </div>
-                <div className="review__bottom-bio">
-                  <p>{reviewBio7}</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="review__card">
-          <div className="review__top-container">
-            <div className="review__top">
-              <div className="review__top-img">
-                <img src={Review8} alt="" />
-              </div>
-              <div className="review__top-opinion">
-                <p>
-                  <span>
-                    <FaQuoteLeft />
-                  </span>
-                  {reviewOpinion8}
-                  <span>
-                    <FaQuoteRight />
-                  </span>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="review__bottom-container">
-            <div className="review__bottom">
-              <div className="review__bottom-img">
-                <img src={ReviewAvatar8} alt="" />
-              </div>
-              <div className="review__bottom-profile">
-                <div className="review__bottom-name">
-                  <p>{reviewName8}</p>
-                </div>
-                <div className="review__bottom-bio">
-                  <p>{reviewBio8}</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+            </>
+          );
+        })}
       </div>
+      <ReviewVideo />
     </div>
   );
 };
