@@ -100,16 +100,16 @@ export default function Details() {
                 </div>
               </div>
               <div className="box-details__content-cart">
-                {/* <Link
+                <Link
                   to="/cart"
                   // className="cart"
-                > */}
+                >
                 <div className="cart">
                   <button  onClick={() => addCart(product._id)}>
                     Add to cart
                   </button>
                 </div>
-                {/* </Link> */}
+                </Link>
               </div>
             </div>
           </div>
