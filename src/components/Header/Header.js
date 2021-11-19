@@ -68,12 +68,12 @@ export default function Header() {
       </ul>
       <div className="cart-icon">
         <span>{cart.length}</span>
-        <Link className="cart-search" to="/#">
+        {/* <Link className="cart-search" to="/#">
           <FaSearch />
         </Link>
         <Link className="cart-person" to="/login">
           <IoIosPerson />
-        </Link>
+        </Link> */}
         <Link className="cart-img" to="/cart">
           <AiOutlineShoppingCart />
         </Link>
