@@ -24,7 +24,7 @@ const CheckoutForm = () => {
               </span>
             </p>
             <p>
-              Informantion
+              Information
               <span>
                 {" "}
                 <BiCaretRight />
