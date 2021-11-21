@@ -28,6 +28,7 @@ function App() {
     <DataProvider>
       <div className="App">
         <Router>
+          <ScrollToTop />
           <section>
             <Header />
             <Routes>
@@ -43,7 +44,11 @@ function App() {
               <Route path="/checkout" exact element={<Checkout />} />
               <Route path="/shipping" exact element={<Shipping />} />
               <Route path="/payment" exact element={<Payment />} />
-              <Route path="/transaction" exact element={<TransactionComplete />} />
+              <Route
+                path="/transaction"
+                exact
+                element={<TransactionComplete />}
+              />
               <Route path="/login" exact element={<Login />} />
 
               {/* <Route path="/cart" exact render={() => <Redirect to="/cart" />} /> */}
