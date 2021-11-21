@@ -37,21 +37,23 @@
   }
 
   .cart__outer {
+    padding: 0px 300px;
     .cart {
       .cart__details {
         border-bottom: 1px solid #333;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         width: 100%;
         // background-color: red;
+        text-align: left;
         padding: 10px 10px;
-
+        
         .cart__details-left {
           text-align: left;
           display: flex;
           align-items: center;
-          width: 50%;
-          width: 100%;
+          // width: 50%;
+          // width: 100%;
           color: #fff;
 
           .cart__img {
@@ -96,7 +98,7 @@
           display: flex;
 
           align-items: center;
-          width: 50%;
+          // width: 50%;
 
           .cart__amount {
             display: flex;
@@ -236,6 +238,7 @@
 @media screen and (max-width: 1200px) {
   .cart__main {
     .cart__outer {
+      padding: 0px;
       .cart {
         .cart__details {
           // display: flex;
