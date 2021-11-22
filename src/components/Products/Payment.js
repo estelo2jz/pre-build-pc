@@ -78,8 +78,7 @@ export default function Payment() {
                 <div className="checkout__details">
                   <div className="checkout__img">
                     <img src={product.images[0]} alt="" />
-
-                    <div className="checkout__amount">
+                    {/* <div className="checkout__amount">
                       <div className="checkout__btn">
                         <button onClick={() => reduction(product._id)}>
                           -
@@ -89,9 +88,8 @@ export default function Payment() {
                       <div className="checkout__btn">
                         <button onClick={() => increase(product._id)}>+</button>
                       </div>
-                    </div>
+                    </div> */}
                   </div>
-                  <div></div>
                   <div className="checkout__heading">
                     <h2 title={product.title}>{product.title}</h2>
                   </div>
@@ -99,12 +97,12 @@ export default function Payment() {
                     <p>${product.price}</p>
                   </div>
                 </div>
-                <div
+                {/* <div
                   className="checkout__delete"
                   onClick={() => removeProduct(product._id)}
                 >
                   <p>remove</p>
-                </div>
+                </div> */}
               </div>
             </div>
           ))}
