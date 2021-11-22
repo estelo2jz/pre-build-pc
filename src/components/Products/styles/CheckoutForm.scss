@@ -352,6 +352,14 @@
 @media screen and (max-width: 600px) {
   .checkout {
     .checkout__form {
+      .checkout__express {
+        .checkout__express-container {
+          flex-direction: column;
+          .checkout__express-paypal {
+            padding-bottom: 10px;
+          }
+        }
+      }
       .checkout__form-contact-container {
         .checkout__form-contact-top {
           .checkout__form-contact-top-head {}
