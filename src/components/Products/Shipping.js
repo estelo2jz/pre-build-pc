@@ -126,17 +126,20 @@ export default function Shipping() {
                 <div className="checkout__total-shipping">
                   <p>
                     Shipping{" "}
-                    <span>
-                      <AiFillQuestionCircle />
-                    </span>
                   </p>
-                  <p>Calculated at next step</p>
+                  <p>$45.00</p>
+                </div>
+                <div className="checkout__total-shipping">
+                  <p>
+                    Taxes
+                  </p>
+                  <p>$86.00</p>
                 </div>
               </div>
               <div className="checkout__total-price">
                 <h3>Total</h3>
                 <h3>
-                  <span>USD</span> ${total}.99
+                  <span>USD</span> ${total + 45.00 + 86.00}.99
                 </h3>
               </div>
               {/* <div className="checkout__total-link">
