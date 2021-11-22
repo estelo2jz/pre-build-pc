@@ -132,11 +132,17 @@ export default function Checkout() {
                   </p>
                   <p>Calculated at next step</p>
                 </div>
+                <div className="checkout__total-shipping">
+                  <p>
+                    Taxes (estimated){" "}
+                  </p>
+                  <p>$86.00</p>
+                </div>
               </div>
               <div className="checkout__total-price">
                 <h3>Total</h3>
                 <h3>
-                  <span>USD</span> ${total}.99
+                  <span>USD</span> ${total + 86.00}.99
                 </h3>
               </div>
               {/* <div className="checkout__total-link">
