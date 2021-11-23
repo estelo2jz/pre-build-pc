@@ -8,7 +8,7 @@ import Top from "../../assets/images/cart/top3.jpg";
 
 import { AiFillQuestionCircle } from "react-icons/ai";
 
-import "./styles/Checkout.scss";
+import "./styles/Shipping.scss";
 
 export default function Shipping() {
   const value = useContext(DataContext);
@@ -60,46 +60,46 @@ export default function Shipping() {
 
   return (
     <>
-      <div className="checkout__form-header">
+      <div className="shipping__form-header">
         <img src={Top} alt="" />
       </div>
-      <div className="checkout__main">
-        <div className="checkout__form">
-          <div className="checkout__total-subtotal">
+      <div className="shipping__main">
+        <div className="shipping__form">
+          <div className="shipping__total-subtotal">
             <p>Order summary total:</p>
             <p>${total}.99</p>
           </div>
           <ShippingForm />
         </div>
-        <div className="checkout__outer">
+        <div className="shipping__outer">
           {cart.map((product) => (
             <div className="cart" key={product._id}>
-              <div className="checkout__container">
-                <div className="checkout__details">
-                  <div className="checkout__img">
+              <div className="shipping__container">
+                <div className="shipping__details">
+                  <div className="shipping__img">
                     <img src={product.images[0]} alt="" />
-                    {/* <div className="checkout__amount">
-                      <div className="checkout__btn">
+                    {/* <div className="shipping__amount">
+                      <div className="shipping__btn">
                         <button onClick={() => reduction(product._id)}>
                           -
                         </button>
                       </div>
                       <span>{product.count}</span>
-                      <div className="checkout__btn">
+                      <div className="shipping__btn">
                         <button onClick={() => increase(product._id)}>+</button>
                       </div>
                     </div> */}
                   </div>
                   <div></div>
-                  <div className="checkout__heading">
+                  <div className="shipping__heading">
                     <h2 title={product.title}>{product.title}</h2>
                   </div>
-                  <div className="checkout__price">
+                  <div className="shipping__price">
                     <p>${product.price}</p>
                   </div>
                 </div>
                 {/* <div
-                  className="checkout__delete"
+                  className="shipping__delete"
                   onClick={() => removeProduct(product._id)}
                 >
                   <p>remove</p>
@@ -107,45 +107,45 @@ export default function Shipping() {
               </div>
             </div>
           ))}
-          <div className="checkout__total">
-            <div className="checkout__coupon">
-              <div className="checkout__input">
+          <div className="shipping__total">
+            <div className="shipping__coupon">
+              <div className="shipping__input">
                 <input type="text" placeholder="Discount code" />
               </div>
-              <div className="checkout__btn">
+              <div className="shipping__btn">
                 <button>Apply</button>
               </div>
             </div>
-            <div className="checkout__total-container">
-              <div className="checkout__total-subtotal-shipping">
-                <div className="checkout__total-subtotal">
+            <div className="shipping__total-container">
+              <div className="shipping__total-subtotal-shipping">
+                <div className="shipping__total-subtotal">
                   <p>Subtotal</p>
                   <p>${total}.99</p>
                 </div>
-                <div className="checkout__total-shipping">
+                <div className="shipping__total-shipping">
                   <p>
                     Shipping{" "}
                   </p>
                   <p>$45.00</p>
                 </div>
-                <div className="checkout__total-shipping">
+                <div className="shipping__total-shipping">
                   <p>
                     Taxes
                   </p>
                   <p>$86.00</p>
                 </div>
               </div>
-              <div className="checkout__total-price">
+              <div className="shipping__total-price">
                 <h3>Total</h3>
                 <h3>
                   <span>USD</span> ${total + 45.00 + 86.00}.99
                 </h3>
               </div>
-              {/* <div className="checkout__total-link">
-                <div className="checkout__total-return">
+              {/* <div className="shipping__total-link">
+                <div className="shipping__total-return">
                   <Link to="/cart">Return to cart</Link>
                 </div>
-                <div className="checkout__total-shipping">
+                <div className="shipping__total-shipping">
                   <Link to="/shipping">Continue to shipping</Link>
                 </div>
               </div> */}
