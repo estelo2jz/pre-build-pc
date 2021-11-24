@@ -7,6 +7,36 @@
   justify-content: center;
   flex-direction: column;
   margin-bottom: 35px;
+  margin-top: 20px;
+  // border: 1px solid #d9d9d9;
+}
+
+.credit-card__container {
+  display: flex;
+  flex-direction: column;
+
+  .credit-card__main-section {
+    input {
+      width: 100%;
+      padding: 15px;
+      border-radius: 5px;
+      border: 1px solid #d9d9d9;
+      margin: 5px;
+      
+    }
+    input:focus {
+      border-color: #c25be9;
+      outline: none;
+    }
+
+    .credit-card__main-date {
+      display: flex;
+      flex-wrap: wrap;
+      input {
+        width: 50%;
+      }
+    }
+  }
 }
 
 
