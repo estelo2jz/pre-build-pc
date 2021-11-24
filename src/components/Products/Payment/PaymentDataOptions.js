@@ -1,8 +1,19 @@
+import './PaymentOptions.scss';
+
 export const Data = [
   {
     paymentOption: "Credit card",
     answer:
-      "Click 'Build Your PC' at the top of our website to get started. Our online PC builder will guide you step-by-step on building the right gaming PC for your needs and budget.",
+      <div className="credit-card__container">
+        <div className="credit-card__main-section">
+          <input type="text" placeholder="Card number" />
+          <input type="text" placeholder="Name on card" />
+          <div className="credit-card__main-date">
+            <input type="text" placeholder="Expiration date (MM / YY)" />
+            <input type="text" placeholder="Security code" />
+          </div>
+        </div>
+      </div>
   },
   {
     paymentOption: "Paypal",
