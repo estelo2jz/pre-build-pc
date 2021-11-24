@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 
 import { DataContext } from "./Data/DataProvider";
 
+import PaymentOptions from "./Payment/PaymentOptions";
+
 
 // import PayPal from '../../assets/images/cart/paypay.svg';
 
@@ -78,6 +80,7 @@ const Payment = () => {
               <p>All transactions are secure and encrypted.</p>
             </div>
             <div className="payment__payment-">
+              <PaymentOptions />
             </div>
           </div>
         </div>
