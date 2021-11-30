@@ -22,19 +22,19 @@ const Container = styled.div`
   top: 30%;
   border: 1px solid #d9d9d9;
   /* box-shadow: 2px 10px 35px 1px rgba(153, 153, 153, 0.3); */
-  
-`;
+  `;
 
 const Wrap = styled.div`
   /* border-bottom: 1px solid #d9d9d9; */
   background-color: #fff;
   color: #333;
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
   width: 100%;
   text-align: center;
   cursor: pointer;
+  padding: 5px 0px;
   svg {
     color: rgba(194, 91, 233, 0.2) !important;
   }
@@ -42,16 +42,24 @@ const Wrap = styled.div`
     padding: 10px 10px;
     font-size: clamp(13px, 2.5vw, 15px);
     text-align: left;
+    width: 120px;
   }
   span {
     margin-right: 1.5rem;
     color: red;
   }
+  img {
+    width: 15%;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
   `;
 
 const Dropdown = styled.div`
   background-color: #fafafa;
-  border-bottom: 1px solid #d9d9d9;
+  border-top: 1px solid #d9d9d9;
+  /* border-bottom: 1px solid #d9d9d9; */
   color: #333;
   width: 100%;
   height: 100%;
@@ -85,7 +93,8 @@ const Accordion = () => {
               <>
                 <Wrap onClick={() => toggle(index)} key={index}>
                   <p>{item.paymentOption}</p>
-                  <span>{clicked === index ? <FiMinus /> : <FiPlus />}</span>
+                  <img src={item.logo} />
+                  {/* <span>{clicked === index ? <FiMinus /> : <FiPlus />}</span> */}
                 </Wrap>
                 {clicked === index ? (
                   <Dropdown>
