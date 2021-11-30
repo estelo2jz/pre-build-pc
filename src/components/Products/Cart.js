@@ -2,6 +2,8 @@ import React, { useContext, useState, useEffect } from "react";
 import { DataContext } from "./Data/DataProvider";
 import { Link } from "react-router-dom";
 
+import CartEmptyTemplate from './components/CartEmptyTemplate';
+
 import { AiFillQuestionCircle } from "react-icons/ai";
 import { BsFillCartFill } from "react-icons/bs";
 
@@ -54,7 +56,8 @@ export default function Cart() {
 
   if (cart.length === 0)
     return (
-      <h2 style={{ textAlign: "center", fontSize: "5rem" }}>Cart Empty</h2>
+      // <h2 style={{ textAlign: "center", fontSize: "5rem" }}>Cart Empty</h2>
+      <CartEmptyTemplate />
     );
 
   return (
