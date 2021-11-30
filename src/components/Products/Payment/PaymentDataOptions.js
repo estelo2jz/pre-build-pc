@@ -1,9 +1,14 @@
-import './PaymentOptions.scss';
+import "./PaymentOptions.scss";
+import CreditCards from "../../../assets/images/payment/credit-cards.png";
+import Paypal from "../../../assets/images/payment/paypal.png";
+import Bread from "../../../assets/images/payment/bread2.png";
+import Next from "../../../assets/images/payment/next.png";
 
 export const Data = [
   {
     paymentOption: "Credit card",
-    answer:
+    logo: CreditCards,
+    answer: (
       <div className="credit-card__container">
         <div className="credit-card__main-section">
           <input type="text" placeholder="Card number" />
@@ -14,15 +19,36 @@ export const Data = [
           </div>
         </div>
       </div>
+    ),
   },
   {
-    paymentOption: "Paypal",
-    answer:
-      "Once we process your order, we should have it shipped within 3-4 week. You will receive tracking information via email.",
+    paymentOption: "Pay with",
+    logo: Paypal,
+    answer: (
+      <div className="paypal__container">
+        <div className="paypal__img">
+          <img src={Next} alt="" />
+        </div>
+        <p className="paypal__text">
+          "After clicking “Complete order”, you will be redirected to PayPal to
+          complete your purchase securely.",
+        </p>
+      </div>
+    ),
   },
   {
     paymentOption: "Pay over time",
-    answer:
-      "We offer a 30 day return policy from the day you receive your order, re-stocking fees may apply unless there is an issue with the PC.",
+    logo: Bread,
+    answer: (
+      <div className="bread__container">
+        <div className="bread__img">
+          <img src={Next} alt="" />
+        </div>
+        <p className="bread__text">
+          "After clicking “Complete order”, you will be redirected to Bread to
+          complete your purchase securely.",
+        </p>
+      </div>
+    ),
   },
 ];
