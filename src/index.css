@@ -20,11 +20,29 @@ code {
   /* box-shadow: 0 2px 6px #555; */
   /* padding: 0 15px; */
   overflow: hidden;
-  background-color: rgb(125, 8, 227);
+  /* background-color: rgb(125, 8, 227); */
+  background-color: rgba(255, 255, 255);
 
   /* background: rgb(157,57,248);
 background: linear-gradient(0deg, rgba(157,57,248,1) 0%, rgba(34,193,195,1) 6%, rgba(85,136,217,1) 22%, rgba(168,45,253,1) 100%); */
 }
+
+body::-webkit-scrollbar {
+  width: 15px;               /* width of the entire scrollbar */
+}
+body::-webkit-scrollbar-track {
+  background: #000000;        /* color of the tracking area */
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #000000;       /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: 3px solid rgb(255, 255, 255);  /* creates padding around scroll thumb */
+}
+html {
+  scroll-behavior: smooth;
+}
+
+
 /* -------------------Header----------------- */
 
 .menu{
