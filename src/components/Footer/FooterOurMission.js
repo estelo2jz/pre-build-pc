@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import './styles/FooterOurMission.scss';
 
@@ -16,9 +17,9 @@ const FooterOurMission = () => {
             Our mission is to build gaming PCs at the best price without cutting corners.
           </p>
         </div>
-        <div className="footer-our-mission__right-btn">
+        <Link to="/products" className="footer-our-mission__right-btn">
           <button>LET'S BUILD</button>
-        </div>
+        </Link>
       </div>
     </div>
   )
