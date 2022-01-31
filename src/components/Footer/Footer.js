@@ -8,8 +8,8 @@ import './styles/Footer.scss';
 const Footer = () => {
   return (
     <div className="footer">
-      <CheckoutBuild />
-      <FooterOurMission />
+      {/* <CheckoutBuild /> */}
+      {/* <FooterOurMission /> */}
       <FooterLinks />
     </div>
   )
