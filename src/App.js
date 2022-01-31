@@ -8,6 +8,7 @@ import Home from "./components/Home/Home";
 
 import Products from "./components/Products//Products";
 import { DataProvider } from "./components/Products/Data/DataProvider";
+import { DataContext } from "./components/Products/Data/DataProvider";
 import Details from "./components/Products/Details/Details";
 
 import Checkout from "./components/Products/Chechout";
