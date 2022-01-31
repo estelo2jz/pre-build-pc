@@ -1,16 +1,27 @@
-import React from 'react';
-import ReviewComponent from '../../Home/Review';
+import React from "react";
+import { Parallax } from 'react-parallax';
 
-import './styles/Review.scss';
+import ImageOne from '../../Parallax/ParallaxOne';
+import ImageTwo from '../../Parallax/ParallaxTwo';
+import ImageThree from '../../Parallax/ParallaxThree';
+import TextBox from '../../Parallax/TextBox';
+
+import MainReview from "./MainReview";
+import "./styles/Review.scss";
 
 const Review = () => {
   return (
     <div className="review-component">
-      <ReviewComponent />
-      {/* reviews top header */}
-      {/* reviews data */}
+      {" "}
+        <MainReview />
+      {" "}
+      <ImageOne />
+      <TextBox />
+      <ImageTwo />
+      <TextBox />
+      <ImageThree />
     </div>
-  )
-}
+  );
+};
 
-export default Review
+export default Review;
