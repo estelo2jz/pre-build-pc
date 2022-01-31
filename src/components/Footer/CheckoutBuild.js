@@ -12,7 +12,7 @@ const CheckoutBuild = () => {
         </p>
       </div>
       <div className="checkout-build__btn">
-        <Link to="/">
+        <Link to="/products">
           <button>VIEW BUILD</button>
         </Link>
       </div>
