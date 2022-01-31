@@ -1,0 +1,143 @@
+.review {
+  height: 100%;
+  width: 100%;
+  padding: 500px 0px;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  // background-image: url('https://images6.alphacoders.com/992/thumb-1920-992033.jpg');
+  
+  .review__heading {
+    display: flex;
+    align-items: center;
+    // justify-content: center;
+    padding-top: 100px;
+    padding-left: 40px;
+    p {
+      font-size: 45px;
+      font-weight: 800;
+      color: #fff;
+      font-style: italic;
+    }
+  }
+  .review__outer {
+    display: flex;
+    // align-items: center;
+    overflow-x: scroll;
+    padding: 100px 0px;
+    height: 500px;
+    box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+    
+    .review__card {
+      border-radius: 10px;
+      background-color: #e2f3f5;
+      height: 100%;
+      margin: 5px;
+      // height: 500px;
+      
+      .review__top-container {
+        width: 300px;
+        .review__top {
+          overflow: hidden;
+          .review__top-opinion {
+            padding: 20px 20px;
+            font-size: 13px;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            p {
+              font-size: 15px;
+            }
+            span {
+              padding: 0px 10px;
+              color: rgb(0, 217, 255);
+            }
+          }
+        }
+      }
+
+      .review__bottom-container {
+        .review__bottom {
+          display: flex;
+          align-items: center;
+          padding-top: 10px;
+          .review__bottom-img {
+            padding: 10px 20px;
+
+            img {
+              border-radius: 50%;
+              width: 50px
+            }
+
+          }
+
+          .review__bottom-prpfile {
+          }
+
+          .review__bottom-name {
+            padding: 10px 20px;
+
+            p {
+              font-weight: 700;
+              font-size: 20px;
+              color: rgb(70, 69, 69);
+            }
+          }
+        }
+      }
+    }
+
+    .review__card::-webkit-scrollbar {
+      display: none;
+    }
+
+    .review {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+      /* Firefox */
+    }
+  }
+}
+
+@media only screen  and (max-width: 500px) {
+  .review {
+    .review__heading {
+      display: flex;
+      // justify-content: center;
+      align-items: center;
+      p {
+        font-size: 25px !important;
+      }
+    }
+
+    .review__outer {
+      .review__card {
+        .review__top-container {
+          .review__top {
+            .review__top-img {}
+
+            .review__top-opinion {}
+          }
+        }
+
+        .review__bottom-container {
+          .review__bottom {
+            .review__bottom-img {}
+
+            .review__bottom-prpfile {
+              .review__bottom-name {}
+
+              .review__bottom-bio {}
+            }
+          }
+        }
+      }
+    }
+  }
+}
