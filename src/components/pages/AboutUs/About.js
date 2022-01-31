@@ -16,7 +16,7 @@ import AboutBottom from './AboutBottom';
 
 import './styles/About.scss';
 
-const About = () => {
+const About = ({data}) => {
   return (
     <div className="about-page">
       <AboutBGOne />
