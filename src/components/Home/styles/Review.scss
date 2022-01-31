@@ -1,142 +1,35 @@
-.review {
-  height: 100%;
-  // padding: 100px 0px;
-  
-  .review__heading {
+.image {
+  position: relative;
+  min-height: 100vh;
+
+  .content {
+    position: absolute;
     display: flex;
+    justify-content: center;
     align-items: center;
-    // justify-content: center;
-    padding-top: 100px;
-    padding-left: 40px;
-    p {
-      font-size: 45px;
-      font-weight: 800;
+    width: 100%;
+    height: 100vh;
+
+    .img-txt {
+      background-color: #333;
+      text-transform: uppercase;
       color: #fff;
-      font-style: italic;
-    }
-  }
-  
-  background-image: url('https://cdn.shopify.com/s/files/1/0408/5792/7834/files/Ambassador_mobile_750x.jpg?v=1600137927');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  .review__outer {
-    display: flex;
-    // align-items: center;
-    overflow-x: scroll;
-    padding: 100px 0px;
-    box-shadow:
-    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
-    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
-    0 12.5px 10px rgba(0, 0, 0, 0.06),
-    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
-    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
-    0 100px 80px rgba(0, 0, 0, 0.12);
-    
-    .review__card {
-      border-radius: 10px;
-      background-color: #e2f3f5;
-      height: 100%;
-      margin: 5px;
-      // height: 500px;
-      
-      .review__top-container {
-        width: 300px;
-        .review__top {
-          overflow: hidden;
-          .review__top-opinion {
-            padding: 20px 20px;
-            font-size: 13px;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            p {
-              font-size: 15px;
-            }
-            span {
-              padding: 0px 10px;
-              color: rgb(0, 217, 255);
-            }
-          }
-        }
-      }
-
-      .review__bottom-container {
-        .review__bottom {
-          display: flex;
-          align-items: center;
-          padding-top: 10px;
-          .review__bottom-img {
-            padding: 10px 20px;
-
-            img {
-              border-radius: 50%;
-              width: 50px
-            }
-
-          }
-
-          .review__bottom-prpfile {
-          }
-
-          .review__bottom-name {
-            padding: 10px 20px;
-
-            p {
-              font-weight: 700;
-              font-size: 20px;
-              color: rgb(70, 69, 69);
-            }
-          }
-        }
-      }
-    }
-
-    .review__card::-webkit-scrollbar {
-      display: none;
-    }
-
-    .review {
-      -ms-overflow-style: none;
-      scrollbar-width: none;
-      /* Firefox */
+      padding: 1rem 0;
+      font-size: 1.5rem;
+      letter-spacing: 10px;
     }
   }
 }
 
-@media only screen  and (max-width: 500px) {
-  .review {
-    .review__heading {
-      display: flex;
-      // justify-content: center;
-      align-items: center;
-      p {
-        font-size: 25px !important;
-      }
-    }
+.text-box {
+  text-align: center;
+  padding: 3rem 1rem;
+  text-align: justify;
+}
 
-    .review__outer {
-      .review__card {
-        .review__top-container {
-          .review__top {
-            .review__top-img {}
-
-            .review__top-opinion {}
-          }
-        }
-
-        .review__bottom-container {
-          .review__bottom {
-            .review__bottom-img {}
-
-            .review__bottom-prpfile {
-              .review__bottom-name {}
-
-              .review__bottom-bio {}
-            }
-          }
-        }
-      }
-    }
-  }
+h3 {
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  font: 1.3rem;
+  text-align: center;
 }
