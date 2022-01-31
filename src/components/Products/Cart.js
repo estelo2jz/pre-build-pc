@@ -78,11 +78,7 @@ export default function Cart() {
                   <div className="cart__heading">
                     <div>
                       <h2 title={product.title}>{product.title}.</h2>
-                      {/* <p>{product.description}</p> */}
                     </div>
-                    {/* <div className="cart__price">
-                        <p>Unit Price: ${product.price}</p>
-                      </div> */}
                     <div
                       className="cart__delete"
                       onClick={() => removeProduct(product._id)}
