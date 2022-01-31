@@ -26,7 +26,7 @@ const FooterLinks = () => {
               <p>Shop</p>
             </div>
             <div className="footer-links__item">
-              <Link to="/" className="footer-links__to">
+              <Link to="/products" className="footer-links__to">
                 <p>Build Your PC</p>
               </Link>
             </div>
