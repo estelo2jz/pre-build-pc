@@ -9,9 +9,11 @@ import FinanceTop from "./FinanceTop";
 import FinanceBottom from "./FinanceBottom";
 import FinanceRate from "./FinanceRate";
 
+import './styles/Financing.scss';
+
 const Financing = () => {
   return (
-    <div>
+    <div className="finance__main">
       <FinanceTopHeader />
       <FinanceTop />
       <FinanceBottom />
