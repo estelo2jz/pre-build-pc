@@ -18,10 +18,6 @@ export default function Products() {
     <div className="products">
       {products.slice(0, 3).map((product) => (
         <div className="products__card" key={product._id}>
-          {/* <img src={product.goodBg} alt="" /> */}
-          {/* <Link to={`/products/${product._id}`}>
-            <img src={product.images[0]} alt="" />
-          </Link> */}
           <div className="products__img">
             <img src={product.goodProfilePic} alt="" />
           </div>
