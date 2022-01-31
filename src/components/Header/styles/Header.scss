@@ -1,9 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 
 
-
 header {
-  // padding: 0 15px;
   width: 100%;
   min-height: 100px;
   overflow: hidden;
@@ -11,10 +9,9 @@ header {
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  // border-bottom: 1px solid #ccc;
-  /* margin-bottom: 20px; */
   z-index: 100;
   // background-color: #581b98 !important;
+  background-color: rgb(125, 8, 227) !important;
   background-color: transparent;
   box-shadow:
   0 2.8px 2.2px rgba(0, 0, 0, 0.034),
