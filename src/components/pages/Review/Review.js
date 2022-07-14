@@ -16,9 +16,9 @@ const Review = () => {
         <MainReview />
       {" "}
       <ImageOne />
-      <TextBox />
+      {/* <TextBox /> */}
       <ImageTwo />
-      <TextBox />
+      {/* <TextBox /> */}
       <ImageThree />
     </div>
   );
