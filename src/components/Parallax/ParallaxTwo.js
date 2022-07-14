@@ -8,7 +8,6 @@ const ParallaxTwo = () => {
   return (
     <Parallax className="image" blur={0} bgImage={FortniteBG} strength={800} bgImageStyle={{minheight: "100vh"}}>
       <div className="content">
-        <span className="img-txt">a trip to Sapce</span>
       </div>
     </Parallax>
   );
