@@ -66,7 +66,7 @@ const FooterLinks = () => {
               <p>Community</p>
             </div>
             <div className="footer-links__item">
-              <Link to="/" className="footer-links__to">
+              <Link to="/terms&conditions" className="footer-links__to">
                 <p>Terms & Conditions</p>
               </Link>
             </div>
