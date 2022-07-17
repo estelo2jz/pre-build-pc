@@ -1,8 +1,10 @@
 import React, { useContext, useState, useEffect } from "react";
 import { DataContext } from "./Data/DataProvider";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import CartEmptyTemplate from './components/CartEmptyTemplate';
+
+import LoadingScreen from '../Helper/Loader/loading'
 
 import { AiFillQuestionCircle } from "react-icons/ai";
 import { BsFillCartFill } from "react-icons/bs";
@@ -13,6 +15,12 @@ export default function Cart() {
   const value = useContext(DataContext);
   const [cart, setCart] = value.cart;
   const [total, setTotal] = useState(0);
+  const navigate = useNavigate();
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    setTimeout(() => setLoading(false), 1210)
+  }, [])
 
   useEffect(() => {
     const getTotal = () => {
@@ -58,6 +66,7 @@ export default function Cart() {
 
   return (
     <>
+        {loading === false ? (
       <div className="cart__main">
         <div className="cart__header">
           <div className="cart__header-top">
@@ -123,9 +132,7 @@ export default function Cart() {
               </div>
               <div className="cart__total-bottom">
                 <div className="cart__total-update">
-                  <Link to="/products">
-                    <p>UPDATE</p>
-                  </Link>
+                 <button onClick={() => navigate(-1)}>go back</button>
                 </div>
                 <div className="cart__total-checkout">
                   <Link to="/checkout">
@@ -155,6 +162,11 @@ export default function Cart() {
           </div>
         </div>
       </div>
+      ) : (
+        <div>
+          <LoadingScreen />
+        </div>
+      )}
     </>
   );
 }
