@@ -16,7 +16,7 @@ export default function Products() {
 
   return (
     <div className="products">
-      {products.slice(0, 3).map((product) => (
+      {products.slice(0, 4).map((product) => (
         <div className="products__card" key={product._id}>
           <div className="products__img">
             <img src={product.goodProfilePic} alt="" />
