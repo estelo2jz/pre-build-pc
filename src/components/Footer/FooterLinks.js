@@ -31,12 +31,12 @@ const FooterLinks = () => {
               </Link>
             </div>
             <div className="footer-links__item">
-              <Link to="/" className="footer-links__to">
+              <Link to="/pages/why-pre-build" className="footer-links__to">
                 <p>Why Pre-Build</p>
               </Link>
             </div>
             <div className="footer-links__item">
-              <Link to="/" className="footer-links__to">
+              <Link to="/pages/support" className="footer-links__to">
                 <p>Support</p>
               </Link>
             </div>
@@ -46,19 +46,19 @@ const FooterLinks = () => {
               <p>Best Sellers</p>
             </div>
             <div className="footer-links__item">
-              <Link to="/" className="footer-links__to">
+              <div to="/" className="footer-links__to">
                 <p>Good.</p>
-              </Link>
+              </div>
             </div>
             <div className="footer-links__item">
-              <Link to="/" className="footer-links__to">
+              <div to="/" className="footer-links__to">
                 <p>Better.</p>
-              </Link>
+              </div>
             </div>
             <div className="footer-links__item">
-              <Link to="/" className="footer-links__to">
+              <div to="/" className="footer-links__to">
                 <p>Best.</p>
-              </Link>
+              </div>
             </div>
           </div>
           <div className="footer-links__container">
@@ -71,12 +71,12 @@ const FooterLinks = () => {
               </Link>
             </div>
             <div className="footer-links__item">
-              <Link to="/" className="footer-links__to">
+              <Link to="/privacy" className="footer-links__to">
                 <p>Privacy Policy</p>
               </Link>
             </div>
             <div className="footer-links__item">
-              <Link to="/" className="footer-links__to">
+              <Link to="/refund" className="footer-links__to">
                 <p>Refund Policy</p>
               </Link>
             </div>
