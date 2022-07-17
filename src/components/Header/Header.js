@@ -48,19 +48,19 @@ export default function Header() {
           <Link to="/products">Products</Link>
         </li> */}
         <li>
-          <Link to="/products">Best Sellers</Link>
+          <Link onClick={toggleMenu} to="/products">Best Sellers</Link>
+        </li>
+        <li >
+          <Link onClick={toggleMenu} to="/pages/review">Reviews</Link>
         </li>
         <li>
-          <Link to="/pages/review">Reviews</Link>
+          <Link onClick={toggleMenu} to="/pages/financing">Financing</Link>
         </li>
         <li>
-          <Link to="/pages/financing">Financing</Link>
+          <Link onClick={toggleMenu} to="/pages/support">Support</Link>
         </li>
         <li>
-          <Link to="/pages/support">Support</Link>
-        </li>
-        <li>
-          <Link to="/pages/why-pre-build">About Us</Link>
+          <Link onClick={toggleMenu} to="/pages/why-pre-build">About Us</Link>
         </li>
         <li onClick={toggleMenu}>
           <img src={Close} alt="" width="30" className="menu" />
