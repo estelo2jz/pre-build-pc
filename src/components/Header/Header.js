@@ -42,7 +42,7 @@ export default function Header() {
       </div>
       <ul style={styleMenu}>
         <li>
-          <Link to="/">Home</Link>
+          <Link onClick={toggleMenu} to="/">Home</Link>
         </li>
         {/* <li>
           <Link to="/products">Products</Link>
