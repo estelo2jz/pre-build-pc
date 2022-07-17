@@ -116,7 +116,6 @@ export default function Details() {
                   <button
                     className={styles.primaryBtn}
                     onClick={() => setIsOpen(true) & addCart(product._id)}
-                    // onClick={() => addCart(product._id)}
                   >
                     Add to cart
                   </button>
