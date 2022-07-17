@@ -5,6 +5,7 @@ import Good2 from "../../../assets/images/pc/good/good2.webp";
 import Good3 from "../../../assets/images/pc/good/good3.webp";
 import Good4 from "../../../assets/images/pc/good/good4.webp";
 import Good5 from "../../../assets/images/pc/good/good5.webp";
+import GoodEmptyCartBanner from "../../../assets/images/pc/good/good.webp";
 
 import Better1 from "../../../assets/images/pc/better/better1.webp";
 import Better2 from "../../../assets/images/pc/better/better2.webp";
@@ -14,6 +15,7 @@ import Better5 from "../../../assets/images/pc/better/better5.png";
 import Better6 from "../../../assets/images/pc/better/better6.png";
 import Better7 from "../../../assets/images/pc/better/better7.webp";
 import Better8 from "../../../assets/images/pc/better/better8.webp";
+import BetterEmptyCartBanner from "../../../assets/images/pc/better/betterBanner.webp";
 
 import Best1 from "../../../assets/images/pc/best/best1.webp";
 import Best2 from "../../../assets/images/pc/best/best2.webp";
@@ -23,6 +25,7 @@ import Best5 from "../../../assets/images/pc/best/best5.webp";
 import Best6 from "../../../assets/images/pc/best/best6.webp";
 import Best7 from "../../../assets/images/pc/best/best7.webp";
 import Best8 from "../../../assets/images/pc/best/best8.webp";
+import BestEmptyCartBanner from "../../../assets/images/pc/best/bestBanner.webp";
 
 import GoodCPU from "../../../assets/images/pc/good/Ryzen5_63x.png";
 import GoodGPU from "../../../assets/images/pc/good/GTX1650_63x.png";
@@ -99,6 +102,7 @@ export const DataProvider = (props) => {
       storage: "70",
       goodProfilePic: GoodProfilePic,
       goodBg: GoodBg,
+      emptyCartBanner: GoodEmptyCartBanner,
       monthlyFinance: "43",
       essentialsOne: [
         { keyboardMouseImg: Keyboard },
@@ -215,6 +219,7 @@ export const DataProvider = (props) => {
       storage: "70",
       goodProfilePic: BetterProfilePic,
       goodBg: BetterBg,
+      emptyCartBanner: BetterEmptyCartBanner,
       monthlyFinance: "43",
       essentialsOne: [
         { keyboardMouseImg: Keyboard },
@@ -322,6 +327,7 @@ export const DataProvider = (props) => {
       storage: "80",
       goodProfilePic: BestProfilePic,
       goodBg: BestBg,
+      emptyCartBanner: BestEmptyCartBanner,
       monthlyFinance: "43",
       essentialsOne: [
         { keyboardMouseImg: Keyboard },
