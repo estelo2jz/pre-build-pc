@@ -322,22 +322,6 @@
               overflow: hidden;
             }
           }
-
-          .box-details__content-btn {
-
-            // color: #fff;
-            // background: #007bed;
-            // border: 1px solid #007bed;
-            // background-position: center;
-            // width: 100%;
-            // min-width: 1px;
-            // margin-top: 10px;
-            // font-size: .75em;
-            // padding: 8px;
-            // text-decoration: none;
-            // position: relative;
-            button {}
-          }
         }
       }
 
@@ -345,17 +329,18 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 100%;
+        // width: 100%;
         margin: 0px auto;
         padding: 0px;
 
         button {
-          width: 100%;
+          width: 150px !important;
           color: #fff;
+          margin: 5px 0px;
           background: #007bed;
           border: 1px solid #007bed;
           background-position: center;
-          min-width: 1px;
+          // min-width: 1px;
           // margin-top: 10px;
           font-size: clamp(17px, 2.5vw, 20px);
           padding: 8px;
