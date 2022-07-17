@@ -25,6 +25,15 @@ import Best7 from "../../../assets/images/pc/best/best7.webp";
 import Best8 from "../../../assets/images/pc/best/best8.webp";
 import BestEmptyCartBanner from "../../../assets/images/pc/best/bestBanner.webp";
 
+import Ultimate0 from "../../../assets/images/pc/ultimate/ultimate.webp";
+import Ultimate1 from "../../../assets/images/pc/ultimate/ultimate1.webp";
+import Ultimate2 from "../../../assets/images/pc/ultimate/ultimate2.webp";
+import Ultimate3 from "../../../assets/images/pc/ultimate/ultimate3.webp";
+import Ultimate4 from "../../../assets/images/pc/ultimate/ultimate4.webp";
+import Ultimate5 from "../../../assets/images/pc/ultimate/ultimate5.webp";
+import Ultimate6 from "../../../assets/images/pc/ultimate/ultimate6.webp";
+import Ultimate7 from "../../../assets/images/pc/ultimate/ultimate7.webp";
+
 import GoodCPU from "../../../assets/images/pc/good/Ryzen5_63x.png";
 import GoodGPU from "../../../assets/images/pc/good/GTX1650_63x.png";
 import GoodRAM from "../../../assets/images/pc/good/RAM_63x.png";
@@ -70,6 +79,20 @@ import BestWARRANTY from "../../../assets/images/pc/best/redux-logo_63x.png";
 import BestProfilePic from "../../../assets/images/pc/best/Best-1_117x117.jpg";
 import BestBg from "../../../assets/images/pc/best/Best_400x.jpg";
 
+import UltimateCPU from "../../../assets/images/pc/ultimate/i9.webp";
+import UltimateGPU from "../../../assets/images/pc/ultimate/rtx.webp";
+import UltimateRAM from "../../../assets/images/pc/ultimate/ddr4.webp";
+import UltimateMEMORY from "../../../assets/images/pc/ultimate/nvmehdd.webp";
+import UltimateCPUCOOLER from "../../../assets/images/pc/ultimate/ml360.webp";
+import UltimateFANS from "../../../assets/images/pc/ultimate/fans.webp";
+import UltimateCASE from "../../../assets/images/pc/ultimate/case.webp";
+import UltimatePOWER from "../../../assets/images/pc/ultimate/power.webp";
+import UltimateMOTHERBOARD from "../../../assets/images/pc/ultimate/mother.webp";
+import UltimateWIFI from "../../../assets/images/pc/ultimate/wifi.webp";
+import UltimateWINDOWS from "../../../assets/images/pc/ultimate/ubuntu.webp";
+import UltimateWARRANTY from "../../../assets/images/pc/ultimate/warranty.webp";
+import UltimateProfilePic from "../../../assets/images/pc/ultimate/rtx3090ti.webp";
+
 import Keyboard from "../../../assets/images/pc/good/KEYBOARD-MOUSE_200x.png";
 import MouseNormal from "../../../assets/images/pc/good/mouse-normal_200x.png";
 import MouseLarge from "../../../assets/images/pc/good/mouse-lage_200x.png";
@@ -95,7 +118,7 @@ export const DataProvider = (props) => {
       componentsCosts: "1,247",
       buildFee: "75",
       monthly: "42.66",
-      totalPrice: "1,322",
+      totalPrice: "1,574",
       count: 1,
       graphics: "80",
       processor: "85",
@@ -104,7 +127,7 @@ export const DataProvider = (props) => {
       goodProfilePic: GoodProfilePic,
       goodBg: GoodBg,
       emptyCartBanner: GoodEmptyCartBanner,
-      monthlyFinance: "43",
+      monthlyFinance: "35",
       essentialsOne: [
         { keyboardMouseImg: Keyboard },
         { keyboardMouseName: "Keyboard & Mouse Bundle" },
@@ -212,7 +235,7 @@ export const DataProvider = (props) => {
       componentsCosts: "1,562",
       buildFee: "75",
       monthly: "52.82",
-      totalPrice: "1,637",
+      totalPrice: "1,883",
       count: 1,
       graphics: "90",
       processor: "95",
@@ -221,7 +244,7 @@ export const DataProvider = (props) => {
       goodProfilePic: BetterProfilePic,
       goodBg: BetterBg,
       emptyCartBanner: BetterEmptyCartBanner,
-      monthlyFinance: "43",
+      monthlyFinance: "50",
       essentialsOne: [
         { keyboardMouseImg: Keyboard },
         { keyboardMouseName: "Keyboard & Mouse Bundle" },
@@ -320,16 +343,16 @@ export const DataProvider = (props) => {
       componentsCosts: "2,658",
       buildFee: "75",
       monthly: "88.19",
-      totalPrice: "2,733",
+      totalPrice: "2,983",
       count: 1,
       graphics: "95",
       processor: "95",
-      memorySize: "80",
-      storage: "80",
+      memorySize: "85",
+      storage: "85",
       goodProfilePic: BestProfilePic,
       goodBg: BestBg,
       emptyCartBanner: BestEmptyCartBanner,
-      monthlyFinance: "43",
+      monthlyFinance: "75",
       essentialsOne: [
         { keyboardMouseImg: Keyboard },
         { keyboardMouseName: "Keyboard & Mouse Bundle" },
@@ -414,6 +437,116 @@ export const DataProvider = (props) => {
         { WARRANTYimg: BestWARRANTY },
         { WARRANTYname: "BUILD + SETUP + TESTING + WARRANTY" },
         { WARRANTYprice: "$75" },
+      ],
+    },
+
+
+    {
+      _id: "build=ultimate",
+      title: "ULTIMATE",
+      images: [Ultimate0, Ultimate1, Ultimate2, Ultimate3, Ultimate4, Ultimate5, Ultimate6, Ultimate7],
+      description:
+        "Nvidia RTX 3090 Ti - Delivers the ultimate experience for gamers and creaters. Featuring enhanced ray tracing cores, tensor cores, and new streaming multiprocessors.",
+      content:
+        "Welcome to our channel Dev AT. Here you can learn web designing, UI/UX designing, html css tutorials, css animations and css effects, javascript and jquery tutorials and related so on.",
+      price: 3643,
+      componentsCosts: "3,544",
+      buildFee: "99",
+      monthly: "117.55",
+      totalPrice: "3,969",
+      count: 1,
+      graphics: "100",
+      processor: "100",
+      memorySize: "100",
+      storage: "100",
+      goodProfilePic: BetterProfilePic,
+      goodBg: BestBg,
+      emptyCartBanner: BestEmptyCartBanner,
+      monthlyFinance: "99",
+      essentialsOne: [
+        { keyboardMouseImg: Keyboard },
+        { keyboardMouseName: "Keyboard & Mouse Bundle" },
+        { keyboardMousePrice: "$39" },
+      ],
+      essentialsTwo: [
+        { keyboardMouseImg: MouseNormal },
+        { keyboardMouseName: "Mouse Pad - Extra Large" },
+        { keyboardMousePrice: "$29" },
+      ],
+      essentialsThree: [
+        { keyboardMouseImg: MouseLarge },
+        { keyboardMouseName: "Mouse Pad - Standard" },
+        { keyboardMousePrice: "$19" },
+      ],
+      essentialsFour: [
+        { keyboardMouseImg: Headset },
+        { keyboardMouseName: "Headset" },
+        { keyboardMousePrice: "$25" },
+      ],
+      essentialsFive: [
+        { keyboardMouseImg: HeadsetStand },
+        { keyboardMouseName: "Headset with RGB Stand" },
+        { keyboardMousePrice: "$35" },
+      ],
+      cpu: [
+        { CPUimg: UltimateCPU },
+        { CPUname: "NTEL CORE I9-12900KS 16-CORE" },
+        { CPUprice: "$779" },
+      ],
+      gpu: [
+        { GPUimg: UltimateGPU },
+        { GPUname: "NVIDIA GEFORCE RTX 3090 TI 24GB" },
+        { GPUprice: "$1,787" },
+      ],
+      ram: [
+        { RAMimg: UltimateRAM },
+        { RAMname: "32GB DDR4 DUAL CHANNEL" },
+        { RAMprice: "$149" },
+      ],
+      memory: [
+        { MEMORYimg: UltimateMEMORY },
+        { MEMORYname: "2TB NVME M.2 + 2TB HDD" },
+        { MEMORYprice: "$269" },
+      ],
+      cpuCooler: [
+        { CPUCOOLERimg: UltimateCPUCOOLER },
+        { CPUCOOLERname: "CM MASTERLIQUID ML360" },
+        { CPUCOOLERprice: "$129" },
+      ],
+      fans: [
+        { FANSimg: UltimateFANS },
+        { FANSname: "QTY 4X CM MASTERFANS RGB" },
+        { FANSprice: "$29" },
+      ],
+      pcCase: [
+        { CASEimg: UltimateCASE },
+        { CASEname: "COOLER MASTER TD500 RGB" },
+        { CASEprice: "$99" },
+      ],
+      power: [
+        { POWERimg: UltimatePOWER },
+        { POWERname: "1000W ATX 80 PLUS GOLD" },
+        { POWERprice: "$139" },
+      ],
+      motherboard: [
+        { MOTHERBOARDimg: UltimateMOTHERBOARD },
+        { MOTHERBOARDname: "ASUS Z690-P D4 | INTEL"},
+        { MOTHERBOARDprice: "$225" },
+      ],
+      wifi: [
+        { WIFIimg: UltimateWIFI },
+        { WIFIname: "WIRELESS 802.11AC" },
+        { WIFIprice: "$29" },
+      ],
+      windows: [
+        { WINDOWSimg: UltimateWINDOWS },
+        { WINDOWSname: "UBUNTU DESKTOP - INSTALL, NO SUPPORT" },
+        { WINDOWSprice: "$29" },
+      ],
+      warranty: [
+        { WARRANTYimg: UltimateWARRANTY },
+        { WARRANTYname: "BUILD + SETUP + TESTING + WARRANTY" },
+        { WARRANTYprice: "$99" },
       ],
     },
 
