@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 import ReactLoading from 'react-loading';
-import './tc.css';
+import './styles/tc.scss';
 
 export default class TC extends Component {
   render() {
     return (
-      <div>
-        <div className="tc__outer-container">I'm the Terms & Conditions</div>
+      <div className="tc__outer-container">
+        <div className="tc__outer-inner">Currently Buiilding This Page.</div>
       </div>
     )
   }
