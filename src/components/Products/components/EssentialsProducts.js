@@ -17,7 +17,7 @@ export default function Products() {
   return (
     <div className="essentials__container">
       <div className="essentials">
-        {products.slice(3, 8).map((product) => (
+        {products.slice(4, 9).map((product) => (
           <div className="essentials__outer">
             <div className="essentials__card" key={product._id}>
               <div className="essentials__img">
