@@ -4,7 +4,11 @@ import { DataContext } from "../Data/DataProvider";
 import Spec from "../components/Specs";
 import DetailsThumb from "../DetailsThumb";
 import { Link } from "react-router-dom";
+
 import "./styles/Details.scss";
+import styles from "../components/Modal/App.module.css";
+
+import Modal from "../components/Modal/Modal";
 
 import { IoMdSettings } from 'react-icons/io';
 import { BiPaperPlane } from 'react-icons/bi';
@@ -15,6 +19,7 @@ export default function Details() {
   const value = useContext(DataContext);
   const [products] = value.products;
   const addCart = value.addCart;
+  const [isOpen, setIsOpen] = useState(false);
 
   const [index, setIndex] = useState(0);
   const imgDiv = useRef();
@@ -100,16 +105,25 @@ export default function Details() {
                 </div>
               </div>
               <div className="box-details__content-cart">
-                <Link
+                {/* <Link
                   to="/cart"
-                  // className="cart"
-                >
+                > */}
                 <div className="cart">
-                  <button  onClick={() => addCart(product._id)}>
+                  {/* <button  onClick={() => addCart(product._id)}>
+                    Add to cart
+                  </button> */}
+                  <main>
+                  <button
+                    className={styles.primaryBtn}
+                    onClick={() => setIsOpen(true) & addCart(product._id)}
+                    // onClick={() => addCart(product._id)}
+                  >
                     Add to cart
                   </button>
+                  {isOpen && <Modal setIsOpen={setIsOpen} />}
+                </main>
                 </div>
-                </Link>
+                {/* </Link> */}
               </div>
             </div>
           </div>
