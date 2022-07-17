@@ -28,6 +28,9 @@ export default function Colors({
 }) {
   return (
     <div className="specs">
+      <div className="spec__header">
+        <p>INCLUDES</p>
+      </div>
       <div className="specs__specs-container">
         <div className="specs__left">
           <div className="specs__items">
