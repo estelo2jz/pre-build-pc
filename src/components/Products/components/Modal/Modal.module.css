@@ -89,16 +89,16 @@
 }
 
 .deleteBtn {
-  margin-top: 10px;
-  cursor: pointer;
-  font-weight: 500;
-  padding: 11px 28px;
-  border-radius: 12px;
-  font-size: 0.8rem;
-  border: none;
-  color: #fff;
-  background: #ff3e4e;
-  transition: all 0.25s ease;
+  margin-top: 10px !important;
+  cursor: pointer !important;
+  font-weight: 500 !important;
+  padding: 11px 28px !important;
+  border-radius: 12px !important;
+  font-size: 0.8rem !important;
+  border: none !important;
+  color: #fff !important;
+  background: #ff3e4e !important;
+  transition: all 0.25s ease !important;
 }
 
 .deleteBtn:hover {
