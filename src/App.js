@@ -24,6 +24,8 @@ import Review from "./components/pages/Review/Review";
 import Support from "./components/pages/Support/Support";
 import Footer from "./components/Footer/Footer";
 import TC from "./components/Footer/FAQ/TC";
+import Privacy from "./components/Footer/FAQ/Privacy";
+import Refund from "./components/Footer/FAQ/Refund";
 
 function App() {
   return (
@@ -47,6 +49,8 @@ function App() {
               <Route path="/shipping" exact element={<Shipping />} />
               <Route path="/payment" exact element={<Payment />} />
               <Route path="/terms&conditions" exact element={<TC />} />
+              <Route path="/privacy" exact element={<Privacy />} />
+              <Route path="/refund" exact element={<Refund />} />
               <Route
                 path="/transaction"
                 exact
