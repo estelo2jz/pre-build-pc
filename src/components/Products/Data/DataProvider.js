@@ -1,5 +1,3 @@
-import React, { createContext, useState, useEffect } from "react";
-
 import Good1 from "../../../assets/images/pc/good/good1.webp";
 import Good2 from "../../../assets/images/pc/good/good2.webp";
 import Good3 from "../../../assets/images/pc/good/good3.webp";
@@ -78,9 +76,12 @@ import MouseLarge from "../../../assets/images/pc/good/mouse-lage_200x.png";
 import Headset from "../../../assets/images/pc/good/REDUXHeadsetRGB_200x.png";
 import HeadsetStand from "../../../assets/images/pc/good/REDUXHeadset-AND-STANDRGB_200x.png";
 
+import React, { createContext, useState, useEffect } from "react";
+
 export const DataContext = createContext();
 
 export const DataProvider = (props) => {
+  const [isOpen, setIsOpen] = useState(false);
   const [products, setProducts] = useState([
     {
       _id: "build=good",
@@ -478,6 +479,7 @@ export const DataProvider = (props) => {
       // alert("The product has been added to cart.")
     }
   };
+
 
   useEffect(() => {
     const dataCart = JSON.parse(localStorage.getItem("dataCart"));
