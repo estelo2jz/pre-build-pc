@@ -23,6 +23,7 @@ import Financing from "./components/pages/Financing/Financing";
 import Review from "./components/pages/Review/Review";
 import Support from "./components/pages/Support/Support";
 import Footer from "./components/Footer/Footer";
+import TC from "./components/Footer/FAQ/TC";
 
 function App() {
   return (
@@ -45,6 +46,7 @@ function App() {
               <Route path="/checkout" exact element={<Checkout />} />
               <Route path="/shipping" exact element={<Shipping />} />
               <Route path="/payment" exact element={<Payment />} />
+              <Route path="/terms&conditions" exact element={<TC />} />
               <Route
                 path="/transaction"
                 exact
