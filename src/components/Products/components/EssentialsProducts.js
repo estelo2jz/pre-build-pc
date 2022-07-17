@@ -1,13 +1,18 @@
-import React, { useContext } from "react";
+import React, { useContext, useState  } from "react";
 import { DataContext } from "../Data/DataProvider";
 import { Link } from "react-router-dom";
 
-import './styles/EssentialsProducts.scss';
+import styles from "./Modal/App.module.css";
+
+import Modal from "./Modal/Modal";
+
+import "./styles/EssentialsProducts.scss";
 
 export default function Products() {
   const value = useContext(DataContext);
   const [products] = value.products;
   const addCart = value.addCart;
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className="essentials__container">
@@ -19,17 +24,25 @@ export default function Products() {
                 <img src={product.goodBg} alt="" />
               </div>
               <div className="essentials__title">
-                <p title={product.title}>
-                  {product.title}.
-                </p>
+                <p title={product.title}>{product.title}.</p>
               </div>
               <div className="essentials__price">
-                <p>
-                  ${product.price}
-                </p>
+                <p>${product.price}</p>
               </div>
               <div className="essentials__box">
-                <button onClick={() => addCart(product._id)}>Add to cart</button>
+                {/* <button onClick={() => addCart(product._id)}>
+                  Add to cart
+                </button> */}
+                <main>
+                  <button
+                    className={styles.primaryBtn}
+                    onClick={() => setIsOpen(true) & addCart(product._id)}
+                    // onClick={() => addCart(product._id)}
+                  >
+                    Add to cart
+                  </button>
+                  {isOpen && <Modal setIsOpen={setIsOpen} />}
+                </main>
               </div>
             </div>
           </div>
