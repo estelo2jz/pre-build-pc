@@ -188,7 +188,7 @@
             text-decoration: none;
           }
   
-          p {
+          button {
             padding: 10px 30px;
             // box-shadow: 0 0 10px #e6e6e6, 0 0 10px #fff;
             color: #3a3a3a;
@@ -197,7 +197,7 @@
             text-shadow: 0 0 10px #fff;
             border-radius: 10px;
             font-weight: 700;
-  
+            cursor: pointer;
           }
         }
   
