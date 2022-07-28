@@ -9,6 +9,7 @@ import Top from "../../assets/images/cart/top3.jpg";
 import { AiFillQuestionCircle } from "react-icons/ai";
 
 import "./styles/Checkout.scss";
+import CartEmptyTemplate from "./components/CartEmptyTemplate";
 
 export default function Checkout() {
   const value = useContext(DataContext);
@@ -55,7 +56,7 @@ export default function Checkout() {
 
   if (cart.length === 0)
     return (
-      <h2 style={{ textAlign: "center", fontSize: "5rem" }}>Cart Empty</h2>
+      <CartEmptyTemplate />
     );
 
   return (
