@@ -28,7 +28,78 @@ export default function Products() {
             <p>{product.description}</p>
           </div>
           <div className="products__stats">
-            <div className="products__stats-item">
+            <div className="container">
+              <div className="card">
+                <div class="percent" style={{ "--clr": '#04fc43', "--num": product.graphics }}>
+                  <div className="dot"></div>
+                  <svg>
+                    <circle cx="70" cy="70" r="70"></circle>
+                    <circle cx="70" cy="70" r="70"></circle>
+                  </svg>
+                  <div className="number">
+                    <h2>
+                    {product.graphics}<span>%</span>
+                    </h2>
+                    <p>Graphics</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="container">
+              <div className="card">
+                <div className="percent" style={{ "--clr": '#fee800', "--num": product.processor }}>
+                  <div className="dot"></div>
+                  <svg>
+                    <circle cx="70" cy="70" r="70"></circle>
+                    <circle cx="70" cy="70" r="70"></circle>
+                  </svg>
+                  <div className="number">
+                    <h2>
+                    {product.processor}<span>%</span>
+                    </h2>
+                    <p>Processor</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="container">
+              <div className="card">
+                <div className="percent" style={{ "--clr": '#ff00be', "--num": product.memorySize }}>
+                  <div className="dot"></div>
+                  <svg>
+                    <circle cx="70" cy="70" r="70"></circle>
+                    <circle cx="70" cy="70" r="70"></circle>
+                  </svg>
+                  <div className="number">
+                    <h2>
+                    {product.memorySize}<span>%</span>
+                    </h2>
+                    <p>Memory</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="container">
+              <div className="card">
+                <div className="percent" style={{ "--clr": '#06ccff', "--num": product.storage }}>
+                  <div className="dot"></div>
+                  <svg>
+                    <circle cx="70" cy="70" r="70"></circle>
+                    <circle cx="70" cy="70" r="70"></circle>
+                  </svg>
+                  <div className="number">
+                    <h2>
+                    {product.storage}<span>%</span>
+                    </h2>
+                    <p>Storage</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+            {/* <div className="products__stats-item">
               <div className="products__stats-logo">
                 <div className="products__stats-logo-img">
                   <img src={GraphicsLogo} alt="" />
@@ -44,8 +115,8 @@ export default function Products() {
                   </p>
                 </div>
               </div>
-            </div>
-            <div className="products__stats-item">
+            </div> */}
+            {/* <div className="products__stats-item">
               <div className="products__stats-logo">
                 <div className="products__stats-logo-img">
                   <img src={ProcessorLogo} alt="" />
@@ -95,7 +166,7 @@ export default function Products() {
                   </p>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
           <div className="products__price">
             <p>Starting at</p>
