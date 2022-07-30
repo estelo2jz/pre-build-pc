@@ -340,6 +340,8 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            // padding: 0px !important;
+            // margin: 0px !important;
             .percent {
               position: relative;
               width: 110px;
@@ -421,7 +423,7 @@
                   align-items: center;
                   color: #fff;
                   font-weight: 700;
-                  font-size: 2.5rem;
+                  font-size: 1.3rem;
                   span {
                     font-weight: 700;
                     color: #fff;
@@ -430,7 +432,7 @@
                 }
                 p {
                   font-weight: 300;
-                  font-size: 0.75em;
+                  font-size: 0.55em;
                   letter-spacing: 2px;
                   text-transform: uppercase;
                   color: rgba(255,255,255, 0.75);
