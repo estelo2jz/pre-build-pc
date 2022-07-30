@@ -324,7 +324,7 @@
         display: flex;
         flex-wrap: wrap;
         align-items: center;
-        justify-content: center;
+        justify-content: space-evenly;
         .container {
           position: relative;
           display: flex;
@@ -334,7 +334,7 @@
           grid-gap: 40px;
           .card {
             position: relative;
-            width: 150px;
+            width: 135px;
             // height: 250px;
             // background: #2a2a2a;
             display: flex;
