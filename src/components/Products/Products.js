@@ -33,8 +33,8 @@ export default function Products() {
                 <div class="percent" style={{ "--clr": '#04fc43', "--num": product.graphics }}>
                   <div className="dot"></div>
                   <svg>
-                    <circle cx="70" cy="70" r="70"></circle>
-                    <circle cx="70" cy="70" r="70"></circle>
+                    <circle cx="50" cy="50" r="50"></circle>
+                    <circle cx="50" cy="50" r="50"></circle>
                   </svg>
                   <div className="number">
                     <h2>
@@ -50,8 +50,8 @@ export default function Products() {
                 <div className="percent" style={{ "--clr": '#fee800', "--num": product.processor }}>
                   <div className="dot"></div>
                   <svg>
-                    <circle cx="70" cy="70" r="70"></circle>
-                    <circle cx="70" cy="70" r="70"></circle>
+                    <circle cx="50" cy="50" r="50"></circle>
+                    <circle cx="50" cy="50" r="50"></circle>
                   </svg>
                   <div className="number">
                     <h2>
@@ -67,8 +67,8 @@ export default function Products() {
                 <div className="percent" style={{ "--clr": '#ff00be', "--num": product.memorySize }}>
                   <div className="dot"></div>
                   <svg>
-                    <circle cx="70" cy="70" r="70"></circle>
-                    <circle cx="70" cy="70" r="70"></circle>
+                    <circle cx="50" cy="50" r="50"></circle>
+                    <circle cx="50" cy="50" r="50"></circle>
                   </svg>
                   <div className="number">
                     <h2>
@@ -84,8 +84,8 @@ export default function Products() {
                 <div className="percent" style={{ "--clr": '#06ccff', "--num": product.storage }}>
                   <div className="dot"></div>
                   <svg>
-                    <circle cx="70" cy="70" r="70"></circle>
-                    <circle cx="70" cy="70" r="70"></circle>
+                    <circle cx="50" cy="50" r="50"></circle>
+                    <circle cx="50" cy="50" r="50"></circle>
                   </svg>
                   <div className="number">
                     <h2>
