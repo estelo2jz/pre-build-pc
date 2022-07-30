@@ -356,6 +356,9 @@
                   stroke-width: 2;
                   stroke: #191919;
                   transform: translate(5px, 5px);
+                  cx: 50;
+                  cy: 50;
+                  r: 50;
                 }
                 circle:nth-child(2) {
                   stroke: var(--clr);
