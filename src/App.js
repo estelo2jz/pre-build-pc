@@ -29,46 +29,49 @@ import Refund from "./components/Footer/FAQ/Refund";
 
 function App() {
   return (
-    <DataProvider>
-      <div className="App">
-        <Router>
-          <ScrollToTop />
-          <section>
-            <Header />
-            <Routes>
-              <Route path="/" exact element={<Home />}>
-                <Home />
-              </Route>
+    <React.Fragment>
+      <DataProvider>
+        <div className="App">
+          <Router>
+            <ScrollToTop />
+            <section>
+              <Header />
+              <Routes>
+                <Route path="/" exact element={<Home />}>
+                  {/* I commnet this because it was giving an error of location */}
+                  {/* <Home /> */}
+                </Route>
 
-              <Route path="/products" exact element={<BuildPC />} />
-              <Route path="/pages/review" exact element={<Review />} />
-              <Route path="/pages/financing" exact element={<Financing />} />
-              <Route path="/pages/support" exact element={<Support />} />
-              <Route path="/pages/why-pre-build" exact element={<About />} />
-              <Route path="/checkout" exact element={<Checkout />} />
-              <Route path="/shipping" exact element={<Shipping />} />
-              <Route path="/payment" exact element={<Payment />} />
-              <Route path="/terms&conditions" exact element={<TC />} />
-              <Route path="/privacy" exact element={<Privacy />} />
-              <Route path="/refund" exact element={<Refund />} />
-              <Route
-                path="/transaction"
-                exact
-                element={<TransactionComplete />}
-              />
-              <Route path="/login" exact element={<Login />} />
+                <Route path="/products" exact element={<BuildPC />} />
+                <Route path="/pages/review" exact element={<Review />} />
+                <Route path="/pages/financing" exact element={<Financing />} />
+                <Route path="/pages/support" exact element={<Support />} />
+                <Route path="/pages/why-pre-build" exact element={<About />} />
+                <Route path="/checkout" exact element={<Checkout />} />
+                <Route path="/shipping" exact element={<Shipping />} />
+                <Route path="/payment" exact element={<Payment />} />
+                <Route path="/terms&conditions" exact element={<TC />} />
+                <Route path="/privacy" exact element={<Privacy />} />
+                <Route path="/refund" exact element={<Refund />} />
+                <Route
+                  path="/transaction"
+                  exact
+                  element={<TransactionComplete />}
+                />
+                <Route path="/login" exact element={<Login />} />
 
-              {/* <Route path="/cart" exact render={() => <Redirect to="/cart" />} /> */}
-              {/* <Route path="/products" exact element={ <Products /> } /> */}
+                {/* <Route path="/cart" exact render={() => <Redirect to="/cart" />} /> */}
+                {/* <Route path="/products" exact element={ <Products /> } /> */}
 
-              <Route path="/products/:id" exact element={<Details />} />
-              <Route path="cart" exact element={<Cart />} />
-            </Routes>
-          </section>
-          <Footer />
-        </Router>
-      </div>
-    </DataProvider>
+                <Route path="/products/:id" exact element={<Details />} />
+                <Route path="cart" exact element={<Cart />} />
+              </Routes>
+            </section>
+            <Footer />
+          </Router>
+        </div>
+      </DataProvider>
+    </React.Fragment>
   );
 }
 

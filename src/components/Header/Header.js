@@ -6,7 +6,7 @@ import { DataContext } from "../Products/Data/DataProvider";
 import PreBuildLogo from "../../assets/images/prebuild.png";
 
 import { AiOutlineShoppingCart } from "react-icons/ai";
-import { GoThreeBars } from "react-icons/go";
+import { GoBug } from "react-icons/go";
 import { FaSearch } from "react-icons/fa";
 import { IoIosPerson } from "react-icons/io";
 // AiOutlineCloseCircle
@@ -30,7 +30,7 @@ export default function Header() {
     <header>
       <div className="menu" onClick={toggleMenu}>
         <div className="menu-bars">
-          <GoThreeBars />
+          <GoBug />
         </div>
       </div>
       <div className="logo">
