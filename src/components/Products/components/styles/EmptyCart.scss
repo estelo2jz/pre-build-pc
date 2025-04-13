@@ -1,172 +1,186 @@
 .cart-empty__outer-container {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 200px 10px;
-  height: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 100px 2rem;
+  gap: 3rem;
 
   .cart-empty__left-container {
-    width: 75%;
+    flex: 1 1 55%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     .cart-empty__left-heading {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 70px 0px;
+      padding: 40px 0;
+      text-align: center;
 
       p {
-        font-size: clamp(32px, 1.5vw, 40px);
+        font-size: clamp(28px, 5vw, 48px);
         text-transform: uppercase;
         font-weight: 700;
-        text-align: center;
         color: #fff;
         font-style: italic;
         font-family: monospace;
+        animation: fadeInDown 0.6s ease-in-out;
       }
     }
 
     .cart-empty__img-container {
       display: flex;
       flex-wrap: wrap;
-      align-items: center;
       justify-content: center;
-      grid-gap: 10px 15px;
+      gap: 1rem;
 
-      .cart-empty__img-main {
-        img {
-          background-position: center;
-          background-size: cover;
-          width: 183px;
-          height: 229px;
-          // max-width: 100%;
-          // max-height: 100%;
+      .cart-empty__img-main img {
+        width: 180px;
+        height: 230px;
+        object-fit: cover;
+        border-radius: 8px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        &:hover {
+          transform: scale(1.05);
+          box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
         }
       }
     }
-
   }
 
   .cart-empty__desc-container {
-    width: 35%;
-    padding: 200px 10px;
+    flex: 1 1 35%;
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     .cart-empty__desc-heading {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      text-align: center;
 
       p {
-        padding: 70px 0px;
-        font-size: clamp(32px, 1.5vw, 40px);
+        font-size: clamp(28px, 4vw, 40px);
         text-transform: uppercase;
         font-weight: 700;
-        text-align: center;
         color: #fff;
         font-style: italic;
         font-family: monospace;
+        padding-bottom: 30px;
+        animation: fadeInUp 0.6s ease-in-out;
       }
     }
 
     .cart-empty__desc-main {
-      grid-gap: 10px 0px;
       display: grid;
+      gap: 20px;
       justify-content: center;
-      align-items: center;
+      width: 100%;
+
       a {
-        text-decoration: none !important;
+        text-decoration: none;
       }
+
       .cart-empty__desc-budget-section {
-        // background-color: red;
-        img {
-          background-position: center;
-          background-repeat: no-repeat;
-          background-size: cover;
-          width: 416px;
-          height: 135px;
-          border-radius: 10px;
-        }
+        position: relative;
         cursor: pointer;
         padding: 10px;
-        
+        border-radius: 10px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        &:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 0 12px rgba(255, 255, 255, 0.3);
+        }
+
+        img {
+          width: 100%;
+          height: 135px;
+          object-fit: cover;
+          border-radius: 10px;
+        }
+
         .cart-empty__desc-good {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          text-align: center;
           color: #fff;
-          position: 'absolute';
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          justify-content: 'center';
-          align-items: 'center'
-          
+
           p {
-            font-style: italic;
-            font-weight: 700;
             font-size: 2.25em;
+            font-weight: 700;
+            font-style: italic;
           }
 
           span {
-            font-size: 1.65em;
+            font-size: 1.5em;
             font-weight: 700;
-
           }
-
         }
-
       }
     }
   }
 }
 
+
+
+
 @media screen and (max-width: 800px) {
   .cart-empty__outer-container {
-    display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 1rem;
 
-    .cart-empty__heading {}
-
-    .cart-empty__left-container {
-      .cart-empty__left-heading {
-        p {
-          font-size: clamp(22px, 1.5vw, 40px);
-
-        }
-      }
-
-      .cart-empty__img-container {
-        .cart-empty__img-main {
-          img {
-            width: 112px;
-            height: 141px;
-          }
-
-          .cart-empty__desc-budget-section {
-            display: grid;
-            justify-content: center;
-            // flex-direction: column;
-            align-items: center;
-            grid-gap: 10px 0px;
-
-            .cart-empty__desc-good,
-            .cart-empty__desc-better,
-            .cart-empty__desc-best {
-              p:nth-child(1) {}
-
-              p:nth-child(2) {}
-            }
-
-            .cart-empty__desc-good {
-              p:nth-child(1) {}
-
-              p:nth-child(1) {}
-            }
-
-            .cart-empty__desc-better {}
-
-            .cart-empty__desc-best {}
-          }
-        }
-      }
-
+    .cart-empty__left-container,
+    .cart-empty__desc-container {
+      width: 100%;
     }
+
+    .cart-empty__img-container {
+      .cart-empty__img-main img {
+        width: 120px;
+        height: 150px;
+      }
+    }
+
+    .cart-empty__desc-budget-section {
+      img {
+        height: auto;
+      }
+
+      .cart-empty__desc-good {
+        p {
+          font-size: 1.5em;
+        }
+
+        span {
+          font-size: 1.2em;
+        }
+      }
+    }
+  }
+}
+
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

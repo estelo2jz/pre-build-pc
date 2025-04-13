@@ -1,168 +1,194 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 
-
 header {
   width: 100%;
   min-height: 100px;
-  overflow: hidden;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  z-index: 100;
-  // background-color: #581b98 !important;
-  background-color: rgb(125, 8, 227) !important;
+  padding: 0 2rem;
   background-color: transparent;
+  position: relative;
+  z-index: 100;
   box-shadow:
-  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
-  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
-  0 12.5px 10px rgba(0, 0, 0, 0.06),
-  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
-  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
-  0 100px 80px rgba(0, 0, 0, 0.12);
-  
-
-  .menu {
-    font-size:30px;
-    .menu-bars {
-      color: rgb(255, 255, 255);
-    }
-  }
-  .menu-close {
-    font-size:30px;
-
-  }
-  ul {
-
-  }
-
-  ul {
-    
-    li {
-      list-style: none;
-      display: inline-block;
-      padding: 0 15px;
-
-      a {
-        text-decoration: none;
-        color: rgb(255, 255, 255);
-        font-size: 20px;
-      }
-
-    }
-  }
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+  transition: background-color 0.3s ease;
 
   .logo {
-    .logo-img {
-      img {
-        width: 100px;
-        top: -20px;
-        left: 170px;
+    a {
+      font-family: 'Anton', sans-serif;
+      color: white;
+      font-size: 2rem;
+      text-decoration: none;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.05);
       }
     }
-    a {
-      color: rgb(255, 255, 255);
-      text-decoration: none;
-      font-family: 'Anton', sans-serif;
+
+    .logo-img img {
+      width: 100px;
+      position: relative;
+    }
+  }
+
+  .menu {
+    font-size: 2rem;
+    color: white;
+    display: none;
+    cursor: pointer;
+
+    .menu-bars,
+    .menu-close {
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  ul {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+
+    li {
+      a {
+        text-decoration: none;
+        color: white;
+        font-size: 1.1rem;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: #ffde59;
+        }
+      }
     }
   }
 
   .cart-icon {
-    position: relative;
-    margin-right: 15px;
     display: flex;
-    justify-content: center;
     align-items: center;
-    .cart-search {
-      padding: 0px 10px;
-      font-size: 25px;
-      color: rgb(255, 255, 255) !important;
-    }
-    .cart-person {
-      padding: 0px 10px;
-      font-size: 30px;
-      color: rgb(255, 255, 255) !important;
-    }
-    .cart-img {
-      padding-left: 10px;
-      font-size: 30px;
-      color: rgb(255, 255, 255) !important;
+    position: relative;
 
+    .cart-search,
+    .cart-person,
+    .cart-img {
+      padding: 0 10px;
+      font-size: 1.5rem;
+      color: white;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: translateY(-3px);
+      }
     }
 
     span {
-      // background: rgb(255, 255, 255);
-      // border-radius: 20px;
-      color: rgb(255, 255, 255);
       position: absolute;
-      top: -20px;
-      right: -15px;
-      font-size: 20px;
-      padding: 5px;
-      font-weight: 700;
+      top: -10px;
+      right: -10px;
+      background: #e91e63;
+      color: white;
+      font-size: 0.8rem;
+      font-weight: bold;
+      padding: 4px 8px;
+      border-radius: 50%;
     }
   }
 }
 
-// .menu{
-//   display: none;
-// }
-
-@media (max-width: 1000px){
-  header{
-    justify-content: space-between;
-    padding: 0px 10px;
-  }
-  ul{
-    position: fixed;
-    top:0;
-    left: -100%;
-    width: 100%;
-    height: 100vh;
-    padding-top: 35px;
-    padding-bottom: 35px;
-    background: #581b98;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    opacity: 0.98;
-    z-index: 99;
-    transition: 0.5s ease-in;
-  }
-  a {
-    color: white;
-  }
-  .menu{
-    display: block;
-    cursor: pointer;
-  }
-  ul li .menu{
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    color: white;
-  }
-  ul {
-    li {
-      font-size: 20px;
-    }
-  }
-}
-
-
-@media screen and (max-width: 500px) {
+// ✅ Tablet & Below: Mobile Nav
+@media (max-width: 1000px) {
   header {
-    .logo {
-      // display: none;
+    padding: 1rem;
+
+    .menu {
+      display: block;
+      z-index: 101;
     }
-  }
-  .cart-icon {
-    .cart-search {
-      display: none;
+
+    ul {
+      position: fixed;
+      top: 0;
+      left: -100%;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100vh;
+      background: #000000;
+      transition: left 0.4s ease;
+      z-index: 100;
+
+      &.active {
+        left: 0;
+      }
+
+      li {
+        padding: 1rem 0;
+
+        a {
+          font-size: 1.5rem;
+        }
+      }
+
+      .menu-close {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        font-size: 2rem;
+      }
     }
-    .cart-person {
-      display: none;
+
+    .logo-img img {
+      top: 0;
+      left: 0;
     }
   }
 }
+
+// ✅ Phones: Simplify icons and logo
+@media (max-width: 500px) {
+  header {
+    flex-direction: row;
+
+    .logo a {
+      font-size: 1.5rem;
+    }
+
+    .logo-img img {
+      width: 80px;
+    }
+
+    .cart-icon {
+      .cart-search,
+      .cart-person {
+        display: none;
+      }
+
+      .cart-img {
+        font-size: 1.8rem;
+      }
+
+      span {
+        font-size: 0.7rem;
+        top: -6px;
+        right: -6px;
+      }
+    }
+  }
+}
+
+
+

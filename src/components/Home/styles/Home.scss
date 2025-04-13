@@ -1,41 +1,35 @@
-.home__main {
+.home {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 
-  .home__main__tope-header,
-  .home__main__price,
-  .home__main__review,
-  .home__main__best-sellers,
-  .home__main__follow,
-  .home__main__checkout,
-  .home__main__footer {
-    // padding: 100px 0px;
+  &__section {
+    width: 100%;
+    padding: 4rem 1.5rem;
 
+    @media screen and (max-width: 768px) {
+      padding: 3rem 1rem;
+    }
   }
 
-  .home__main__top-header {
+  &__header,
+  &__footer {
+    padding: 0;
   }
 
-  .home__main__price {
-
+  &__bestsellers {
   }
 
-  .home__main__review {
+  &__checkout {
+    background: #f5f5f5;
   }
 
-  .home__main__best-sellers {
-    background-color: rgb(125, 8, 227);
-  margin: 0px !important;
+  &__follow {
+    color: #000000;
   }
 
-  .home__main__follow {
-    padding: 100px 0px;
-
-  }
-
-  .home__main__checkout {
-    padding: 100px 0px;
-  }
-
-  .home__main__footer {
-    padding: 100px 0px;
+  &__pricing,
+  &__review {
+    background-color: #fff;
   }
 }

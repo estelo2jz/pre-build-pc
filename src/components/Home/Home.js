@@ -1,5 +1,5 @@
 import React from "react";
-import { Parallax } from 'react-parallax';
+import { Parallax } from "react-parallax";
 
 import TopHeader from "./TopHeader";
 import Pricing from "./Pricing";
@@ -13,32 +13,34 @@ import "./styles/Home.scss";
 
 const Home = () => {
   return (
-    <div className="home__main">
-      <div className="home__main__top-header">
+    <div className="home">
+      <section className="home__section home__header">
         <TopHeader />
-      </div>
-      <div className="home__main__price">
+      </section>
+
+      <section className="home__section home__pricing">
         <Pricing />
-      </div>
+      </section>
 
-      <div className="home__main__review">
+      <section className="home__section home__review">
         <Review />
-      </div>
-      <div className="home__main__best-sellers">
+      </section>
+
+      <section className="home__section home__bestsellers">
         <BestSellers />
-      </div>
+      </section>
 
-      <div className="home__main__follow">
+      <section className="home__section home__follow">
         <Follow />
-      </div>
+      </section>
 
-      <div className="home__main__checkout">
+      <section className="home__section home__checkout">
         <Checkout />
-      </div>
+      </section>
 
-      <div className="home__main__footer">
+      <footer className="home__section home__footer">
         <FooterOurMission />
-      </div>
+      </footer>
     </div>
   );
 };
