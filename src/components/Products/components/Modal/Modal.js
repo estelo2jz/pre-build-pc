@@ -1,7 +1,7 @@
 import React from "react";
 import {Link} from "react-router-dom";
 import styles from "../Modal/Modal.module.scss";
-import { RiCloseLine } from "react-icons/ri";
+// import { RiCloseLine } from "react-icons/ri";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import './modalll.scss';
 

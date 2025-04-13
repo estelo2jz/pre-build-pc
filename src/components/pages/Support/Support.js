@@ -3,8 +3,6 @@ import React from "react";
 import SupportTopHeader from "./SupportTopHeader";
 import SupportGuides from "./SupportGuides";
 import SupportQuestions from "./SupportQuestions";
-import SupportSales from "./SupportSales";
-import SupportSupport from "./SupportSupport";
 import SupportContact from "./SupportContact";
 
 const Support = () => {

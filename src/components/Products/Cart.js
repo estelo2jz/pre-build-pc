@@ -6,7 +6,6 @@ import CartEmptyTemplate from './components/CartEmptyTemplate';
 
 import LoadingScreen from '../Helper/Loader/loading'
 
-import { AiFillQuestionCircle } from "react-icons/ai";
 import { BsFillCartFill } from "react-icons/bs";
 
 import "./styles/Cart.scss";

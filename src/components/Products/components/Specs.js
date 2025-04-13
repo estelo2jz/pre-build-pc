@@ -1,10 +1,5 @@
 import React from "react";
-
-import Essentials from "./Essentials";
-import Slider from "./Slider";
-
 import EssentialsProducts from "./EssentialsProducts";
-
 import "./styles/Specs.scss";
 
 export default function Colors({

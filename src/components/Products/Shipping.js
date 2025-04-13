@@ -1,12 +1,10 @@
 import React, { useContext, useState, useEffect } from "react";
 import { DataContext } from "./Data/DataProvider";
-import { Link } from "react-router-dom";
 
 import ShippingForm from "./ShippingForm";
 
 import Top from "../../assets/images/cart/top3.jpg";
 
-import { AiFillQuestionCircle } from "react-icons/ai";
 
 import "./styles/Shipping.scss";
 

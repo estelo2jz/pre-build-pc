@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { DataContext } from "../Data/DataProvider";
 
-import { BsArrowRight } from "react-icons/bs";
 
 import Apex from "./images/apex.webp";
 import BF2042 from "./images/bf2042.webp";

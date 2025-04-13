@@ -1,6 +1,5 @@
 import React, { useContext, useState  } from "react";
 import { DataContext } from "../Data/DataProvider";
-import { Link } from "react-router-dom";
 
 import styles from "./Modal/App.module.css";
 

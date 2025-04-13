@@ -13,10 +13,6 @@ const AccordionSection = styled.div`
   height: 100%;
   margin-top: 20px;
   background: transparent;
-  /* background-color: #f0f0f0; */
-  /* padding: 30px 120px 30px 30px; */
-  /* background: #fff; */
-  
   `;
 
 const Container = styled.div`

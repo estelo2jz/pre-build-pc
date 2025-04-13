@@ -5,8 +5,6 @@ import { Link } from "react-router-dom";
 
 import "./styles/ShippingForm.scss";
 
-import { FcGoogle } from "react-icons/fc";
-import { BsPaypal } from "react-icons/bs";
 import { BiCaretRight } from "react-icons/bi";
 import { AiFillCaretLeft } from "react-icons/ai";
 // FcGoogle

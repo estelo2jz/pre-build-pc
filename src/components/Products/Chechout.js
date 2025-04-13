@@ -1,6 +1,5 @@
 import React, { useContext, useState, useEffect } from "react";
 import { DataContext } from "./Data/DataProvider";
-import { Link } from "react-router-dom";
 
 import CheckoutForm from "./CheckoutForm";
 

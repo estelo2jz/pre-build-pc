@@ -2,11 +2,6 @@ import React, { useContext } from "react";
 import { DataContext } from "./Data/DataProvider";
 import { Link } from "react-router-dom";
 
-import GraphicsLogo from "../../assets/images/pc/gpu.png";
-import ProcessorLogo from "../../assets/images/pc/cpu-tower.png";
-import StorageLogo from "../../assets/images/pc/ram.png";
-import MemoryLogo from "../../assets/images/pc/ssd.png";
-
 import "./styles/Products.scss";
 
 export default function Products() {
