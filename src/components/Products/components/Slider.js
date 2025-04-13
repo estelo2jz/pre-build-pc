@@ -1,9 +1,11 @@
 import React from "react";
 import { Carousel } from "@trendyol-js/react-carousel";
+import CarouselComponent from "./Carousel";
 
 const Slider = () => {
   return (
     <div>
+      <CarouselComponent />
       <Carousel show={3.5} slide={3} swiping={true}>
         <div color="#2d66c3">We love Web 🌐</div>
         <div color="#f44336">We love Developers 👩🏻‍</div>
