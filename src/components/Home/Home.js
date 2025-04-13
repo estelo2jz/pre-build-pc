@@ -34,9 +34,9 @@ const Home = () => {
         <Follow />
       </section>
 
-      <section className="home__section home__checkout">
+      {/* <section className="home__section home__checkout">
         <Checkout />
-      </section>
+      </section> */}
 
       <footer className="home__section home__footer">
         <FooterOurMission />
