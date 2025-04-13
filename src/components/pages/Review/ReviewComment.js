@@ -1,7 +1,8 @@
 // Review.jsx
 import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
+import 'swiper/css';
+import 'swiper/swiper-bundle.css';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 import "./styles/Review.scss";
 

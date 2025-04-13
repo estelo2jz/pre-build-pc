@@ -1,3 +1,4 @@
+import React from "react";
 import "./PaymentOptions.scss";
 import CreditCards from "../../../assets/images/payment/credit-cards.png";
 import Paypal from "../../../assets/images/payment/paypal.png";
