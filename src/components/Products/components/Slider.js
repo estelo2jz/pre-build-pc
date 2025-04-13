@@ -1,23 +1,66 @@
 import React from "react";
-import { Carousel } from "@trendyol-js/react-carousel";
-import CarouselComponent from "./Carousel";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+import CarouselComponent from "./Carousel"; // keep if needed for additional content
 
-const Slider = () => {
+const CustomSlider = () => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 600,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    swipeToSlide: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1.2,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
+
   return (
     <div>
       <CarouselComponent />
-      <Carousel show={3.5} slide={3} swiping={true}>
-        <div color="#2d66c3">We love Web 🌐</div>
-        <div color="#f44336">We love Developers 👩🏻‍</div>
-        <a target="_blank" href="https://github.com/trendyol/">
-          <div color="#d53f8c">This is our github</div>
+      <Slider {...settings}>
+        <div style={{ backgroundColor: "#2d66c3", padding: "40px", color: "white" }}>
+          We love Web 🌐
+        </div>
+        <div style={{ backgroundColor: "#f44336", padding: "40px", color: "white" }}>
+          We love Developers 👩🏻‍💻
+        </div>
+        <a
+          href="https://github.com/trendyol/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div style={{ backgroundColor: "#d53f8c", padding: "40px", color: "white" }}>
+            This is our GitHub
+          </div>
         </a>
-        <a target="_blank" href="https://trendyol.com/">
-          <div color="#f27a1a">This is our website</div>
+        <a
+          href="https://trendyol.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div style={{ backgroundColor: "#f27a1a", padding: "40px", color: "white" }}>
+            This is our website
+          </div>
         </a>
-      </Carousel>
+      </Slider>
     </div>
   );
 };
 
-export default Slider;
+export default CustomSlider;
