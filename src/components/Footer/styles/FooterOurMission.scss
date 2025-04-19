@@ -7,80 +7,87 @@
   flex-wrap: wrap;
   width: 100%;
   height: 100%;
-  // background-color: red;
   padding: 40px;
   z-index: 1;
   position: relative;
   margin-top: 220px;
+  animation: fadeIn 1s ease forwards;
+  opacity: 0;
 
   .footer-our-mission__left {
     width: 50%;
     text-align: right;
+    animation: slideUp 1s ease forwards 0.3s;
+    opacity: 0;
 
     img {
       width: 100%;
       border-radius: 10px;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.03);
+      }
     }
   }
 
   .footer-our-mission__right {
-    padding: 0px 40px;
+    padding: 0 40px;
     display: flex;
     width: 50%;
-    // align-items: center;
-    // justify-content: center;
     flex-direction: column;
+    animation: slideUp 1s ease forwards 0.5s;
+    opacity: 0;
 
     .footer-our-mission__right-p {
-      padding: 20px 0px;
+      padding: 20px 0;
       padding-bottom: 200px;
 
       p {
-        color: rgb(0, 0, 0);
-        // font-weight: 600;
+        color: #ffffff;
         font-size: 1.875rem;
         font-style: italic;
         font-family: 'Anton', sans-serif;
         text-transform: uppercase;
-
+        transform: translateY(20px);
+        opacity: 0;
+        animation: slideUp 1s ease forwards 0.7s;
       }
     }
 
     .footer-our-mission__right-btn {
-      paddin-bottom: 200px;
-      padding: 40px 0px;;
+      padding: 40px 0;
+
       button {
         padding: 15px 50px;
         border-radius: 10px;
-        outline: none;
-        border: none;
+        border: 1px solid #c25be9;
+        background: #b740e2;
         font-size: 16px;
         font-weight: 700;
-        color: rgb(255, 255, 255);
-        background: #b740e2;
-        border: 1px solid #c25be9;
-        background-position: center;
+        color: #fff;
         letter-spacing: 2px;
         cursor: pointer;
+        transition: background 0.3s ease, transform 0.3s ease;
+
+        &:hover {
+          background: #a232d4;
+          transform: scale(1.05);
+        }
       }
     }
   }
 }
 
-
-
+// 📱 Responsive: Tablet
 @media screen and (max-width: 1100px) {
   .footer-our-mission {
-    display: flex;
     flex-direction: column;
     margin-top: 300px;
-    
+
     .footer-our-mission__left {
       width: 100%;
-      display: flex;
-      flex-direction: column;
       align-items: center;
-      // text-align: right;
 
       img {
         width: 60%;
@@ -92,23 +99,23 @@
       align-items: center;
 
       .footer-our-mission__right-p {
-        display: none;
-        p {}
+        // display: none;
       }
 
       .footer-our-mission__right-btn {
-        button {}
+        button {
+          width: auto;
+        }
       }
     }
   }
 }
 
+// 📱 Responsive: Mobile
 @media screen and (max-width: 700px) {
   .footer-our-mission {
-    display: flex;
-    flex-direction: column;
     margin-top: 320px;
-    
+
     .footer-our-mission__left {
       width: 100%;
       text-align: right;
@@ -123,7 +130,7 @@
 
       .footer-our-mission__right-p {
         p {
-          display: none;          
+          // display: none;
         }
       }
 
@@ -134,5 +141,19 @@
         }
       }
     }
+  }
+}
+
+// 🔥 Animations
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
 }

@@ -90,11 +90,11 @@ export default function Payment() {
                     </div> */}
                   </div>
                   <div className="payment__heading">
-                    <h2 title={product.title}>{product.title}</h2>
+                    <h2 title={product.title}>{product.title} PERFORMANCE</h2>
                   </div>
-                  <div className="payment__price">
+                  {/* <div className="payment__price">
                     <p>${product.price}</p>
-                  </div>
+                  </div> */}
                 </div>
                 {/* <div
                   className="payment__delete"

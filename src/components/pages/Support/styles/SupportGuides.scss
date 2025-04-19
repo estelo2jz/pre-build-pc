@@ -4,49 +4,73 @@
   background-size: cover;
   height: 35vh;
   display: flex;
-  // align-items: center;
   flex-direction: column;
   justify-content: center;
-  padding: 0px 50px;
+  padding: 0 50px;
   color: #3a3a3a;
+  animation: fadeIn 1s ease forwards;
+  opacity: 0;
+  overflow: hidden;
 
   .support-guides__heading {
     p {
       font-size: clamp(30px, 3.5vw, 50px);
       font-weight: 700;
       font-style: italic;
+      margin-bottom: 10px;
+      transform: translateY(20px);
+      opacity: 0;
+      animation: slideUp 1s ease forwards 0.3s;
     }
   }
 
   .support-guides__text {
     width: 50%;
-    padding: 10px 0px;
+    padding: 10px 0;
+
     p {
-      // text-align: center;
-      font-size: clamp(10px, 3.5vw, 19px);
+      font-size: clamp(12px, 3.5vw, 19px);
+      transform: translateY(20px);
+      opacity: 0;
+      animation: slideUp 1s ease forwards 0.6s;
     }
   }
 }
 
-
+// 📱 Responsive Adjustments
 @media screen and (max-width: 500px) {
   .support-guides {
-    display: flex;
     align-items: center;
-    flex-direction: column;
+    padding: 0 20px;
+    text-align: center;
+
     .support-guides__heading {
       p {
+        font-size: clamp(24px, 6vw, 36px);
+      }
+    }
 
-      }
-    }
-  
     .support-guides__text {
-      text-align: center;
       width: 100%;
-      padding: 10px 0px;
+      padding: 10px 0;
+
       p {
-        // text-align: center;
+        font-size: clamp(12px, 4vw, 16px);
       }
     }
+  }
+}
+
+// 🔥 Animations
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
 }

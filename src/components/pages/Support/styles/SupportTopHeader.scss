@@ -8,36 +8,69 @@
   flex-direction: column;
   justify-content: center;
   color: #fff;
-  padding: 0px 20px;
+  padding: 0 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  animation: fadeIn 1s ease forwards;
+  opacity: 0;
+
   .support-top-header__heading {
     p {
       font-size: clamp(30px, 3.5vw, 50px);
       font-weight: 700;
       font-style: italic;
-      
+      margin-bottom: 10px;
+      transform: translateY(20px);
+      opacity: 0;
+      animation: slideUp 1s ease forwards 0.3s;
     }
   }
+
   .support-top-header__text {
     width: 50%;
+
     p {
+      font-size: clamp(12px, 3.5vw, 19px);
       text-align: center;
-      font-size: clamp(10px, 3.5vw, 19px);
+      transform: translateY(20px);
+      opacity: 0;
+      animation: slideUp 1s ease forwards 0.6s;
     }
   }
 }
 
+// 📱 Responsive: Mobile tweaks
 @media screen and (max-width: 500px) {
   .support-top-header {
+    padding: 0 10px;
+
     .support-top-header__heading {
       p {
-
-        
+        font-size: clamp(24px, 6vw, 36px);
       }
     }
+
     .support-top-header__text {
       width: 100%;
+
       p {
+        font-size: clamp(12px, 4vw, 16px);
       }
     }
+  }
+}
+
+// 🔥 Animations
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
 }

@@ -1,15 +1,37 @@
+.close__container {
+  .delete__Btn {
+    background-color: red !important;
+    border: none !important;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 
-  .close__container {
-    .delete__Btn {
-      background-color: red !important;
-      border: none !important;
+    &:hover {
+      background-color: darkred !important;
+      transform: scale(1.05);
     }
-  
   }
+}
 
 .go-to-cart__container {
   .cancelBtn {
-    // font-size: 20px !important;
-    color: rgb(255, 255, 255) !important;
+    color: #fff !important;
+    padding: 10px 20px;
+    background-color: #3a3a3a;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+
+    &:hover {
+      background-color: #5a5a5a;
+      transform: scale(1.05);
+    }
   }
 }

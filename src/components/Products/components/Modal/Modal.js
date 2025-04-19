@@ -32,7 +32,7 @@ const Modal = ({ setIsOpen }) => {
                   Close
                 </button>
               </div>
-                <AiOutlineShoppingCart />
+                {/* <AiOutlineShoppingCart /> */}
             </div>
           </div>
         </div>

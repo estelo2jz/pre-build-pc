@@ -1,6 +1,7 @@
 .image {
   min-height: 100vh;
   position: relative;
+
   .content {
     position: absolute;
     display: flex;
@@ -8,6 +9,8 @@
     align-items: center;
     width: 100%;
     height: 100vh;
+    animation: fadeIn 1s ease forwards;
+    opacity: 0;
   }
 }
 
@@ -15,32 +18,43 @@
   height: 100vh;
   display: flex;
   align-items: center;
-  // background-image: url('../../../assets/images/home/homeBg3.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   padding: 40px;
-  
-  .top-header__container {
-    .top-header__heading {
-      p {
-        font-style: italic;
-        color: #fff;
-        font-weight: 700;
+  animation: fadeIn 1s ease forwards;
+  opacity: 0;
 
-      }
+  .top-header__container {
+    width: 100%;
+
+    .top-header__heading {
+      text-align: left;
+      color: #fff;
+      font-style: italic;
+      font-weight: 700;
+      animation: slideUp 1s ease forwards 0.3s;
+      opacity: 0;
+
       .top-header__heading-top {
         p {
           font-size: 80px;
+          line-height: 1.1;
+          transform: translateY(20px);
+          opacity: 0;
+          animation: slideUp 1s ease forwards 0.5s;
         }
       }
+
       .top-header__heading-bottom {
         p {
           font-size: 40px;
+          transform: translateY(20px);
+          opacity: 0;
+          animation: slideUp 1s ease forwards 0.7s;
 
         }
       }
-
     }
 
     .top-header__bottom {
@@ -48,123 +62,115 @@
       justify-content: space-around;
       align-items: center;
       padding-top: 30px;
-      .top-header__build {
+      flex-wrap: wrap;
+      animation: slideUp 1s ease forwards 0.9s;
+      opacity: 0;
+      gap: 20px;
+
+      .top-header__build,
+      .top-header__best {
         width: 100%;
-        margin-bottom: 10px;
+        display: flex;
+        justify-content: center;
+
         button {
           padding: 10px 30px;
           border-radius: 10px;
-          color: #fff;
           font-size: clamp(15px, 1.5vw, 20px);
-          background: #c25be9;
-          border: 1px solid #c25be9;
-          background-position: center;
           font-weight: 700;
           cursor: pointer;
-        }
+          background-position: center;
+          transition: transform 0.3s ease, background 0.3s ease;
 
+          &:hover {
+            transform: scale(1.05);
+          }
+        }
       }
 
-      .top-header__best {
-        margin-bottom: 10px;
-        width: 100%;
-        button {
-          font-size: clamp(15px, 1.5vw, 20px);
-          padding: 10px 30px;
-          border-radius: 10px;
-          color: #3a3a3a;
-          background: #fff;
-          border: 1px solid #fff;
-          background-position: center;
-          font-weight: 700;
-          cursor: pointer;
+      .top-header__build button {
+        background: #c25be9;
+        color: #fff;
+        border: 1px solid #c25be9;
 
+        &:hover {
+          background: #a232d4;
+        }
+      }
+
+      .top-header__best button {
+        background: #fff;
+        color: #3a3a3a;
+        border: 1px solid #fff;
+
+        &:hover {
+          background: #eaeaea;
         }
       }
     }
   }
 }
+a {
+  text-decoration: none !important;
 
+  }
+
+// 📱 Responsive: Tablets
 @media screen and (max-width: 1300px) {
   .top-header {
-  
     .top-header__container {
       .top-header__heading {
-        p {
-  
+        .top-header__heading-top p {
+          font-size: 40px;
         }
-        .top-header__heading-top {
-          p {
-            font-size: 40px;
-          }
-        }
-        .top-header__heading-bottom {
-          p {
+
+        .top-header__heading-bottom p {
           font-size: 30px;
-          }
         }
-  
       }
-  
+
       .top-header__bottom {
-        width: 100%;
-        display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        .top-header__build {
-          button {
-          }
-  
-        }
-  
-        .top-header__best {
-          button {
-          }
-        }
       }
     }
   }
 }
 
+// 📱 Responsive: Phones
 @media screen and (max-width: 500px) {
   .top-header {
-  
     .top-header__container {
       .top-header__heading {
-        p {
-  
+        .top-header__heading-top p {
+          font-size: 40px;
         }
-        .top-header__heading-top {
-          p {
-            font-size: 40px;
-          }
-        }
-        .top-header__heading-bottom {
-          p {
+
+        .top-header__heading-bottom p {
           font-size: 20px;
-          }
         }
-  
       }
-  
+
       .top-header__bottom {
-        width: 100%;
-        display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        .top-header__build {
-          button {
-          }
-  
-        }
-  
-        .top-header__best {
-          button {
-          }
-        }
       }
     }
+  }
+}
+
+// 🔥 Animations
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
 }

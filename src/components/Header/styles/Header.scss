@@ -11,6 +11,7 @@ header {
   background-color: transparent;
   position: relative;
   z-index: 100;
+  animation: fadeIn 0.8s ease forwards;
   box-shadow:
     0 2.8px 2.2px rgba(0, 0, 0, 0.034),
     0 6.7px 5.3px rgba(0, 0, 0, 0.048),
@@ -18,24 +19,30 @@ header {
     0 22.3px 17.9px rgba(0, 0, 0, 0.072),
     0 41.8px 33.4px rgba(0, 0, 0, 0.086),
     0 100px 80px rgba(0, 0, 0, 0.12);
-  transition: background-color 0.3s ease;
+  transition: background-color 0.4s ease;
 
   .logo {
+    
     a {
       font-family: 'Anton', sans-serif;
       color: white;
-      font-size: 2rem;
       text-decoration: none;
-      transition: transform 0.3s ease;
+      transition: transform 0.4s ease, color 0.3s ease;
 
       &:hover {
-        transform: scale(1.05);
+        transform: scale(1.08);
+        color: #ffde59;
       }
     }
 
     .logo-img img {
       width: 100px;
       position: relative;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: rotate(3deg) scale(1.05);
+      }
     }
   }
 
@@ -47,10 +54,10 @@ header {
 
     .menu-bars,
     .menu-close {
-      transition: transform 0.3s ease;
+      transition: transform 0.4s ease;
 
       &:hover {
-        transform: scale(1.1);
+        transform: scale(1.15) rotate(5deg);
       }
     }
   }
@@ -67,10 +74,26 @@ header {
         text-decoration: none;
         color: white;
         font-size: 1.1rem;
-        transition: color 0.3s ease;
+        position: relative;
+        transition: all 0.3s ease;
 
         &:hover {
           color: #ffde59;
+        }
+
+        &:after {
+          content: '';
+          position: absolute;
+          width: 0;
+          height: 2px;
+          left: 0;
+          bottom: -5px;
+          background: #ffde59;
+          transition: width 0.3s ease;
+        }
+
+        &:hover:after {
+          width: 100%;
         }
       }
     }
@@ -87,10 +110,10 @@ header {
       padding: 0 10px;
       font-size: 1.5rem;
       color: white;
-      transition: transform 0.3s ease;
+      transition: transform 0.4s ease;
 
       &:hover {
-        transform: translateY(-3px);
+        transform: translateY(-4px) scale(1.1);
       }
     }
 
@@ -104,11 +127,12 @@ header {
       font-weight: bold;
       padding: 4px 8px;
       border-radius: 50%;
+      animation: popIn 0.5s ease forwards;
     }
   }
 }
 
-// ✅ Tablet & Below: Mobile Nav
+// 🔁 Mobile Responsive
 @media (max-width: 1000px) {
   header {
     padding: 1rem;
@@ -127,12 +151,13 @@ header {
       align-items: center;
       width: 100%;
       height: 100vh;
-      background: #000000;
-      transition: left 0.4s ease;
+      background: #000;
+      transition: left 0.5s ease;
       z-index: 100;
 
       &.active {
         left: 0;
+        animation: slideIn 0.5s ease forwards;
       }
 
       li {
@@ -158,7 +183,6 @@ header {
   }
 }
 
-// ✅ Phones: Simplify icons and logo
 @media (max-width: 500px) {
   header {
     flex-direction: row;
@@ -190,5 +214,34 @@ header {
   }
 }
 
+// 🔥 Animations
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
+@keyframes slideIn {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 0;
+  }
+}
 
+@keyframes popIn {
+  0% {
+    transform: scale(0.6);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

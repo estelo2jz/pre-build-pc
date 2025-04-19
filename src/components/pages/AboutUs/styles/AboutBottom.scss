@@ -1,21 +1,22 @@
 .about-bottom {
   display: flex;
   flex-wrap: wrap;
-  // justify-content: space-evenly;
-  // align-items: center;
   width: 100%;
   background-image: url('https://cdn.shopify.com/s/files/1/0408/5792/7834/files/Redux_Gaming_1920x.jpg?v=1600655051');
-  padding: 100px 30px;
   background-size: cover;
   background-position: center;
+  padding: 100px 30px;
   height: 100% !important;
+  animation: fadeIn 1s ease forwards;
+  opacity: 0;
 
   .about-bottom__bottom {
     width: 50%;
-    padding: 0px 20px;
+    padding: 0 20px;
     display: flex;
     flex-direction: column;
-    // align-items: center;
+    animation: slideUp 1s ease forwards 0.4s;
+    opacity: 0;
 
     .about-bottom__level {
       color: #fff;
@@ -23,43 +24,42 @@
       flex-direction: column;
       width: 60%;
 
-
-      p {}
-
       p:nth-child(1) {
         font-size: 30px;
         font-style: italic;
         padding-bottom: 10px;
         font-weight: 700;
-        // padding: 20px 70px;
-
-
+        transform: translateY(20px);
+        opacity: 0;
+        animation: slideUp 1s ease forwards 0.5s;
       }
 
       p:nth-child(2) {
-        padding: 20px 0px;
+        padding: 20px 0;
         font-size: 18px;
-        // padding: 20px 70px;
-
+        transform: translateY(20px);
+        opacity: 0;
+        animation: slideUp 1s ease forwards 0.7s;
       }
-
     }
 
     .about-bottom__btn {
-      padding-top: 10px;
-      padding-bottom: 30px;
+      padding: 10px 0 30px;
 
       button {
         color: #3a3a3a;
         background: #fff;
-        border: 1px solid #fff;
-        background-position: center;
+        border: none;
         padding: 15px 30px;
         font-weight: 700;
-        border: none;
-        outline: none;
         border-radius: 10px;
         font-size: 15px;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background: #c25be9;
+          color: #fff;
+        }
       }
     }
 
@@ -67,75 +67,80 @@
       img {
         width: 60%;
         border-radius: 10px;
+        transition: transform 0.4s ease;
+        transform: translateY(20px);
+        opacity: 0;
+        animation: slideUp 1s ease forwards 0.9s;
+
+        &:hover {
+          transform: scale(1.05);
+        }
       }
     }
   }
 
   .about-bottom__top {
+    width: 50%;
+    padding: 0 20px;
     display: flex;
     flex-direction: column;
-    // align-items: center;
     color: white;
-    // background-color: red;
-    width: 50%;
-    // height: 300px;
-    padding: 0px 20px;
-    height: 100%;
+    animation: slideUp 1s ease forwards 0.3s;
+    opacity: 0;
 
     .about-bottom__top-contents {
-      display: flex;
-      flex-direction: column;
-      // align-items: center;
       color: #fff;
       width: 60% !important;
-
-      p {}
 
       p:nth-child(1) {
         font-size: 30px;
         font-style: italic;
         padding-bottom: 10px;
         font-weight: 700;
-        // padding: 10px 70px;
-
+        transform: translateY(20px);
+        opacity: 0;
+        animation: slideUp 1s ease forwards 0.5s;
       }
 
       p:nth-child(2) {
-        // padding: 20px 70px;
         font-size: 18px;
         width: 100%;
+        transform: translateY(20px);
+        opacity: 0;
+        animation: slideUp 1s ease forwards 0.7s;
       }
     }
 
     .about-bottom__top-cards {
       display: flex;
       flex-wrap: wrap;
-      // align-items: center;
-      // margin-top: 40px;
       height: 100%;
+      justify-content: center;
+      gap: 20px;
 
       .about-bottom__top-container {
         padding: 20px;
-        height: 100% !important;
+        height: 100%;
+
         .about-bottom__top-power {
           background-color: #fff;
-          // position: relative;
-          height: 100%;
           margin-top: 20px;
           border-radius: 10px;
           text-align: center;
-          padding: 0px 10px;
-          // padding: 20px
+          padding: 10px;
+          animation: slideUp 1s ease forwards 1s;
+          opacity: 0;
+
           .about-bottom__top-good {
             color: #c25be9;
             font-size: 20px;
             font-weight: 800;
-            font-style: italic !important;
-            padding: 10px 0px;
+            font-style: italic;
+            padding: 10px 0;
           }
         }
+
         .about-bottom__top-box {
-          position: relative;
           display: flex;
           align-items: center;
           flex-direction: column;
@@ -144,109 +149,93 @@
             img {
               width: 90%;
               border-radius: 10px;
+              transition: transform 0.4s ease;
+
+              &:hover {
+                transform: scale(1.05);
+              }
             }
           }
 
           .about-bottom__top-price {
-            width: 100%;
+            text-align: center;
+            color: black;
 
             .about-bottom__top-price-child {
-              text-align: center;
-              color: rgb(0, 0, 0);
               font-size: 15px;
-              font-weight: 500 !important;
-              font-style: none !important;
+              font-weight: 500;
             }
 
             button {
-              margin: 20px 0px;
-              padding: 10px 0px;
+              margin: 20px 0;
+              padding: 10px 0;
               border-radius: 10px;
               font-size: 15px;
               width: 100%;
               font-weight: 800;
-              color: #ffffff;
+              color: #fff;
               background: #c25be9;
               border: 1px solid #fff;
-              background-position: center;
               cursor: pointer;
+              transition: background 0.3s ease;
+
+              &:hover {
+                background: #a232d4;
+              }
             }
           }
-
         }
-
       }
     }
   }
 }
 
-@media screen and (max-width: 1000px) {
+// 📱 Responsive
+@media screen and (max-width: 1000px), screen and (max-width: 1700px) {
   .about-bottom {
-    display: flex;
-    align-items: center;
     flex-direction: column;
-    width: 100%;
+
+    .about-bottom__top,
+    .about-bottom__bottom {
+      width: 100%;
+    }
 
     .about-bottom__top {
-      display: flex;
       align-items: center;
-      flex-direction: column;
-      color: white;
-      // background-color: red;
-      width: 100%;
-      // margin-top: 50px;
-      // height: 300px;
 
       .about-bottom__top-contents {
         width: 100% !important;
-        display: flex;
         align-items: center;
-        p {
-          // width: 50%;
+        text-align: center;
 
-        }
-
-        p:nth-child(1) {
-          margin: 20px 0px;
-          padding: 0px !important;
-          // width: 50% !important;
-
-        }
-
+        p:nth-child(1),
         p:nth-child(2) {
-          padding: 0px !important;
+          padding: 0 !important;
         }
       }
 
       .about-bottom__top-cards {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
         justify-content: center;
       }
     }
 
     .about-bottom__bottom {
-      width: 100%;
+      align-items: center;
 
       .about-bottom__level {
         width: 100%;
+        text-align: center;
 
-        p {}
-
-        p:nth-child(1) {
-          margin: 20px 0px;
-          padding: 0px !important;
-
-        }
-
+        p:nth-child(1),
         p:nth-child(2) {
-          padding: 0px !important;
+          padding: 0 !important;
         }
       }
 
       .about-bottom__bottom-contents {
-          // width: 80%;
+        display: flex;
+        justify-content: center;
+
         img {
           width: 50% !important;
         }
@@ -255,76 +244,16 @@
   }
 }
 
-@media screen and (max-width: 1700px) {
-  .about-bottom {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
+// 🔥 Animations
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
 
-    .about-bottom__top {
-      display: flex;
-      // align-items: center;
-      flex-direction: column;
-      color: white;
-      // background-color: red;
-      width: 100%;
-      // height: 300px;
-
-      .about-bottom__top-contents {
-        width:100%;
-
-        p {
-          // width: 50%;
-
-        }
-
-        p:nth-child(1) {
-          margin: 20px 0px;
-          padding: 0px !important;
-
-        }
-
-        p:nth-child(2) {
-          padding: 0px !important;
-        }
-      }
-
-      .about-bottom__top-cards {
-        display: flex;
-        flex-wrap: wrap;
-        // align-items: center;
-        justify-content:center;
-        height: 100%;
-      }
-    }
-
-    .about-bottom__bottom {
-      width: 100%;
-
-      .about-bottom__level {
-        // width: 70%;
-
-        p {
-          
-        }
-
-        p:nth-child(1) {
-          margin: 20px 0px;
-          padding: 0px !important;
-
-        }
-
-        p:nth-child(2) {
-          padding: 0px !important;
-        }
-      }
-
-      .about-bottom__bottom-contents {
-        img {
-          width: 40%;
-        }
-      }
-    }
+@keyframes slideUp {
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
 }

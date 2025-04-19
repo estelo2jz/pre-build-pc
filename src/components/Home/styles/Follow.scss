@@ -2,42 +2,98 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #fff;
+  animation: fadeIn 1s ease forwards;
+  opacity: 0;
+
   .follow__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     .follow__at {
-      padding: 20px 0px;
+      padding: 20px 0;
+      transform: translateY(20px);
+      opacity: 0;
+      animation: slideUp 1s ease forwards 0.3s;
+
       p {
         font-size: clamp(20px, 1.5vw, 30px);
         text-transform: uppercase;
         font-weight: 700;
         font-style: italic;
+        text-align: center;
+
         span {
           color: #c25be9;
           cursor: pointer;
+          transition: color 0.3s ease;
+
+          &:hover {
+            color: #a232d4;
+            text-decoration: underline;
+          }
         }
       }
     }
+
     .follow__socials {
-      padding: 20px 0px;
+      padding: 20px 0;
       display: flex;
       align-items: center;
       justify-content: center;
+      transform: translateY(20px);
+      opacity: 0;
+      animation: slideUp 1s ease forwards 0.5s;
+
       span {
-        margin: 0px 10px;
+        margin: 0 10px;
         color: #c25be9;
         font-size: 30px;
         cursor: pointer;
+        transition: transform 0.3s ease, color 0.3s ease;
+
+        &:hover {
+          transform: scale(1.2);
+          color: #a232d4;
+        }
       }
     }
   }
+
   .follow__imgs {
-    padding: 20px 0px;
+    padding: 20px 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    // overflow-x: scroll;
+    flex-wrap: wrap;
+    gap: 20px;
+    transform: translateY(20px);
+    opacity: 0;
+    animation: slideUp 1s ease forwards 0.7s;
+
     img {
-      // width: 50%;
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      transition: transform 0.4s ease;
+
+      &:hover {
+        transform: scale(1.05);
+      }
     }
+  }
+}
+
+// 🔥 Animations
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
 }

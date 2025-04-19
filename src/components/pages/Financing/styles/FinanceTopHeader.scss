@@ -8,25 +8,42 @@
   justify-content: center;
   align-items: center;
   color: #fff;
+  position: relative;
+  overflow: hidden;
+
   .finance-top-header__container {
+    text-align: center;
+    animation: fadeIn 1.2s ease forwards;
+    opacity: 0;
+
     .finance-top-header__top {
-      padding: 0px 20px;
+      padding: 0 20px;
+
       p {
         font-size: clamp(30px, 2.5vw, 80px) !important;
         font-weight: 700;
-        letter-spacing:1px;
+        letter-spacing: 1px;
         font-style: italic;
-     
+        transform: translateY(30px);
+        opacity: 0;
+        animation: slideUp 1s ease forwards 0.3s;
       }
     }
+
     .finance-top-header__center {
       padding: 20px;
+
       p {
         font-size: clamp(12px, 2.5vw, 15px);
+        transform: translateY(30px);
+        opacity: 0;
+        animation: slideUp 1s ease forwards 0.6s;
       }
     }
+
     .finance-top-header__bottom {
       padding: 20px;
+
       button {
         background: #c25be9;
         background-position: center;
@@ -34,14 +51,41 @@
         border: none;
         font-size: clamp(20px, 2.5vw, 20px);
         font-weight: 700;
-        letter-spacing:2px;
+        letter-spacing: 2px;
         color: white;
         padding: 15px 40px;
         border-radius: 10px;
         width: 100%;
         cursor: pointer;
-      }
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        transform: translateY(30px);
+        opacity: 0;
+        animation: slideUp 1s ease forwards 0.9s;
 
+        &:hover {
+          transform: scale(1.05);
+          box-shadow: 0 0 15px #c25be9aa;
+        }
+      }
     }
+  }
+}
+
+// 🔥 Animations
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideUp {
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
 }

@@ -91,7 +91,7 @@ export default function Shipping() {
                   </div>
                   <div></div>
                   <div className="shipping__heading">
-                    <h2 title={product.title}>{product.title}</h2>
+                    <h2 title={product.title}>{product.title} PERFORMANCE</h2>
                   </div>
                   <div className="shipping__price">
                     <p>${product.price}</p>

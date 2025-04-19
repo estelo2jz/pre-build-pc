@@ -2,122 +2,158 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(255, 255, 255);
+  background-color: #fff;
   width: 100%;
   color: #3a3a3a;
-  padding: 20px 20px;
-  
+  padding: 40px 20px;
+  animation: fadeIn 1s ease forwards;
+  opacity: 0;
 
   .finance-rate__container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+
     .finance-rate__heading {
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 10px 0px;
+      padding: 10px 0;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: slideUp 1s ease forwards 0.3s;
+
       p {
         font-size: clamp(25px, 2.5vw, 50px);
         font-weight: 700;
         font-style: italic;
+        text-align: center;
       }
     }
 
     .finance-rate__btn {
-      padding: 10px 0px;
+      padding: 10px 0;
       display: flex;
       justify-content: center;
       align-items: center;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: slideUp 1s ease forwards 0.5s;
+
       button {
-        padding: 10px 80px;
+        padding: 12px 80px;
         border-radius: 10px;
-        outline: none;
-        border: none;
-        font-size: 16px;
-        font-weight: 700;
-        color: white;
-        background: #b740e2;
         border: 1px solid #c25be9;
+        font-size: clamp(15px, 2.5vw, 20px);
+        font-weight: 700;
+        color: #fff;
+        background: #b740e2;
         background-position: center;
         letter-spacing: 2px;
-        font-size: clamp(15px, 2.5vw, 20px);
         cursor: pointer;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        &:hover {
+          transform: scale(1.05);
+          box-shadow: 0 0 15px #c25be9aa;
+        }
       }
     }
 
     .finance-rate__help {
-      padding: 10px 0px;
+      padding: 70px 0 10px;
       display: flex;
       justify-content: center;
       align-items: center;
-      padding-top: 70px;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: slideUp 1s ease forwards 0.7s;
+
       p {
         font-size: clamp(25px, 2.5vw, 50px);
         font-weight: 700;
         font-style: italic;
+        text-align: center;
       }
     }
 
     .finance-rate__faq {
-      padding: 10px 0px;
+      padding: 10px 0;
       display: flex;
       justify-content: center;
       align-items: center;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: slideUp 1s ease forwards 0.9s;
+
       p {
         font-size: clamp(15px, 2.5vw, 20px);
+        text-align: center;
       }
+
       span {
         color: #c25be9;
         cursor: pointer;
-        
+        margin-left: 5px;
+        transition: color 0.3s ease, text-decoration 0.3s ease;
+
         &:hover {
           text-decoration: underline;
+          color: #a232d4;
         }
       }
     }
-    
+
     .finance-rate__subject {
-      padding: 10px 0px;
+      padding: 10px 0;
       display: flex;
       align-items: center;
       flex-direction: column;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: slideUp 1s ease forwards 1.1s;
+
       p {
         font-size: clamp(15px, 2.5vw, 20px);
+        text-align: center;
       }
     }
   }
 }
 
+// 📱 Responsive
 @media screen and (max-width: 500px) {
-  .finance-rate {  
+  .finance-rate {
+    padding: 30px 10px;
+
     .finance-rate__container {
-      .finance-rate__heading {
+      gap: 15px;
 
-        p {
-
-        }
-      }
-  
       .finance-rate__btn {
-
         button {
+          padding: 12px 40px;
         }
       }
-  
-      .finance-rate__help {
 
-      }
-  
-      .finance-rate__faq {
-
-        span {
-          
-          &:hover {
-          }
-        }
-      }
-      
       .finance-rate__subject {
-        padding: 0px !important;
+        padding: 0 !important;
       }
     }
+  }
+}
+
+// 🎯 Animations
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
 }

@@ -93,7 +93,7 @@ export default function Checkout() {
                   </div>
                   <div></div>
                   <div className="checkout__heading">
-                    <h2 title={product.title}>{product.title}</h2>
+                    <h2 title={product.title}>{product.title} PERFORMANCE</h2>
                   </div>
                   <div className="checkout__price">
                     <p>${product.price}</p>
