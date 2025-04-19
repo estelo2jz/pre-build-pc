@@ -1,4 +1,4 @@
-import React, { components } from "react";
+import React from "react";
 import Header from "./components/Header/Header";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Cart from "./components/Products/Cart";
@@ -6,9 +6,9 @@ import ScrollToTop from "./components/ScrollToTop";
 
 import Home from "./components/Home/Home";
 
-import Products from "./components/Products//Products";
+// import Products from "./components/Products//Products";
 import { DataProvider } from "./components/Products/Data/DataProvider";
-import { DataContext } from "./components/Products/Data/DataProvider";
+// import { DataContext } from "./components/Products/Data/DataProvider";
 import Details from "./components/Products/Details/Details";
 
 import Checkout from "./components/Products/Chechout";

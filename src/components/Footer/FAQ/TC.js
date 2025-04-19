@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import ReactLoading from 'react-loading';
 import './styles/tc.scss';
 
 export default class TC extends Component {
