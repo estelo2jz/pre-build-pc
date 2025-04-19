@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 import Close from "../svg/times-solid.svg";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { DataContext } from "../Products/Data/DataProvider";
 
 import { RiMenu5Fill } from "react-icons/ri";
@@ -30,33 +30,33 @@ export default function Header() {
         </div>
       </div>
       <div className="logo">
-        <Link to="/">
+        <NavLink to="/">
           <div className="logo-img">
             <img src={pcevolvers} alt="" />
           </div>
-        </Link>
+        </NavLink>
       </div>
       <ul style={styleMenu}>
         <li>
-          <Link onClick={toggleMenu} to="/">Home</Link>
+          <NavLink onClick={toggleMenu} to="/">Home</NavLink>
         </li>
         {/* <li>
-          <Link to="/products">Products</Link>
+          <NavLink to="/products">Products</NavLink>
         </li> */}
         <li>
-          <Link onClick={toggleMenu} to="/products">Best Sellers</Link>
+          <NavLink onClick={toggleMenu} to="/products">Best Sellers</NavLink>
         </li>
         <li >
-          <Link onClick={toggleMenu} to="/pages/review">Reviews</Link>
+          <NavLink onClick={toggleMenu} to="/pages/review">Reviews</NavLink>
         </li>
         <li>
-          <Link onClick={toggleMenu} to="/pages/financing">Financing</Link>
+          <NavLink onClick={toggleMenu} to="/pages/financing">Financing</NavLink>
         </li>
         <li>
-          <Link onClick={toggleMenu} to="/pages/support">Support</Link>
+          <NavLink onClick={toggleMenu} to="/pages/support">Support</NavLink>
         </li>
         <li>
-          <Link onClick={toggleMenu} to="/pages/why-pre-build">About Us</Link>
+          <NavLink onClick={toggleMenu} to="/pages/why-pre-build">About Us</NavLink>
         </li>
         <li onClick={toggleMenu}>
           <img src={Close} alt="" width="30" className="menu" />
@@ -64,9 +64,9 @@ export default function Header() {
       </ul>
       <div className="cart-icon">
         <span>{cart.length}</span>
-        <Link className="cart-img" to="/cart">
+        <NavLink className="cart-img" to="/cart">
           <AiOutlineShoppingCart />
-        </Link>
+        </NavLink>
       </div>
     </header>
   );
