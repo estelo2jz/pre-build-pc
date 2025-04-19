@@ -11,6 +11,7 @@ import "./styles/Payment.scss";
 export default function Payment() {
   const value = useContext(DataContext);
   const [cart, setCart] = value.cart;
+  // const [cart, setCart] = value.cart;
   const [total, setTotal] = useState(0);
 
   useEffect(() => {

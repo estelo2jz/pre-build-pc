@@ -11,6 +11,7 @@ import "./styles/Shipping.scss";
 export default function Shipping() {
   const value = useContext(DataContext);
   const [cart, setCart] = value.cart;
+  // const [cart, setCart] = value.cart;
   const [total, setTotal] = useState(0);
 
   useEffect(() => {

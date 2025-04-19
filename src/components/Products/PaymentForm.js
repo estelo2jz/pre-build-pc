@@ -17,6 +17,7 @@ import { AiFillCaretLeft } from "react-icons/ai";
 const Payment = () => {
   const value = useContext(DataContext);
   const [cart, setCart] = value.cart;
+  // const [cart, setCart] = value.cart;
   // const [total, setTotal] = useState(0);
 
   const emptyCart = () => {
