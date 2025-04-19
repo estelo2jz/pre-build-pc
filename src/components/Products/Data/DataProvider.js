@@ -91,7 +91,6 @@ import UltimateMOTHERBOARD from "../../../assets/images/pc/ultimate/mother.webp"
 import UltimateWIFI from "../../../assets/images/pc/ultimate/wifi.webp";
 import UltimateWINDOWS from "../../../assets/images/pc/ultimate/ubuntu.webp";
 import UltimateWARRANTY from "../../../assets/images/pc/ultimate/warranty.webp";
-import UltimateProfilePic from "../../../assets/images/pc/ultimate/rtx3090ti.webp";
 
 import Keyboard from "../../../assets/images/pc/good/KEYBOARD-MOUSE_200x.png";
 import MouseNormal from "../../../assets/images/pc/good/mouse-normal_200x.png";
@@ -104,7 +103,7 @@ import React, { createContext, useState, useEffect } from "react";
 export const DataContext = createContext();
 
 export const DataProvider = (props) => {
-  const [isOpen, setIsOpen] = useState(false);
+  // const [isOpen, setIsOpen] = useState(false);
   const [products, setProducts] = useState([
     {
       _id: "build=good",

@@ -10,8 +10,6 @@ import PaymentOptions from "./Payment/PaymentOptions";
 
 import "./styles/PaymentForm.scss";
 
-import { FcGoogle } from "react-icons/fc";
-import { BsPaypal } from "react-icons/bs";
 import { BiCaretRight } from "react-icons/bi";
 import { AiFillCaretLeft } from "react-icons/ai";
 // FcGoogle
@@ -19,7 +17,7 @@ import { AiFillCaretLeft } from "react-icons/ai";
 const Payment = () => {
   const value = useContext(DataContext);
   const [cart, setCart] = value.cart;
-  const [total, setTotal] = useState(0);
+  // const [total, setTotal] = useState(0);
 
   const emptyCart = () => {
     setCart([]);

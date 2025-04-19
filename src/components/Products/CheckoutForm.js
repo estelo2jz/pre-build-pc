@@ -72,7 +72,7 @@ const CheckoutForm = () => {
             </div>
             <div className="checkout__form-contact-top-bottom">
               <p>Already have an account?</p>
-              <a href="#">Log in</a>
+              <a href="/">Log in</a>
             </div>
           </div>
           <div className="checkout__form-contact-bottom">

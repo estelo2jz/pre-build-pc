@@ -1,12 +1,10 @@
 import React, { useContext, useState, useEffect } from "react";
 import { DataContext } from "./Data/DataProvider";
-import { Link } from "react-router-dom";
 
 import PaymentForm from "./PaymentForm";
 
 import Top from "../../assets/images/cart/top3.jpg";
 
-import { AiFillQuestionCircle } from "react-icons/ai";
 
 import "./styles/Payment.scss";
 
@@ -25,33 +23,33 @@ export default function Payment() {
     getTotal();
   }, [cart]);
 
-  const reduction = (id) => {
-    cart.forEach((item) => {
-      if (item._id === id) {
-        item.count === 1 ? (item.count = 1) : (item.count -= 1);
-      }
-    });
-    setCart([...cart]);
-  };
-  const increase = (id) => {
-    cart.forEach((item) => {
-      if (item._id === id) {
-        item.count += 1;
-      }
-    });
-    setCart([...cart]);
-  };
+  // const reduction = (id) => {
+  //   cart.forEach((item) => {
+  //     if (item._id === id) {
+  //       item.count === 1 ? (item.count = 1) : (item.count -= 1);
+  //     }
+  //   });
+  //   setCart([...cart]);
+  // };
+  // const increase = (id) => {
+  //   cart.forEach((item) => {
+  //     if (item._id === id) {
+  //       item.count += 1;
+  //     }
+  //   });
+  //   setCart([...cart]);
+  // };
 
-  const removeProduct = (id) => {
-    // if(window.confirm("Do you want to delete this product?")){
-    // }
-    cart.forEach((item, index) => {
-      if (item._id === id) {
-        cart.splice(index, 1);
-      }
-    });
-    setCart([...cart]);
-  };
+  // const removeProduct = (id) => {
+  //   // if(window.confirm("Do you want to delete this product?")){
+  //   // }
+  //   cart.forEach((item, index) => {
+  //     if (item._id === id) {
+  //       cart.splice(index, 1);
+  //     }
+  //   });
+  //   setCart([...cart]);
+  // };
 
   if (cart.length === 0)
     return (

@@ -7,7 +7,7 @@ import "./styles/Products.scss";
 export default function Products() {
   const value = useContext(DataContext);
   const [products] = value.products;
-  const addCart = value.addCart;
+  // const addCart = value.addCart;
 
   return (
     <div className="products">

@@ -92,7 +92,7 @@ const Accordion = () => {
               <>
                 <Wrap onClick={() => toggle(index)} key={index}>
                   <p>{item.paymentOption}</p>
-                  <img src={item.logo} />
+                  <img src={item.logo} alt="logo" />
                   {/* <span>{clicked === index ? <FiMinus /> : <FiPlus />}</span> */}
                 </Wrap>
                 {clicked === index ? (
