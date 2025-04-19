@@ -3,7 +3,7 @@ import Close from "../svg/times-solid.svg";
 import { Link } from "react-router-dom";
 import { DataContext } from "../Products/Data/DataProvider";
 
-
+import { RiMenu5Fill } from "react-icons/ri";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { GoBug } from "react-icons/go";
 import pcevolvers from "../../assets/pcevolversNObg.png"
@@ -26,7 +26,7 @@ export default function Header() {
     <header>
       <div className="menu" onClick={toggleMenu}>
         <div className="menu-bars">
-          <GoBug />
+          <RiMenu5Fill  />
         </div>
       </div>
       <div className="logo">
