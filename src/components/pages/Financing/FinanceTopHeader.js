@@ -2,7 +2,6 @@ import React from 'react';
 
 import './styles/FinanceTopHeader.scss';
 
-import FinaceBG from '../../../assets/images/finance/financebg.jpg';
 
 const TopHeader = () => {
   return (
