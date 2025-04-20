@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import Close from "../svg/times-solid.svg";
 import { NavLink } from "react-router-dom";
 import { DataContext } from "../Products/Data/DataProvider";
@@ -22,6 +22,15 @@ export default function Header() {
     left: menu ? 0 : "-100%",
   };
 
+  useEffect(() => {
+    if (setMenu) {
+      document.body.classList.add('no-scroll');
+    } else {
+      document.body.classList.remove('no-scroll');
+    }
+  }, [setMenu]);
+  
+  
   return (
     <header>
       <div className="menu" onClick={toggleMenu}>
