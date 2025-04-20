@@ -5,7 +5,7 @@ import { DataContext } from "../Products/Data/DataProvider";
 
 import { RiMenu5Fill } from "react-icons/ri";
 import { AiOutlineShoppingCart } from "react-icons/ai";
-import { GoBug } from "react-icons/go";
+import { CiShoppingCart } from "react-icons/ci";
 import pcevolvers from "../../assets/pcevolversNObg.png"
 import "./styles/Header.scss";
 
@@ -65,7 +65,7 @@ export default function Header() {
       <div className="cart-icon">
         <span>{cart.length}</span>
         <NavLink className="cart-img" to="/cart">
-          <AiOutlineShoppingCart />
+          <CiShoppingCart />
         </NavLink>
       </div>
     </header>
