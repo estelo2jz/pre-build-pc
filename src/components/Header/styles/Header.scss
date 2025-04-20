@@ -1,19 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 
-body.no-scroll {
-  overflow: hidden;
-  height: 100vh;
-  touch-action: none;
-}
+// body.no-scroll {
+//   overflow: hidden;
+//   height: 100vh;
+//   touch-action: none;
+// }
 
-ul.active {
-  left: 0;
-  animation: slideIn 0.5s ease forwards;
+// ul.active {
+//   left: 0;
+//   animation: slideIn 0.5s ease forwards;
 
-  // optional: prevent scroll on iOS
-  overscroll-behavior: contain;
-  touch-action: none;
-}
+//   // optional: prevent scroll on iOS
+//   overscroll-behavior: contain;
+//   touch-action: none;
+// }
 
 header {
   width: 100%;

@@ -22,13 +22,13 @@ export default function Header() {
     left: menu ? 0 : "-100%",
   };
 
-  useEffect(() => {
-    if (setMenu) {
-      document.body.classList.add('no-scroll');
-    } else {
-      document.body.classList.remove('no-scroll');
-    }
-  }, [setMenu]);
+  // useEffect(() => {
+  //   if (setMenu) {
+  //     document.body.classList.add('no-scroll');
+  //   } else {
+  //     document.body.classList.remove('no-scroll');
+  //   }
+  // }, [setMenu]);
   
   
   return (
