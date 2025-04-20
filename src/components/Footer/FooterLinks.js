@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import { FaFacebookF, FaTwitter } from 'react-icons/fa';
 import { BsInstagram } from 'react-icons/bs';
@@ -27,19 +27,19 @@ const FooterLinks = () => {
               <p>Shop</p>
             </div>
             <div className="footer-links__item">
-              <Link to="/products" className="footer-links__to">
+              <NavLink to="/products" className="footer-links__to">
                 <p>Build Your PC</p>
-              </Link>
+              </NavLink>
             </div>
             <div className="footer-links__item">
-              <Link to="/pages/why-pre-build" className="footer-links__to">
+              <NavLink to="/pages/why-pre-build" className="footer-links__to">
                 <p>Why Pre-Build</p>
-              </Link>
+              </NavLink>
             </div>
             <div className="footer-links__item">
-              <Link to="/pages/support" className="footer-links__to">
+              <NavLink to="/pages/support" className="footer-links__to">
                 <p>Support</p>
-              </Link>
+              </NavLink>
             </div>
           </div>   
           <div className="footer-links__container">
@@ -47,19 +47,19 @@ const FooterLinks = () => {
               <p>Best Sellers</p>
             </div>
             <div className="footer-links__item">
-              <div to="/" className="footer-links__to">
+              <NavLink to="/products/build=good" className="footer-links__to">
                 <p>Good.</p>
-              </div>
+              </NavLink>
             </div>
             <div className="footer-links__item">
-              <div to="/" className="footer-links__to">
+              <NavLink to="/products/build=better" className="footer-links__to">
                 <p>Better.</p>
-              </div>
+              </NavLink>
             </div>
             <div className="footer-links__item">
-              <div to="/" className="footer-links__to">
+              <NavLink to="/products/build=best" className="footer-links__to">
                 <p>Best.</p>
-              </div>
+              </NavLink>
             </div>
           </div>
           <div className="footer-links__container">
@@ -67,19 +67,19 @@ const FooterLinks = () => {
               <p>Community</p>
             </div>
             <div className="footer-links__item">
-              <Link to="/terms&conditions" className="footer-links__to">
+              <NavLink to="/terms&conditions" className="footer-links__to">
                 <p>Terms & Conditions</p>
-              </Link>
+              </NavLink>
             </div>
             <div className="footer-links__item">
-              <Link to="/privacy" className="footer-links__to">
+              <NavLink to="/privacy" className="footer-links__to">
                 <p>Privacy Policy</p>
-              </Link>
+              </NavLink>
             </div>
             <div className="footer-links__item">
-              <Link to="/refund" className="footer-links__to">
+              <NavLink to="/refund" className="footer-links__to">
                 <p>Refund Policy</p>
-              </Link>
+              </NavLink>
             </div>
           </div>
         </div>
