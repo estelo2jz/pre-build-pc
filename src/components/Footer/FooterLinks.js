@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 import { FaFacebookF, FaTwitter } from 'react-icons/fa';
 import { BsInstagram } from 'react-icons/bs';
+import pcevolvers from "../../assets/pcevolversNObg.png"
 
 import './styles/FooterLinks.scss';
 
@@ -84,7 +85,7 @@ const FooterLinks = () => {
         </div>
         <div className="footer-links__logo">
           <div className="footer-links__logo">
-            <p>PRE-BUILD</p>
+            <img src={pcevolvers} alt="logo" />
           </div>
         </div>
       </div>
