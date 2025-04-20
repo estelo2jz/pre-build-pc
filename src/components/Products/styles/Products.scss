@@ -1,12 +1,27 @@
 .products {
   display: flex;
   flex-wrap: wrap;
-  // align-items: center;
   justify-content: space-evenly;
-  padding: 300px 0px;
+  padding: 200px 30px;
   height: 100%;
-  // background-color: #fff;
   background-color: transparent;
+  gap: 40px;
+  position: relative;
+  animation: fadeInContainer 1s ease-out both;
+
+  // Optional subtle gradient bg
+  // background: linear-gradient(to bottom right, #1c1b2a, #2f2d4a);
+
+  // Hover effect for any child .products__card
+  .products__card {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+
+    &:hover {
+      transform: translateY(-10px) scale(1.03);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    }
+  }
+
 
   // grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   // margin: 0 -15px;
@@ -37,6 +52,7 @@
     .products__img {
       position: absolute;
       margin-top: -55px;
+
       img {
         border-radius: 50%;
         width: 120px;
@@ -48,6 +64,7 @@
       padding-top: 80px;
       font-size: clamp(30px, 1.5vw, 100px);
       color: #fff;
+
       h3 {
         font-weight: 900;
         font-style: italic;
@@ -70,6 +87,7 @@
       flex-wrap: wrap;
       align-items: center;
       justify-content: center;
+
       .container {
         position: relative;
         display: flex;
@@ -77,6 +95,7 @@
         align-items: center;
         flex-wrap: wrap;
         grid-gap: 40px;
+
         .card {
           position: relative;
           width: 220px;
@@ -85,15 +104,18 @@
           display: flex;
           justify-content: center;
           align-items: center;
+
           .percent {
             position: relative;
             width: 150px;
             height: 150px;
+
             svg {
               position: relative;
               width: 150px;
               height: 150px;
               transform: rotate(270deg);
+
               circle {
                 width: 100%;
                 height: 100%;
@@ -102,6 +124,7 @@
                 stroke: #191919;
                 transform: translate(5px, 5px);
               }
+
               circle:nth-child(2) {
                 stroke: var(--clr);
                 stroke-dasharray: 440;
@@ -110,15 +133,18 @@
                 animation: fadeIn 1s linear forwards;
                 animation-delay: 2.5s;
               }
+
               @keyframes fadeIn {
                 0% {
                   opacity: 0;
                 }
+
                 100% {
                   opacity: 1;
                 }
               }
             }
+
             .dot {
               position: absolute;
               inset: 5px;
@@ -126,14 +152,17 @@
               transform: rotate(calc(3.6deg * var(--num)));
               animation: animateDot 2s linear forwards;
             }
+
             @keyframes animateDot {
               0% {
                 transform: rotate(0deg);
               }
+
               100% {
                 transform: rotate(calc(3.6deg * var(--num)));
               }
             }
+
             .dot::before {
               content: "";
               position: absolute;
@@ -145,8 +174,9 @@
               border-radius: 50%;
               background: var(--clr);
               box-shadow: 0 0 10px var(--clr),
-              0 0 30px var(--clr);
+                0 0 30px var(--clr);
             }
+
             .number {
               position: absolute;
               inset: 0;
@@ -157,6 +187,7 @@
               opacity: 0;
               animation: fadeIn 1s linear forwards;
               animation-delay: 2.5s;
+
               h2 {
                 display: flex;
                 justify-content: center;
@@ -164,18 +195,20 @@
                 color: #fff;
                 font-weight: 700;
                 font-size: 2.5rem;
+
                 span {
                   font-weight: 700;
                   color: #fff;
                   font-size: 0.5em;
                 }
               }
+
               p {
                 font-weight: 300;
                 font-size: 0.75em;
                 letter-spacing: 2px;
                 text-transform: uppercase;
-                color: rgba(255,255,255, 0.75);
+                color: rgba(255, 255, 255, 0.75);
               }
             }
           }
@@ -200,6 +233,7 @@
 
       .products__stats-logo {
         padding: 0px 10px;
+
         .products__stats-logo-img {
           img {
             border-radius: 50%;
@@ -213,14 +247,15 @@
             // // width: 40px;
             // // height: 40px;
           }
-          
+
         }
-        
+
       }
 
       .products__stats-contents {
         display: flex;
         flex-direction: column;
+
         .products__stats-span-container {
           span {
             font-size: clamp(11px, 1.5vw, 13px);
@@ -233,21 +268,25 @@
           font-size: clamp(18px, 1.5vw, 20px);
           font-weight: 700;
         }
+
         .products__stats-graphics-container {
           .products__stats-graphics {
             color: rgb(255, 81, 0);
           }
         }
+
         .products__stats-processor-container {
           .products__stats-processor {
             color: rgb(221, 255, 0);
           }
         }
+
         .products__stats-memory-size-container {
           .products__stats-memory-size {
             color: rgb(0, 255, 251);
           }
         }
+
         .products__stats-storage-container {
           .products__stats-storage {
             color: rgb(252, 24, 245);
@@ -276,6 +315,7 @@
 
     .products__finance {
       padding: 5px 0px;
+
       p {
         color: #fff;
         font-size: clamp(13px, 1.5vw, 15px);
@@ -284,20 +324,45 @@
     }
 
     .products__btn {
-      padding: 10px;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      animation: fadeIn 1.5s ease-in-out both;
+    
       button {
         cursor: pointer;
-        padding: 10px 70px;
-        border-radius: 10px;
+        padding: 12px 60px;
+        border-radius: 12px;
         font-weight: 700;
         font-size: clamp(15px, 1.5vw, 20px);
         color: #fff;
-        background: #c25be9;
-        border: 1px solid #c25be9;
-        background-position: center;
-        transition: background .3s;
+        background: linear-gradient(135deg, #c25be9, #8e3be3);
+        border: none;
+        background-size: 200%;
+        transition: background-position 0.4s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    
+        &:hover {
+          background-position: right center;
+          box-shadow: 0 0 20px rgba(194, 91, 233, 0.6);
+          transform: translateY(-3px) scale(1.02);
+        }
+    
+        &:active {
+          transform: scale(0.98);
+        }
       }
     }
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
@@ -305,26 +370,24 @@
   .products {
     .products__card {
       .products__img {
-        img {
-        }
+        img {}
       }
-  
+
       .products__title {
-        h3 {
-        }
+        h3 {}
       }
-  
+
       .products__desc {
-        p {
-        }
+        p {}
       }
-  
+
       .products__stats {
         color: #fff;
         display: flex;
         flex-wrap: wrap;
         align-items: center;
         justify-content: space-evenly;
+
         .container {
           position: relative;
           display: flex;
@@ -332,6 +395,7 @@
           align-items: center;
           flex-wrap: wrap;
           grid-gap: 40px;
+
           .card {
             position: relative;
             width: 130px;
@@ -340,17 +404,20 @@
             display: flex;
             justify-content: center;
             align-items: center;
+
             // padding: 0px !important;
             // margin: 0px !important;
             .percent {
               position: relative;
               width: 110px;
               height: 110px;
+
               svg {
                 position: relative;
                 width: 110px;
                 height: 110px;
                 transform: rotate(270deg);
+
                 circle {
                   width: 100%;
                   height: 100%;
@@ -362,6 +429,7 @@
                   cy: 50;
                   r: 50;
                 }
+
                 circle:nth-child(2) {
                   stroke: var(--clr);
                   stroke-dasharray: 440;
@@ -370,30 +438,51 @@
                   animation: fadeIn 1s linear forwards;
                   animation-delay: 2.5s;
                 }
+
                 @keyframes fadeIn {
                   0% {
                     opacity: 0;
                   }
+
                   100% {
                     opacity: 1;
                   }
                 }
               }
+
               .dot {
                 position: absolute;
                 inset: 5px;
                 z-index: 10;
                 transform: rotate(calc(3.6deg * var(--num)));
-                animation: animateDot 2s linear forwards;
+                animation: animateDot 2s ease-out forwards;
+                transition: transform 0.4s ease;
+              
+                &::before {
+                  content: "";
+                  position: absolute;
+                  top: -5px;
+                  left: 50%;
+                  transform: translateX(-50%);
+                  width: 12px;
+                  height: 12px;
+                  border-radius: 50%;
+                  background: var(--clr);
+                  box-shadow: 0 0 10px var(--clr), 0 0 25px var(--clr), 0 0 35px var(--clr);
+                  animation: pulse 1.5s infinite ease-in-out;
+                }
               }
+
               @keyframes animateDot {
                 0% {
                   transform: rotate(0deg);
                 }
+
                 100% {
                   transform: rotate(calc(3.6deg * var(--num)));
                 }
               }
+
               .dot::before {
                 content: "";
                 position: absolute;
@@ -405,8 +494,9 @@
                 border-radius: 50%;
                 background: var(--clr);
                 box-shadow: 0 0 10px var(--clr),
-                0 0 30px var(--clr);
+                  0 0 30px var(--clr);
               }
+
               .number {
                 position: absolute;
                 inset: 0;
@@ -417,6 +507,7 @@
                 opacity: 0;
                 animation: fadeIn 1s linear forwards;
                 animation-delay: 2.5s;
+
                 h2 {
                   display: flex;
                   justify-content: center;
@@ -424,101 +515,121 @@
                   color: #fff;
                   font-weight: 700;
                   font-size: 1.3rem;
+
                   span {
                     font-weight: 700;
                     color: #fff;
                     font-size: 0.5em;
                   }
                 }
+
                 p {
                   font-weight: 300;
                   font-size: 0.55em;
                   letter-spacing: 2px;
                   text-transform: uppercase;
-                  color: rgba(255,255,255, 0.75);
+                  color: rgba(255, 255, 255, 0.75);
                 }
               }
             }
           }
         }
-  
-  
-        p {
-        }
-  
-        .products__stats-item {
 
-        }
-  
+
+        p {}
+
+        .products__stats-item {}
+
         .products__stats-logo {
           .products__stats-logo-img {
-            img {
+            img {}
 
-            }
-            
           }
-          
+
         }
-  
+
         .products__stats-contents {
 
           .products__stats-span-container {
-            span {
-
-            }
+            span {}
           }
-  
-  
-          p {
 
-          }
+
+          p {}
+
           .products__stats-graphics-container {
-            .products__stats-graphics {
-            }
+            .products__stats-graphics {}
           }
+
           .products__stats-processor-container {
-            .products__stats-processor {
-            }
+            .products__stats-processor {}
           }
+
           .products__stats-memory-size-container {
-            .products__stats-memory-size {
-            }
+            .products__stats-memory-size {}
           }
+
           .products__stats-storage-container {
-            .products__stats-storage {
-            }
+            .products__stats-storage {}
           }
         }
       }
-  
+
       .products__price {
 
-        p {
+        p {}
 
-  
-        }
-  
-        h4 {
-
-  
-        }
+        h4 {}
       }
-  
+
       .products__finance {
-        p {
-  
-        }
+        p {}
       }
-  
-      .products__btn {
-        button {
 
-        }
+      .products__btn {
+        button {}
       }
     }
   }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1200px) {}
 
+@keyframes fadeInContainer {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+// Rotation animation
+@keyframes animateDot {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(calc(3.6deg * var(--num)));
+  }
+}
+
+// Glowing pulse effect
+@keyframes pulse {
+  0% {
+    transform: translateX(-50%) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(-50%) scale(1.2);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateX(-50%) scale(1);
+    opacity: 1;
+  }
 }
