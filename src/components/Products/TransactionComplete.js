@@ -18,7 +18,7 @@ const TransactionComplete = () => {
       </div>
       <div className="thankyou__actions">
         <NavLink to="/" className="btn btn--primary">Continue Shopping</NavLink>
-        <NavLink to="/" className="btn btn--outline">View Order</NavLink>
+        <NavLink to="/vieworder" className="btn btn--outline">View Order</NavLink>
       </div>
     </div>
   </section>

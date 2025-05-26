@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import './styles/FinanceTopHeader.scss';
 
@@ -14,7 +15,9 @@ const TopHeader = () => {
           <p>EASY AND AFFORDABLE FINANCING WITH CLEAR AND TRANSPARENT TERMS.</p>
         </div>
         <div className="finance-top-header__bottom">
-          <button>GET MY RATE</button>
+          <Link to="/getmyrate">
+            <button>GET MY RATE</button>
+          </Link>
         </div>
       </div>
     </div>

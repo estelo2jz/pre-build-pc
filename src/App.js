@@ -26,6 +26,8 @@ import Footer from "./components/Footer/Footer";
 import TC from "./components/Footer/FAQ/TC";
 import Privacy from "./components/Footer/FAQ/Privacy";
 import Refund from "./components/Footer/FAQ/Refund";
+import GetMyRate from "./components/pages/Rate/GetMyRate";
+import ViewOrder from "./components/Products/Details/ViewOrder";
 
 function App() {
   return (
@@ -53,6 +55,8 @@ function App() {
                 <Route path="/terms&conditions" exact element={<TC />} />
                 <Route path="/privacy" exact element={<Privacy />} />
                 <Route path="/refund" exact element={<Refund />} />
+                <Route path="/getmyrate" exact element={<GetMyRate />} />
+                <Route path="/vieworder" exact element={<ViewOrder />} />
                 <Route
                   path="/transaction"
                   exact
