@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
-
 .header {
   background: #111;
   color: #fff;
@@ -7,8 +5,14 @@
   top: 0;
   width: 100%;
   z-index: 1000;
-  font-family: 'Anton', sans-serif;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transform: translateY(0);
+  opacity: 1;
+
+  &--hidden {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
 
   &__container {
     max-width: 1280px;
@@ -31,56 +35,63 @@
 
   &__logo img {
     height: 50px;
-    width: auto;
   }
 
-  &__nav {
-    ul {
-      list-style: none;
-      display: flex;
-      align-items: center;
-      gap: 2rem;
+  &__nav ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
 
-      li {
-        a {
-          color: #fff;
-          text-decoration: none;
-          font-size: 1.1rem;
-          transition: color 0.3s;
+    li {
+      a {
+        color: #fff;
+        text-decoration: none;
+        position: relative;
+        transition: all 0.3s ease;
 
-          &:hover {
-            color: #f39c12;
+        &.nav-active {
+          color: #f39c12;
+          &::after {
+            content: "";
+            position: absolute;
+            bottom: -6px;
+            left: 0;
+            height: 3px;
+            width: 100%;
+            background: #f39c12;
+            border-radius: 2px;
           }
+        }
+
+        &:hover {
+          color: #f39c12;
         }
       }
 
-      .header__close {
+      &.header__close {
         display: none;
       }
     }
   }
 
   &__cart {
-    display: flex;
-    align-items: center;
-    font-size: 1.8rem;
     position: relative;
+    font-size: 1.8rem;
 
     a {
       color: #fff;
     }
-  }
 
-  &__cart-count {
-    background: #f39c12;
-    border-radius: 50%;
-    color: #000;
-    font-size: 0.75rem;
-    font-weight: bold;
-    padding: 2px 6px;
-    position: absolute;
-    top: -10px;
-    right: -10px;
+    .header__cart-count {
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      background: #f39c12;
+      border-radius: 50%;
+      padding: 2px 6px;
+      font-size: 0.75rem;
+      color: #000;
+    }
   }
 
   @media (max-width: 768px) {
@@ -97,7 +108,6 @@
       background: #1a1a1a;
       padding: 4rem 2rem;
       transition: left 0.4s ease;
-      z-index: 2000;
 
       &.open {
         left: 0;
@@ -105,73 +115,20 @@
 
       ul {
         flex-direction: column;
-        align-items: flex-start;
 
         li {
           margin-bottom: 1.5rem;
 
-          a {
-            font-size: 1.25rem;
-          }
-        }
+          &.header__close {
+            display: block;
 
-        .header__close {
-          display: block;
-
-          img {
-            width: 25px;
-            cursor: pointer;
-          }
-        }
-      }
-    }
-  }
-}
-.header {
-  // ... (existing styles)
-
-  &__nav {
-    ul {
-      li {
-        a {
-          color: #fff;
-          text-decoration: none;
-          font-size: 1.1rem;
-          position: relative;
-          transition: all 0.3s ease;
-
-          &.nav-active {
-            color: #f39c12;
-
-            &::after {
-              content: "";
-              position: absolute;
-              left: 0;
-              bottom: -6px;
-              width: 100%;
-              height: 3px;
-              background: #f39c12;
-              border-radius: 2px;
-              animation: slideIn 0.3s ease forwards;
+            img {
+              width: 25px;
+              cursor: pointer;
             }
           }
-
-          &:hover {
-            color: #f39c12;
-          }
         }
       }
     }
-  }
-}
-
-@keyframes slideIn {
-  from {
-    width: 0%;
-    opacity: 0;
-  }
-  to {
-    width: 100%;
-    opacity: 1;
   }
 }
