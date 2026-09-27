@@ -19,7 +19,7 @@ const FooterOurMission = () => {
           <p>
             Our mission is to build gaming PCs at the best price without cutting corners.
           </p>
-          <Link to="/products" className="footer-our-mission__btn-link">
+          <Link to="/startbuild" className="footer-our-mission__btn-link">
             <button>LET'S BUILD</button>
           </Link>
         </div>

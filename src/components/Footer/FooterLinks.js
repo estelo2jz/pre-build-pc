@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 
 import { FaFacebookF, FaTwitter } from 'react-icons/fa';
 import { BsInstagram } from 'react-icons/bs';
@@ -34,9 +34,9 @@ const FooterLinks = () => {
               <p>Shop</p>
             </div>
             <div className="footer-links__item">
-              <NavLink to="/products" className="footer-links__to">
+              <Link to="/startbuild" className="footer-links__to">
                 <p>Build Your PC</p>
-              </NavLink>
+              </Link>
             </div>
             <div className="footer-links__item">
               <NavLink to="/pages/why-pre-build" className="footer-links__to">
