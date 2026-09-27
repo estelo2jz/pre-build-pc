@@ -4,10 +4,10 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  background-color: #fff;
+  background-color: #0f172a;
   padding: 40px 0;
   height: 100%;
-  color: #000;
+  color: #fdfdfd;
   animation: fadeIn 1s ease forwards;
   opacity: 0;
 
@@ -34,7 +34,7 @@
         text-transform: uppercase;
         letter-spacing: 3px;
         padding: 20px 80px;
-        color: #3a3a3a;
+        color: #f8fafc;
         transition: transform 0.3s ease;
         transform: translateY(20px);
         opacity: 0;
@@ -50,7 +50,7 @@
         font-size: 1.1rem;
         padding: 0px 80px;
         text-align: left;
-        color: #3a3a3a;
+        color: #f8fafc;
         transform: translateY(20px);
         opacity: 0;
         animation: slideUp 1s ease forwards 0.8s;
