@@ -21,7 +21,10 @@ const AboutBGOne = ({data}) => {
           </p>
         </div>
         <div className="about-bottom__btn">
+          <Link to="/startbuild" className="about-bottom__btn-link">
+
           <button>START YOUR BUILD</button>
+          </Link>
         </div>
         <div className="about-bottom__bottom-contents">
           <img src={About4} alt="" />
@@ -52,7 +55,7 @@ const AboutBGOne = ({data}) => {
                   <p className="about-bottom__top-price-child">
                     Or as low as $46 monthly
                   </p>
-                  <Link to="/products">
+                  <Link to="/products/build=good">
                     <button>VIEW BUILD</button>
                   </Link>
                 </div>
@@ -73,7 +76,7 @@ const AboutBGOne = ({data}) => {
                   <p className="about-bottom__top-price-child">
                     Or as low as $56 monthly
                   </p>
-                  <Link to="/products">
+                  <Link to="/products/build=better">
                     <button>VIEW BUILD</button>
                   </Link>
                 </div>
@@ -94,7 +97,7 @@ const AboutBGOne = ({data}) => {
                   <p className="about-bottom__top-price-child">
                     Or as low as $88 monthly
                   </p>
-                  <Link to="/products">
+                  <Link to="/products/build=best">
                     <button>VIEW BUILD</button>
                   </Link>
                 </div>

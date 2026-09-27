@@ -7,19 +7,45 @@ $text-muted: #94a3b8;
 $border-color: rgba(56, 189, 248, 0.15);
 $transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 
+// Keyframe Animations
+@keyframes pulseGlow {
+  0%, 100% {
+    filter: drop-shadow(0 0 10px rgba(56, 189, 248, 0.2));
+  }
+  50% {
+    filter: drop-shadow(0 0 20px rgba(56, 189, 248, 0.5));
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .footer-links {
   width: 100%;
   background-color: $bg-dark;
+  background-image: radial-gradient(circle at 50% 100%, rgba(30, 41, 59, 0.5) 0%, transparent 70%);
   border-top: 1px solid rgba(255, 255, 255, 0.06);
   color: $text-light;
   padding: 4rem 2rem 2rem 2rem;
+  position: relative;
+  overflow: hidden;
 
+  // Staggered entrance animation wrapper
   &__outer {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     gap: 3rem;
+    animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   }
 
   &__top-bar {
@@ -38,6 +64,13 @@ $transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
       font-weight: 600;
       color: $text-light;
       margin: 0;
+      letter-spacing: 0.01em;
+      transition: $transition-smooth;
+
+      &:hover {
+        color: $accent-cyan;
+        text-shadow: 0 0 12px rgba(56, 189, 248, 0.3);
+      }
     }
   }
 
@@ -49,7 +82,8 @@ $transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
       width: 40px;
       height: 40px;
       border-radius: 50%;
-      background: $bg-card;
+      background: rgba(30, 41, 59, 0.7);
+      backdrop-filter: blur(8px);
       border: 1px solid rgba(255, 255, 255, 0.08);
       display: flex;
       align-items: center;
@@ -58,13 +92,33 @@ $transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
       font-size: 0.9rem;
       transition: $transition-smooth;
       text-decoration: none;
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        inset: -2px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, $accent-cyan, transparent);
+        z-index: -1;
+        opacity: 0;
+        transition: $transition-smooth;
+      }
 
       &:hover {
         background-color: $accent-cyan;
         color: $bg-dark;
         border-color: $accent-cyan;
-        transform: translateY(-3px);
-        box-shadow: 0 5px 15px rgba(56, 189, 248, 0.4);
+        transform: translateY(-4px) scale(1.05);
+        box-shadow: 0 8px 20px rgba(56, 189, 248, 0.4);
+
+        &::after {
+          opacity: 0.6;
+        }
+      }
+
+      &:active {
+        transform: translateY(-1px) scale(0.98);
       }
     }
   }
@@ -94,6 +148,24 @@ $transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
       letter-spacing: 0.08em;
       color: $accent-cyan;
       margin: 0;
+      position: relative;
+      display: inline-block;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 16px;
+        height: 2px;
+        background-color: $accent-cyan;
+        border-radius: 2px;
+        transition: $transition-smooth;
+      }
+    }
+
+    &:hover &__title p::after {
+      width: 100%;
     }
   }
 
@@ -102,6 +174,7 @@ $transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
       text-decoration: none;
       color: $text-muted;
       transition: $transition-smooth;
+      display: inline-block;
 
       p {
         font-size: 0.95rem;
@@ -111,7 +184,11 @@ $transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 
       &:hover {
         color: $accent-cyan;
-        transform: translateX(4px);
+        transform: translateX(6px);
+
+        p {
+          text-shadow: 0 0 8px rgba(56, 189, 248, 0.25);
+        }
       }
     }
   }
@@ -131,7 +208,13 @@ $transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
       max-height: 50px;
       width: auto;
       object-fit: contain;
-      filter: drop-shadow(0 0 10px rgba(56, 189, 248, 0.2));
+      animation: pulseGlow 4s ease-in-out infinite;
+      transition: $transition-smooth;
+
+      &:hover {
+        transform: scale(1.05);
+        filter: drop-shadow(0 0 16px rgba(56, 189, 248, 0.6));
+      }
     }
   }
 
@@ -139,5 +222,10 @@ $transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     font-size: 0.85rem;
     color: $text-muted;
     margin: 0;
+    transition: $transition-smooth;
+
+    &:hover {
+      color: $text-light;
+    }
   }
 }

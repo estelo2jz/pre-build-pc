@@ -28,7 +28,7 @@ export default function Products() {
           <div className="products__performance-graph">
             <div className="products__graph-header">
               <span>Performance Index</span>
-              <span className="products__graph-badge">Tier 1</span>
+              {/* <span className="products__graph-badge">Tier 1</span> */}
             </div>
             
             <div className="products__bar-item">

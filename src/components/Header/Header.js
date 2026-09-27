@@ -4,7 +4,7 @@ import { RiMenu5Fill } from "react-icons/ri";
 import { CiShoppingCart } from "react-icons/ci";
 import { DataContext } from "../Products/Data/DataProvider";
 
-import pcevolvers from "../../assets/pcevolversNObg.png";
+import pcevolvers from "../../assets/PCevolvers_logo.png";
 import Close from "../svg/times-solid.svg";
 import "./styles/Header.scss";
 

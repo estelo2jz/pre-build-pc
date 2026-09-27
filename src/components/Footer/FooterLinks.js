@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 import { FaFacebookF, FaTwitter } from 'react-icons/fa';
 import { BsInstagram } from 'react-icons/bs';
-import pcevolvers from "../../assets/pcevolversNObg.png";
+import pcevolvers from "../../assets/PCevolvers_logo.png";
 
 import './styles/FooterLinks.scss';
 
