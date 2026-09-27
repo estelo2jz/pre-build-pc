@@ -10,88 +10,121 @@ const AccordionSection = styled.div`
   align-items: center;
   justify-content: center;
   position: relative;
-  height: 100%;
-  margin-top: 20px;
+  width: 100%;
+  margin-top: 1.5rem;
   background: transparent;
-  `;
+`;
 
 const Container = styled.div`
   width: 100%;
-  background: #f0f0f0;
   position: relative;
-  top: 30%;
-  box-shadow: 2px 10px 35px 1px rgba(153, 153, 153, 0.3);
-  
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37),
+              0 0 15px rgba(56, 189, 248, 0.05);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    border-color: rgba(56, 189, 248, 0.4);
+    box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.45),
+                0 0 25px rgba(56, 189, 248, 0.15);
+  }
 `;
 
 const Wrap = styled.div`
-  border-bottom: 1px solid rgba(194, 91, 233, 0.2);
-  background-color: #fff;
-  color: #333;
+  background-color: transparent;
+  color: #f8fafc;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  text-align: center;
   cursor: pointer;
-  svg {
-    color: rgba(194, 91, 233, 0.2) !important;
+  border-bottom: 1px solid rgba(56, 189, 248, 0.15);
+  transition: background-color 0.3s ease;
+
+  &:last-of-type {
+    border-bottom: none;
   }
+
+  &:hover {
+    background-color: rgba(56, 189, 248, 0.08);
+  }
+
   h1 {
-    padding: 20px 10px;
-    font-size: clamp(15px, 2.5vw, 18px);
+    padding: 20px;
+    font-size: clamp(14px, 2.2vw, 17px);
+    font-weight: 600;
     text-align: left;
+    margin: 0;
+    letter-spacing: 0.02em;
   }
+
   span {
     margin-right: 1.5rem;
-    color: red;
+    display: flex;
+    align-items: center;
+    color: #38bdf8;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
-  `;
 
-const Dropdown = styled.div`
-  background-color: #fff;
-  color: #333;
-  width: 100%;
-  height: 100px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  p {
-    font-size: clamp(10px, 2.5vw, 15px);
-    padding: 0px 20px;
+  &:hover span {
+    transform: scale(1.15);
   }
 `;
 
-const Accordion = () => {
-  const [clicked, setClicked] = useState(false);
+const Dropdown = styled.div`
+  background-color: rgba(30, 41, 59, 0.6);
+  color: #cbd5e1;
+  width: 100%;
+  max-height: ${props => (props.$isOpen ? "300px" : "0")};
+  opacity: ${props => (props.$isOpen ? "1" : "0")};
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-bottom: 1px solid rgba(56, 189, 248, 0.15);
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+              opacity 0.3s ease-in-out,
+              padding 0.3s ease;
+  padding: ${props => (props.$isOpen ? "20px 24px" : "0 24px")};
+
+  p {
+    font-size: clamp(12px, 2vw, 15px);
+    line-height: 1.6;
+    margin: 0;
+  }
+`;
+
+const AccordionSales = () => {
+  const [clicked, setClicked] = useState(null);
 
   const toggle = (index) => {
     if (clicked === index) {
-      //if clicked question is already active, then close it
       return setClicked(null);
     }
-
     setClicked(index);
   };
 
   return (
-    <IconContext.Provider value={{ color: "#00FFB9", size: "25px" }}>
+    <IconContext.Provider value={{ color: "#38bdf8", size: "22px" }}>
       <AccordionSection>
         <Container>
           {Data.map((item, index) => {
+            const isOpen = clicked === index;
             return (
-              <>
-                <Wrap onClick={() => toggle(index)} key={index}>
+              <React.Fragment key={item.id || index}>
+                <Wrap onClick={() => toggle(index)}>
                   <h1>{item.question}</h1>
-                  <span>{clicked === index ? <FiMinus /> : <FiPlus />}</span>
+                  <span>{isOpen ? <FiMinus /> : <FiPlus />}</span>
                 </Wrap>
-                {clicked === index ? (
-                  <Dropdown>
-                    <p>{item.answer}</p>
-                  </Dropdown>
-                ) : null}
-              </>
+                <Dropdown $isOpen={isOpen}>
+                  <p>{item.answer}</p>
+                </Dropdown>
+              </React.Fragment>
             );
           })}
         </Container>
@@ -100,4 +133,4 @@ const Accordion = () => {
   );
 };
 
-export default Accordion;
+export default AccordionSales;

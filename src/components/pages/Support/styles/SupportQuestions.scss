@@ -1,29 +1,69 @@
+// ==========================================
+// Support Questions Container Styles
+// ==========================================
+
 .support-questions {
-  background-color: #fff;
-  color: #3a3a3a;
-  padding: 0 10px;
-  padding-bottom: 100px;
+  background-color: #0f172a;
+  color: #f8fafc;
+  padding: 0 1rem 100px 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   text-align: center;
-  animation: fadeIn 1s ease forwards;
+  position: relative;
+  overflow: hidden;
+  animation: fadeInTech 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   opacity: 0;
 
+  // Ambient background tech glow
+  &::before {
+    content: '';
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 800px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(56, 189, 248, 0.06) 0%, rgba(15, 23, 42, 0) 70%);
+    z-index: 0;
+    pointer-events: none;
+  }
+
   .support-questions__heading {
+    position: relative;
+    z-index: 1;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 40px 0;
-    transform: translateY(20px);
+    padding: 50px 0;
+    transform: translateY(30px);
     opacity: 0;
-    animation: slideUp 1s ease forwards 0.3s;
+    animation: slideUpSmooth 1s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.2s;
 
     p {
       font-size: clamp(30px, 3.5vw, 50px);
       font-weight: 700;
       font-style: italic;
+      color: #f8fafc;
+      letter-spacing: -0.025em;
+      text-shadow: 0 0 25px rgba(56, 189, 248, 0.3);
+      margin: 0;
+      border-bottom: 3px solid rgba(56, 189, 248, 0.4);
+      padding-bottom: 0.5rem;
+    }
+  }
+
+  // Ensure inner child components stack nicely and stay centered
+  > *:not(.support-questions__heading) {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 3rem;
+
+    &:last-child {
+      margin-bottom: 0;
     }
   }
 }
@@ -32,6 +72,8 @@
 @media screen and (max-width: 500px) {
   .support-questions {
     padding-bottom: 60px;
+    padding-left: 1rem;
+    padding-right: 1rem;
 
     .support-questions__heading {
       padding: 30px 0;
@@ -43,15 +85,19 @@
   }
 }
 
-// 🔥 Animations
-@keyframes fadeIn {
+// 🔥 Enhanced Animations with Smooth Tech Curves
+@keyframes fadeInTech {
   to {
     opacity: 1;
   }
 }
 
-@keyframes slideUp {
-  to {
+@keyframes slideUpSmooth {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
     transform: translateY(0);
     opacity: 1;
   }

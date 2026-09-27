@@ -45,11 +45,11 @@
       button {
         padding: 12px 80px;
         border-radius: 10px;
-        border: 1px solid #c25be9;
+        border: 1px solid #38bdf8;
         font-size: clamp(15px, 2.5vw, 20px);
         font-weight: 700;
         color: #fff;
-        background: #b740e2;
+        background: #38bdf8;
         background-position: center;
         letter-spacing: 2px;
         cursor: pointer;
@@ -57,7 +57,7 @@
 
         &:hover {
           transform: scale(1.05);
-          box-shadow: 0 0 15px #c25be9aa;
+          box-shadow: 0 0 15px #38bdf8;
         }
       }
     }
@@ -94,7 +94,7 @@
       }
 
       span {
-        color: #c25be9;
+        color: #38bdf8;
         cursor: pointer;
         margin-left: 5px;
         transition: color 0.3s ease, text-decoration 0.3s ease;

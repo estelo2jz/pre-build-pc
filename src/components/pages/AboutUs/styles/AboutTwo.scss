@@ -1,79 +1,131 @@
+// ==========================================
+// About Two Component Styles
+// ==========================================
+
 .about-two {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   width: 100%;
-  background-color: rgb(43, 17, 138);
-  padding: 100px 0;
+  background-color: #0f172a;
+  padding: 100px 2rem;
   height: 100%;
-  color: white;
-  animation: fadeIn 1s ease forwards;
+  color: #f8fafc;
+  position: relative;
+  overflow: hidden;
+  animation: fadeInTech 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   opacity: 0;
+  margin-top: 5rem;
+
+  // Ambient background tech glow
+  &::before {
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 900px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(56, 189, 248, 0.06) 0%, rgba(15, 23, 42, 0) 70%);
+    z-index: 0;
+    pointer-events: none;
+  }
 
   .about-two__top {
+    position: relative;
+    z-index: 1;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 50%;
-    height: 300px;
-    animation: slideUp 1s ease forwards 0.3s;
+    min-height: 300px;
     opacity: 0;
+    transform: translateY(30px);
+    animation: slideUpSmooth 1s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.2s;
 
     .about-two__top-contents {
-      padding: 30px 0;
+      padding: 30px 20px;
       width: 100%;
+      max-width: 600px;
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
 
       h4 {
-        font-size: 3rem;
+        font-size: clamp(2rem, 3.5vw, 3rem);
+        font-weight: 800;
         font-style: italic;
         font-family: 'Anton', sans-serif;
         text-transform: uppercase;
-        letter-spacing: 3px;
-        padding: 20px 80px;
-        transform: translateY(20px);
+        letter-spacing: 2px;
+        color: #f8fafc;
+        padding: 10px 0;
+        margin-bottom: 1.5rem;
+        text-shadow: 0 0 20px rgba(56, 189, 248, 0.3);
+        border-bottom: 3px solid rgba(56, 189, 248, 0.4);
+        padding-bottom: 0.5rem;
         opacity: 0;
-        animation: slideUp 1s ease forwards 0.5s;
+        transform: translateY(20px);
+        animation: slideUpSmooth 1s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.4s;
+        transition: color 0.3s ease, text-shadow 0.3s ease;
 
         &:hover {
-          color: #ffde59;
+          color: #38bdf8;
+          text-shadow: 0 0 25px rgba(56, 189, 248, 0.6);
         }
       }
 
       p {
-        font-size: 1.1rem;
-        padding: 0 40px;
+        font-size: clamp(0.95rem, 1.2vw, 1.15rem);
+        line-height: 1.7;
+        color: #cbd5e1;
+        padding: 0 20px;
         text-align: left;
-        transform: translateY(20px);
         opacity: 0;
-        animation: slideUp 1s ease forwards 0.8s;
+        transform: translateY(20px);
+        animation: slideUpSmooth 1s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.6s;
       }
     }
   }
 
   .about-two__bottom {
+    position: relative;
+    z-index: 1;
     width: 50%;
-    animation: slideUp 1s ease forwards 0.6s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     opacity: 0;
+    transform: translateY(30px);
+    animation: slideUpSmooth 1s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.5s;
 
     .about-two__bottom-contents {
       display: flex;
       justify-content: center;
       align-items: center;
+      width: 100%;
 
       img {
         width: 80%;
-        transform: translateY(20px);
+        max-width: 500px;
+        border-radius: 16px;
+        border: 1px solid rgba(56, 189, 248, 0.25);
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5),
+                    0 0 20px rgba(56, 189, 248, 0.1);
         opacity: 0;
-        animation: slideUp 1s ease forwards 1s;
-        transition: transform 0.4s ease;
+        transform: translateY(20px);
+        animation: slideUpSmooth 1s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.8s;
+        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+                    border-color 0.4s ease,
+                    box-shadow 0.4s ease;
 
         &:hover {
-          transform: scale(1.05);
+          transform: scale(1.03) translateY(-4px);
+          border-color: rgba(56, 189, 248, 0.5);
+          box-shadow: 0 16px 50px rgba(0, 0, 0, 0.6),
+                      0 0 30px rgba(56, 189, 248, 0.25);
         }
       }
     }
@@ -84,51 +136,56 @@
 @media screen and (max-width: 1000px) {
   .about-two {
     flex-direction: column;
-    padding: 60px 0;
+    padding: 60px 1.5rem;
 
     .about-two__top,
     .about-two__bottom {
       width: 100%;
       height: auto;
+      min-height: auto;
     }
 
     .about-two__top {
       flex-direction: column;
 
       .about-two__top-contents {
-        padding: 0 20px;
+        padding: 0;
 
         h4 {
-          font-size: 2rem;
-          padding: 0 !important;
+          font-size: clamp(1.8rem, 5vw, 2.5rem);
+          padding-bottom: 0.4rem;
         }
 
         p {
-          font-size: 0.95rem;
           text-align: center;
+          padding: 0;
         }
       }
     }
 
     .about-two__bottom .about-two__bottom-contents {
-      padding: 20px;
+      padding-top: 30px;
 
       img {
-        width: 100%;
+        width: 90%;
       }
     }
   }
 }
 
-// 🔥 Animations
-@keyframes fadeIn {
+// 🔥 Enhanced Tech Animations
+@keyframes fadeInTech {
   to {
     opacity: 1;
   }
 }
 
-@keyframes slideUp {
-  to {
+@keyframes slideUpSmooth {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
     transform: translateY(0);
     opacity: 1;
   }

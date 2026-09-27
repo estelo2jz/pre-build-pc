@@ -1,28 +1,52 @@
+// ==========================================
+// Support Guides Component Styles
+// ==========================================
+
 .support-guides {
+  position: relative;
   background-image: url('../../../../assets/images/support/support3.jpg');
   background-position: center;
   background-size: cover;
   height: 35vh;
+  min-height: 280px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 0 50px;
-  color: #3a3a3a;
-  animation: fadeIn 1s ease forwards;
-  opacity: 0;
+  color: #f8fafc;
   overflow: hidden;
-  // background-color: #ffb938 !important;
+  animation: fadeInBg 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
 
+  // Sleek Dark-Mode Tech Overlay & Glow
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.88) 0%, rgba(15, 23, 42, 0.7) 100%);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-bottom: 1px solid rgba(56, 189, 248, 0.2);
+    z-index: 1;
+  }
+
+  // Ensure content stays above the overlay
+  > * {
+    position: relative;
+    z-index: 2;
+  }
 
   .support-guides__heading {
     p {
       font-size: clamp(30px, 3.5vw, 50px);
       font-weight: 700;
       font-style: italic;
+      color: #f8fafc;
       margin-bottom: 10px;
-      transform: translateY(20px);
+      transform: translateY(30px);
       opacity: 0;
-      animation: slideUp 1s ease forwards 0.3s;
+      text-shadow: 0 0 20px rgba(56, 189, 248, 0.3);
+      animation: slideUpSmooth 1s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.3s;
     }
   }
 
@@ -31,20 +55,23 @@
     padding: 10px 0;
 
     p {
-      font-size: clamp(12px, 3.5vw, 19px);
-      transform: translateY(20px);
+      font-size: clamp(14px, 1.5vw, 19px);
+      color: #cbd5e1;
+      line-height: 1.6;
+      transform: translateY(30px);
       opacity: 0;
-      animation: slideUp 1s ease forwards 0.6s;
+      animation: slideUpSmooth 1s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.5s;
     }
   }
 }
 
 // 📱 Responsive Adjustments
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 768px) {
   .support-guides {
     align-items: center;
-    padding: 0 20px;
+    padding: 0 24px;
     text-align: center;
+    height: 40vh;
 
     .support-guides__heading {
       p {
@@ -57,21 +84,30 @@
       padding: 10px 0;
 
       p {
-        font-size: clamp(12px, 4vw, 16px);
+        font-size: clamp(13px, 4vw, 16px);
       }
     }
   }
 }
 
-// 🔥 Animations
-@keyframes fadeIn {
-  to {
+// 🔥 Enhanced Animations with Smooth Tech Curves
+@keyframes fadeInBg {
+  0% {
+    opacity: 0;
+    transform: scale(1.03);
+  }
+  100% {
     opacity: 1;
+    transform: scale(1);
   }
 }
 
-@keyframes slideUp {
-  to {
+@keyframes slideUpSmooth {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
     transform: translateY(0);
     opacity: 1;
   }
