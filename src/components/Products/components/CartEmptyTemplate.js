@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { DataContext } from "../Data/DataProvider";
 
-
 import Apex from "./images/apex.webp";
 import BF2042 from "./images/bf2042.webp";
 import CP2077 from "./images/cp2077.webp";
@@ -21,87 +20,68 @@ import Warzone from "./images/warzone.webp";
 
 import "./styles/EmptyCart.scss";
 
+// Game images collection array for clean mapping
+const gameImages = [
+  { src: Apex, alt: "Apex Legends" },
+  { src: BF2042, alt: "Battlefield 2042" },
+  { src: CP2077, alt: "Cyberpunk 2077" },
+  { src: CS, alt: "Counter-Strike" },
+  { src: FC, alt: "Far Cry" },
+  { src: Fortnite, alt: "Fortnite" },
+  { src: GTA5, alt: "Grand Theft Auto V" },
+  { src: LOL, alt: "League of Legends" },
+  { src: MC, alt: "Minecraft" },
+  { src: OW, alt: "Overwatch" },
+  { src: R6S, alt: "Rainbow Six Siege" },
+  { src: Rust, alt: "Rust" },
+  { src: Tarkov, alt: "Escape from Tarkov" },
+  { src: Valo, alt: "Valorant" },
+  { src: Warzone, alt: "Call of Duty Warzone" },
+];
+
 export default function CartEmptyTemplate() {
   const value = useContext(DataContext);
   const [products] = value.products;
+
   return (
-    <>
+    <section className="cart-empty">
       <div className="cart-empty__outer-container">
+        
+        {/* Left Side: Games Showcase Grid */}
         <div className="cart-empty__left-container">
           <div className="cart-empty__left-heading">
-            <p>Games your going to ENJOY!</p>
+            <p>Games You're Going to ENJOY!</p>
           </div>
           <div className="cart-empty__img-container">
-            <div className="cart-empty__img-main">
-              <img src={Apex} alt="game-image" />
-            </div>
-            <div className="cart-empty__img-main">
-              <img src={BF2042} alt="game-image" />
-            </div>
-            <div className="cart-empty__img-main">
-              <img src={CP2077} alt="game-image" />
-            </div>
-            <div className="cart-empty__img-main">
-              <img src={CS} alt="game-image" />
-            </div>
-            <div className="cart-empty__img-main">
-              <img src={FC} alt="game-image" />
-            </div>
-            <div className="cart-empty__img-main">
-              <img src={Fortnite} alt="game-image" />
-            </div>
-            <div className="cart-empty__img-main">
-              <img src={GTA5} alt="game-image" />
-            </div>
-            <div className="cart-empty__img-main">
-              <img src={LOL} alt="game-image" />
-            </div>
-            <div className="cart-empty__img-main">
-              <img src={MC} alt="game-image" />
-            </div>
-            <div className="cart-empty__img-main">
-              <img src={OW} alt="game-image" />
-            </div>
-            <div className="cart-empty__img-main">
-              <img src={R6S} alt="game-image" />
-            </div>
-            <div className="cart-empty__img-main">
-              <img src={Rust} alt="game-image" />
-            </div>
-            <div className="cart-empty__img-main">
-              <img src={Tarkov} alt="game-image" />
-            </div>
-            <div className="cart-empty__img-main">
-              <img src={Valo} alt="game-image" />
-            </div>
-            <div className="cart-empty__img-main">
-              <img src={Warzone} alt="game-image" />
-            </div>
+            {gameImages.map((game, index) => (
+              <div className="cart-empty__img-main" key={index}>
+                <img src={game.src} alt={game.alt} loading="lazy" />
+              </div>
+            ))}
           </div>
         </div>
+
+        {/* Right Side: Budget Recommendations */}
         <div className="cart-empty__desc-container">
           <div className="cart-empty__desc-heading">
             <p>PICK YOUR BUDGET</p>
           </div>
           <div className="cart-empty__desc-main">
-            {products.slice(0, 3).map((product) => (
-              <Link to={`/products/${product._id}`}>
+            {products && products.slice(0, 3).map((product) => (
+              <Link to={`/products/${product._id}`} key={product._id} className="cart-empty__link-wrapper">
                 <div className="cart-empty__desc-budget-section">
-                  <img src={product.emptyCartBanner} alt="banner" />
+                  <img src={product.emptyCartBanner} alt={product.title} />
                   <div className="cart-empty__desc-good">
-                    <p title={product.title}>{product.title}.</p>
-                    <span>${product.price}</span>
+                    <p title={product.title}>{product.title}</p>
+                    <span>${product.price?.toFixed(2)}</span>
                   </div>
                 </div>
               </Link>
             ))}
           </div>
-          {/* <Link to="/products">
-          <button>CONTINUE SHOPPING</button>
-          <BsArrowRight />
-        </Link> */}
         </div>
+
       </div>
-    </>
+    </section>
   );
 }

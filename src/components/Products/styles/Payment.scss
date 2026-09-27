@@ -1,66 +1,102 @@
+/* ================================================================= 
+   Sleek Dark-Mode Tech Aesthetic (Glassmorphism + Cyan Accents)
+   ================================================================= */
+
+$bg-main: #0f172a;
+$cyan-accent: #38bdf8;
+$glass-bg: rgba(15, 23, 42, 0.75);
+$glass-border: rgba(56, 189, 248, 0.2);
+$transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
 .payment__form-header {
   height: 150px;
   overflow: hidden;
+  position: relative;
+    margin-top: 5rem;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, transparent, $bg-main);
+  }
+
   img {
     width: 100vw;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    transition: transform 0.6s ease;
+    
+    &:hover {
+      transform: scale(1.03);
+    }
   }
 }
+
 .payment__main {
   display: flex;
   justify-content: space-around;
   margin-bottom: 300px;
+  background-color: $bg-main;
+  color: #f8fafc;
+  transition: $transition-smooth;
 
   .payment__form {
     width: 50%;
-    background-color: #fff;
+    background-color: rgba(30, 41, 59, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid $glass-border;
     padding: 0px 40px;
     border-radius: 20px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    transition: $transition-smooth;
 
     .payment__total-subtotal {
       padding: 20px 0px !important;
       display: flex;
       justify-content: space-between;
-      // border-top: 1px solid #333;
-      border-bottom: 1px solid rgb(235, 235, 235);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      
       p:nth-child(1) {
-        color: #c25be9;
+        color: $cyan-accent;
       }
       p:nth-child(2) {
         font-weight: 600;
+        color: #f8fafc;
       }
     }
-
   }
 
   .payment__outer {
-
     padding: 60px 100px;
     display: flex;
     flex-direction: column;
     width: 50%;
     height: 100%;
-    // border-bottom-right-radius: 10px;
-    // background-color: #0e153a;
 
     .cart {
       margin: 2px;
-      // background-color: rgba(92, 91, 91, 0.5);
-      // border-radius: 10px;
 
-      // display: flex;
-      // flex-direction: column;
       .payment__container {
         margin: 0;
+
         .payment__details {
           display: flex;
-          // justify-content: center;
           width: 100%;
           align-items: center;
           border-radius: 20px;
-          background-color: black;
+          background-color: rgba(15, 23, 42, 0.9);
+          border: 1px solid $glass-border;
+          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+          transition: $transition-smooth;
+
+          &:hover {
+            border-color: $cyan-accent;
+            box-shadow: 0 0 15px rgba(56, 189, 248, 0.25);
+            transform: translateY(-2px);
+          }
 
           .payment__img {
             display: flex;
@@ -69,6 +105,12 @@
 
             img {
               width: 60px;
+              border-radius: 8px;
+              transition: transform 0.3s ease;
+              
+              &:hover {
+                transform: scale(1.08);
+              }
             }
 
             span {
@@ -77,33 +119,44 @@
               color: white;
             }
 
-            .cart_img-container {}
-
             .payment__amount {
-              // margin-top: -50px;
               display: flex;
               padding: 0px 10px;
               align-items: center;
-              color: rgb(0, 0, 0);
+              color: #f8fafc;
 
               button {
-                background-color: rgba(255, 255, 255, 0.5);
+                background-color: rgba(56, 189, 248, 0.15);
+                color: $cyan-accent;
                 cursor: pointer;
-                height: 100%;
-                width: 20px;
-                padding: 1px 5px;
-                border: none;
+                height: 28px;
+                width: 28px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0;
+                border: 1px solid rgba(56, 189, 248, 0.3);
                 border-radius: 50%;
                 font-weight: 700;
                 font-size: 15px;
-              }
+                transition: $transition-smooth;
 
-              .payment__btn {}
+                &:hover {
+                  background-color: $cyan-accent;
+                  color: $bg-main;
+                  box-shadow: 0 0 10px $cyan-accent;
+                  transform: scale(1.1);
+                }
+
+                &:active {
+                  transform: scale(0.95);
+                }
+              }
 
               .payment__qauntity {
                 span {
                   font-size: clamp(17px, 1.5vw, 23px);
-                  color: rgb(0, 0, 0);
+                  color: #f8fafc;
                 }
               }
 
@@ -112,14 +165,12 @@
                 justify-content: center;
                 align-items: center;
               }
-
             }
           }
 
           .payment__heading {
             width: 100%;
             color: rgb(255, 255, 255);
-
 
             h2 {
               font-size: clamp(14px, 1.5vw, 18px);
@@ -128,49 +179,49 @@
 
             h3 {
               font-size: clamp(12px, 1.5vw, 15px);
+              color: rgba(255, 255, 255, 0.7);
             }
           }
 
           .payment__price {
-            color: rgb(0, 0, 0);
-
+            color: $cyan-accent;
             width: 100%;
             padding-left: 30px;
-          font-weight: 700;
+            font-weight: 700;
           }
-
-          
         }
+
         .payment__delete {
           display: flex;
-          // justify-content: center;
-          // background-color: rgba(92, 91, 91, 0.5);
           align-items: center;
-          color: rgb(255, 0, 0);
+          color: #f43f5e;
           font-weight: 600;
           letter-spacing: 1px;
           border-bottom-left-radius: 10px;
           border-bottom-right-radius: 10px;
           cursor: pointer;
           font-size: clamp(13px, 1.5vw, 15px);
-          
+          transition: $transition-smooth;
+
+          &:hover {
+            color: #fb7185;
+            background-color: rgba(244, 63, 94, 0.08);
+          }
+
           p {
             width: 100%;
             padding: 5px 10px;
-
           }
         }
-
       }
     }
-
   }
 
   .payment__total {
     color: rgb(255, 255, 255);
     padding: 20px 0px;
+
     .payment__coupon {
-      // border-top: 1px solid #333;
       overflow: hidden;
       padding-top: 30px;
       width: 100%;
@@ -179,31 +230,58 @@
       align-items: center;
       padding-left: 10px;
       padding-right: 10px;
+
       .payment__input {
         width: 100%;
         input {
           border-top-left-radius: 10px;
           border-bottom-left-radius: 10px;
-          border: none;
+          border: 1px solid $glass-border;
+          border-right: none;
           outline: none;
-          padding: 10px;
+          padding: 12px 16px;
           width: 100%;
+          background-color: rgba(30, 41, 59, 0.8);
+          color: #f8fafc;
+          transition: $transition-smooth;
+
+          &:focus {
+            border-color: $cyan-accent;
+            box-shadow: 0 0 10px rgba(56, 189, 248, 0.2);
+          }
+
+          &::placeholder {
+            color: rgba(255, 255, 255, 0.4);
+          }
         }
       }
+
       .payment__btn {
         button {
           cursor: pointer;
           border-top-right-radius: 10px;
           border-bottom-right-radius: 10px;
-          border: none;
+          border: 1px solid $cyan-accent;
           outline: none;
-          padding: 10px;
+          padding: 12px 20px;
           width: 100%;
+          background-color: $cyan-accent;
+          color: $bg-main;
+          font-weight: 600;
+          transition: $transition-smooth;
+
+          &:hover {
+            background-color: #7dd3fc;
+            box-shadow: 0 0 15px $cyan-accent;
+          }
+
+          &:active {
+            transform: scale(0.97);
+          }
         }
       }
     }
 
-    // align-items: center;
     .payment__total-container {
       display: flex;
       padding-top: 30px;
@@ -211,42 +289,60 @@
       padding-right: 10px;
       flex-direction: column;
       border-bottom-left-radius: 10px;
-      
+
       .payment__total-link {
         display: flex;
         padding-top: 30px;
+
         a {
           text-decoration: none;
-          color: rgb(0, 0, 0);
+          color: $bg-main;
           font-weight: bold;
-          background-color: rgb(21, 255, 0);
-          padding: 10px 30px;
+          background-color: $cyan-accent;
+          padding: 12px 30px;
           border-radius: 10px;
+          box-shadow: 0 0 15px rgba(56, 189, 248, 0.3);
+          transition: $transition-smooth;
+          display: inline-block;
+          text-align: center;
+          width: 100%;
+
+          &:hover {
+            background-color: #7dd3fc;
+            box-shadow: 0 0 25px $cyan-accent;
+            transform: translateY(-2px);
+          }
+
+          &:active {
+            transform: translateY(0);
+          }
         }
       }
-      
+
       .payment__total-subtotal-shipping {
         display: flex;
         flex-direction: column;
-        border-top: 1px solid #333;;
-        border-bottom: 1px solid #333;;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         padding: 10px 0px;
+
         p {
           padding: 3px 0px;
         }
+
         .payment__total-subtotal {
           display: flex;
           justify-content: space-between;
         }
+
         .payment__total-shipping {
           display: flex;
           justify-content: space-between;
           p {
             align-items: center;
             span {
-              color: rgb(204, 201, 201);
+              color: rgba(255, 255, 255, 0.6);
             }
-
           }
         }
       }
@@ -256,217 +352,59 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+
         h3 {
           display: flex;
           align-items: center;
           justify-content: center;
+          color: $cyan-accent;
         }
+
         span {
-          // display: flex;
-          // justify-content: center;
           font-size: 12px;
           margin-right: 5px;
+          color: rgba(255, 255, 255, 0.6);
         }
       }
     }
   }
 }
 
+/* ================================================================= 
+   Responsive Breakpoints with Smooth Transitions
+   ================================================================= */
+
 @media screen and (max-width: 1200px) {
   .payment__main {
-    display: flex;
     flex-direction: column;
     width: 100%;
-    
+
     .payment__form {
       width: 100%;
-      padding: 0px 10px;
-
+      padding: 0px 20px;
     }
-  
+
     .payment__outer {
       width: 100%;
-      padding: 10px 10px;
-
-      .cart {
-
-        .payment__container {
-          .payment__details {
-  
-            .payment__img {
-  
-              img {
-              }
-  
-              span {
-              }
-  
-              .cart_img-container {}
-  
-              .payment__amount {
-                button {
-
-                }
-  
-                .payment__btn {}
-  
-                .payment__qauntity {
-                  span {
-                }
-  
-                .payment__count-plus {
-                }
-  
-              }
-            }
-  
-            .payment__heading {
-  
-  
-              h2 {
-              }
-  
-              h3 {
-              }
-            }
-  
-            .payment__price {
-            }
-  
-            
-          }
-          .payment__delete {
-  
-            p {
-            }
-          }
-  
-        }
-      }
-  
-    }
-  
-    .payment__total {
-  
-      // align-items: center;
-      .payment__total-container {
-
-  
-        .cart__total-link {
-          a {
-
-          }
-        }
-  
-        .cart__total-price {}
-      }
-  
-      .cart__review-cart {
-  
-        p {
-
-        }
-      }
-    }
+      padding: 20px;
     }
   }
 }
 
 @media screen and (max-width: 700px) {
-  .cart__main {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-  
-    .cart__form {
-    width: 100%;
-
-    }
-  
-    .cart__outer {
-      width: 100%;
-
+  .payment__main {
+    .payment__outer {
       .cart {
-
-        .cart__container {
-          .cart__details {
-  
-            .cart__img {
-  
-              img {
-              }
-  
-              span {
-              }
-  
-              .cart_img-container {}
-  
-              .cart__amount {
+        .payment__container {
+          .payment__details {
+            .payment__img {
+              .payment__amount {
                 display: none;
-                button {
-
-                }
-  
-                .cart__btn {}
-  
-                .cart__qauntity {
-                  span {
-                }
-  
-                .cart__count-plus {
-                }
-  
               }
             }
-  
-            .cart__heading {
-  
-  
-              h2 {
-              }
-  
-              h3 {
-              }
-            }
-  
-            .cart__price {
-            }
-  
-            
-          }
-          .cart__delete {
-  
-            p {
-            }
-          }
-  
-        }
-      }
-  
-    }
-  
-    .payment__total {
-  
-      // align-items: center;
-      .payment__total-container {
-
-  
-        .payment__total-link {
-          a {
-
           }
         }
-  
-        .payment__total-price {}
       }
-  
-      .payment__review-cart {
-  
-        p {
-
-        }
-      }
-    }
     }
   }
 }

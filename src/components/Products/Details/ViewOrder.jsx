@@ -1,5 +1,5 @@
-import React from "react";
-import "./styles/ViewOrder.scss";
+import React from 'react';
+import './styles/ViewOrder.scss';
 
 export default function ViewOrder() {
   // Dummy order data (replace with props or actual state later)

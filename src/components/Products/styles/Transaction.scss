@@ -1,45 +1,72 @@
+/* ================================================================= 
+   Sleek Dark-Mode Tech Aesthetic (Glassmorphism + Cyan Accents)
+   ================================================================= */
+
+$bg-main: #0f172a;
+$cyan-accent: #38bdf8;
+$glass-bg: rgba(30, 41, 59, 0.7);
+$glass-border: rgba(56, 189, 248, 0.2);
+$transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
 .thankyou {
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #f3f3f3;
+  background: $bg-main;
   padding: 40px;
+  color: #f8fafc;
+    margin-top: 5rem;
 
   .thankyou__container {
-    background: white;
+    background: $glass-bg;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid $glass-border;
     padding: 60px 40px;
     border-radius: 20px;
     text-align: center;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
     animation: fadeIn 0.8s ease forwards;
     opacity: 0;
     max-width: 500px;
     width: 100%;
+    transition: $transition-smooth;
+
+    &:hover {
+      border-color: rgba(56, 189, 248, 0.4);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5), 0 0 20px rgba(56, 189, 248, 0.15);
+    }
   }
 
   .thankyou__icon {
     font-size: 60px;
     margin-bottom: 20px;
+    filter: drop-shadow(0 0 12px rgba(56, 189, 248, 0.4));
   }
 
   .thankyou__title {
     font-size: 2rem;
-    color: #2c3e50;
+    color: #f8fafc;
     margin-bottom: 10px;
-    font-weight: 700;
+    font-weight: 750;
+    letter-spacing: -0.5px;
   }
 
   .thankyou__message {
     font-size: 1rem;
-    color: #555;
+    color: rgba(255, 255, 255, 0.75);
     margin-bottom: 20px;
   }
 
   .thankyou__details {
     font-size: 0.95rem;
-    color: #444;
+    color: rgba(255, 255, 255, 0.65);
     margin-bottom: 30px;
+    background: rgba(15, 23, 42, 0.5);
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
 
     p {
       margin: 5px 0;
@@ -54,31 +81,45 @@
 
     .btn {
       padding: 12px 25px;
-      border-radius: 8px;
+      border-radius: 10px;
       font-weight: 600;
       font-size: 1rem;
       cursor: pointer;
-      transition: all 0.3s ease;
+      transition: $transition-smooth;
       text-decoration: none;
 
       &--primary {
-        background: #7d08e3;
-        color: #fff;
-        border: none;
+        background: $cyan-accent;
+        color: $bg-main;
+        border: 1px solid $cyan-accent;
+        box-shadow: 0 0 15px rgba(56, 189, 248, 0.3);
 
         &:hover {
-          background: #6200c2;
+          background: #7dd3fc;
+          box-shadow: 0 0 25px $cyan-accent;
+          transform: translateY(-2px);
+        }
+
+        &:active {
+          transform: translateY(0);
         }
       }
 
       &--outline {
         background: transparent;
-        color: #7d08e3;
-        border: 2px solid #7d08e3;
+        color: $cyan-accent;
+        border: 1px solid rgba(56, 189, 248, 0.4);
 
         &:hover {
-          background: #7d08e3;
-          color: #fff;
+          background: rgba(56, 189, 248, 0.1);
+          border-color: $cyan-accent;
+          color: $cyan-accent;
+          box-shadow: 0 0 15px rgba(56, 189, 248, 0.2);
+          transform: translateY(-2px);
+        }
+
+        &:active {
+          transform: translateY(0);
         }
       }
     }

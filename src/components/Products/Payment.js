@@ -1,5 +1,6 @@
 import React, { useContext, useState, useEffect } from "react";
 import { DataContext } from "./Data/DataProvider";
+import CartEmptyTemplate from './components/CartEmptyTemplate';
 
 import PaymentForm from "./PaymentForm";
 
@@ -52,10 +53,12 @@ export default function Payment() {
   //   setCart([...cart]);
   // };
 
-  if (cart.length === 0)
-    return (
-      <h2 style={{ textAlign: "center", fontSize: "5rem" }}>Cart Empty</h2>
-    );
+
+      if (cart.length === 0)
+        return (
+          // <h2 style={{ textAlign: "center", fontSize: "5rem" }}>Cart Empty</h2>
+          <CartEmptyTemplate />
+        );
 
   return (
     <>

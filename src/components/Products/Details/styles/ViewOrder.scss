@@ -1,63 +1,109 @@
+/* ================================================================= 
+   Upgraded View-Order Component SCSS (Dark-Mode Tech Aesthetic)
+   ================================================================= */
+
+$bg-main: #0f172a;
+$cyan-accent: #38bdf8;
+$glass-bg: rgba(30, 41, 59, 0.75);
+$glass-border: rgba(56, 189, 248, 0.2);
+$transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
 .view-order {
-  background: #f8f8f8;
+  background: radial-gradient(circle at top right, rgba(30, 41, 59, 0.5), $bg-main 70%);
   min-height: 100vh;
   padding: 4rem 2rem;
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  color: #f8fafc;
+    margin-top: 10rem;
 
   &__container {
     max-width: 1200px;
     width: 100%;
-    background: #fff;
+    background: $glass-bg;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     padding: 3rem;
-    border-radius: 1rem;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    animation: fadeUp 0.4s ease;
+    border-radius: 1.25rem;
+    border: 1px solid $glass-border;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   }
 
   h2 {
-    font-size: 2rem;
-    color: #333;
+    font-size: 2.25rem;
+    color: #f8fafc;
     margin-bottom: 0.5rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    background: linear-gradient(135deg, #f8fafc 30%, $cyan-accent 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
   &__subtitle {
-    color: #666;
-    font-size: 1rem;
-    margin-bottom: 2rem;
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 1.05rem;
+    margin-bottom: 2.5rem;
   }
 
   &__grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 2rem;
   }
 
   &__card {
-    background: #fafafa;
+    background: rgba(15, 23, 42, 0.65);
     padding: 2rem;
-    border-radius: 0.8rem;
-    border: 1px solid #ddd;
-    transition: transform 0.3s ease;
+    border-radius: 1rem;
+    border: 1px solid $glass-border;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    transition: $transition-smooth;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, $cyan-accent, transparent);
+      opacity: 0;
+      transition: $transition-smooth;
+    }
 
     &:hover {
-      transform: translateY(-4px);
+      transform: translateY(-6px);
+      border-color: rgba(56, 189, 248, 0.45);
+      box-shadow: 0 14px 35px rgba(0, 0, 0, 0.5), 0 0 20px rgba(56, 189, 248, 0.15);
+
+      &::before {
+        opacity: 1;
+      }
     }
 
     h3 {
-      font-size: 1.2rem;
-      color: #222;
-      margin-bottom: 1rem;
+      font-size: 1.25rem;
+      color: $cyan-accent;
+      margin-bottom: 1.25rem;
+      font-weight: 700;
+      letter-spacing: 0.3px;
     }
 
     p {
-      margin: 0.4rem 0;
+      margin: 0.6rem 0;
       font-size: 0.95rem;
-      color: #444;
+      color: rgba(255, 255, 255, 0.75);
+      display: flex;
+      justify-content: space-between;
 
       strong {
-        color: #000;
+        color: #f8fafc;
+        font-weight: 600;
       }
     }
 
@@ -65,19 +111,38 @@
       .product-item {
         display: flex;
         align-items: center;
-        margin-bottom: 1.2rem;
+        margin-bottom: 1rem;
+        background: rgba(30, 41, 59, 0.5);
+        padding: 12px;
+        border-radius: 0.75rem;
+        border: 1px solid rgba(255, 255, 255, 0.04);
+        transition: $transition-smooth;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        &:hover {
+          border-color: rgba(56, 189, 248, 0.3);
+          background: rgba(30, 41, 59, 0.8);
+        }
 
         img {
-          width: 70px;
-          height: 70px;
+          width: 75px;
+          height: 75px;
           object-fit: cover;
           border-radius: 0.5rem;
           margin-right: 1rem;
+          border: 1px solid $glass-border;
         }
 
         div {
+          flex: 1;
           p {
-            margin: 0.2rem 0;
+            margin: 0.25rem 0;
+            color: rgba(255, 255, 255, 0.85);
+            justify-content: flex-start;
+            gap: 8px;
           }
         }
       }
@@ -88,7 +153,7 @@
 @keyframes fadeUp {
   from {
     opacity: 0;
-    transform: translateY(40px);
+    transform: translateY(30px);
   }
   to {
     opacity: 1;
@@ -97,11 +162,15 @@
 }
 
 @media (max-width: 768px) {
-  .view-order__container {
-    padding: 2rem;
-  }
+  .view-order {
+    padding: 2rem 1rem;
 
-  .view-order__grid {
-    grid-template-columns: 1fr;
+    &__container {
+      padding: 1.5rem;
+    }
+
+    &__grid {
+      grid-template-columns: 1fr;
+    }
   }
 }
