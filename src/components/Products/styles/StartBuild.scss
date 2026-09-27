@@ -1,0 +1,293 @@
+/* ================================================================= 
+   Start Your Build / Part Picker SCSS (Dark-Mode Tech Aesthetic)
+   ================================================================= */
+
+$bg-main: #0f172a;
+$cyan-accent: #38bdf8;
+$glass-bg: rgba(30, 41, 59, 0.75);
+$glass-border: rgba(56, 189, 248, 0.2);
+$transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+.start-build {
+  background: radial-gradient(circle at top, rgba(30, 41, 59, 0.5), $bg-main 75%);
+  min-height: 100vh;
+  padding: 4rem 2rem;
+  color: #f8fafc;
+
+  &__container {
+    max-width: 1000px;
+    margin: 0 auto;
+    animation: fadeUp 0.5s ease forwards;
+  }
+
+  &__header {
+    text-align: center;
+    margin-bottom: 3rem;
+
+    h2 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #f8fafc 30%, $cyan-accent 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      color: rgba(255, 255, 255, 0.65);
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .progress-bar {
+      max-width: 500px;
+      margin: 0 auto;
+      text-align: left;
+
+      span {
+        font-size: 0.85rem;
+        color: rgba(255, 255, 255, 0.7);
+        display: block;
+        margin-bottom: 0.5rem;
+
+        strong {
+          color: $cyan-accent;
+        }
+      }
+
+      .progress-track {
+        background: rgba(255, 255, 255, 0.1);
+        height: 8px;
+        border-radius: 4px;
+        overflow: hidden;
+
+        .progress-fill {
+          background: $cyan-accent;
+          height: 100%;
+          transition: width 0.4s ease;
+          box-shadow: 0 0 10px $cyan-accent;
+        }
+      }
+    }
+  }
+
+  &__content {
+    background: $glass-bg;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid $glass-border;
+    border-radius: 1.25rem;
+    padding: 2.5rem;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+
+    .category-title {
+      font-size: 1.5rem;
+      color: #f8fafc;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding-bottom: 0.75rem;
+    }
+
+    .parts-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.25rem;
+      margin-bottom: 2.5rem;
+
+      .part-card {
+        background: rgba(15, 23, 42, 0.7);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 1rem;
+        padding: 1.25rem;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: $transition-smooth;
+
+        .part-img {
+          height: 120px;
+          border-radius: 0.5rem;
+          overflow: hidden;
+          margin-bottom: 1rem;
+          background: rgba(0, 0, 0, 0.2);
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.85;
+            transition: transform 0.3s ease;
+          }
+        }
+
+        .part-info {
+          h4 {
+            font-size: 1rem;
+            color: #f8fafc;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+          }
+
+          .part-price {
+            font-size: 1.1rem;
+            color: $cyan-accent;
+            font-weight: 700;
+          }
+        }
+
+        .select-badge {
+          margin-top: 1rem;
+          text-align: right;
+          font-size: 0.8rem;
+          color: rgba(255, 255, 255, 0.5);
+          font-weight: 600;
+        }
+
+        &:hover {
+          border-color: rgba(56, 189, 248, 0.4);
+          transform: translateY(-3px);
+
+          img {
+            transform: scale(1.05);
+          }
+        }
+
+        &.selected {
+          background: rgba(56, 189, 248, 0.1);
+          border-color: $cyan-accent;
+          box-shadow: 0 0 20px rgba(56, 189, 248, 0.25);
+
+          .select-badge {
+            color: $cyan-accent;
+          }
+        }
+      }
+    }
+
+    .wizard-actions {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 1.5rem;
+
+      .btn {
+        padding: 12px 24px;
+        border-radius: 8px;
+        font-weight: 700;
+        cursor: pointer;
+        transition: $transition-smooth;
+
+        &--secondary {
+          background: transparent;
+          border: 1px solid rgba(255, 255, 255, 0.2);
+          color: rgba(255, 255, 255, 0.8);
+
+          &:hover:not(:disabled) {
+            background: rgba(255, 255, 255, 0.05);
+            color: #fff;
+          }
+
+          &:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+          }
+        }
+
+        &--primary {
+          background: $cyan-accent;
+          border: none;
+          color: $bg-main;
+          box-shadow: 0 0 15px rgba(56, 189, 248, 0.3);
+
+          &:hover:not(:disabled) {
+            background: #7dd3fc;
+            box-shadow: 0 0 25px $cyan-accent;
+            transform: translateY(-2px);
+          }
+
+          &:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+          }
+        }
+      }
+    }
+
+    .review-section {
+      h3 {
+        font-size: 1.5rem;
+        color: #f8fafc;
+        margin-bottom: 1.5rem;
+        font-weight: 700;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding-bottom: 0.75rem;
+      }
+
+      .review-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        margin-bottom: 2rem;
+
+        .review-item {
+          display: flex;
+          justify-content: space-between;
+          background: rgba(15, 23, 42, 0.5);
+          padding: 12px 16px;
+          border-radius: 8px;
+          border: 1px solid rgba(255, 255, 255, 0.05);
+          font-size: 0.95rem;
+
+          .review-category {
+            color: $cyan-accent;
+            font-weight: 700;
+            width: 130px;
+          }
+
+          .review-name {
+            flex: 1;
+            color: rgba(255, 255, 255, 0.85);
+          }
+
+          .review-price {
+            font-weight: 600;
+            color: #f8fafc;
+          }
+        }
+      }
+
+      .review-total-box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: rgba(56, 189, 248, 0.08);
+        border: 1px solid rgba(56, 189, 248, 0.2);
+        padding: 1.25rem 1.5rem;
+        border-radius: 10px;
+        margin-bottom: 2rem;
+        font-size: 1.2rem;
+        font-weight: 700;
+
+        .total-amount {
+          color: $cyan-accent;
+          font-size: 1.5rem;
+          text-shadow: 0 0 10px rgba(56, 189, 248, 0.4);
+        }
+      }
+    }
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

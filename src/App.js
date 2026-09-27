@@ -16,6 +16,7 @@ import Shipping from "./components/Products/Shipping";
 import Payment from "./components/Products/Payment";
 import Customize from "./components/Products/Customize";
 import TransactionComplete from "./components/Products/TransactionComplete";
+import StartBuild from "./components/Products/StartBuild";
 
 import Login from "./components/pages/Login/Login";
 import About from "./components/pages/AboutUs/About";
@@ -54,6 +55,7 @@ function App() {
                 <Route path="/shipping" exact element={<Shipping />} />
                 <Route path="/payment" exact element={<Payment />} />
                 <Route path="/customize/:id" exact element={<Customize />} />
+                <Route path="/startbuild" exact element={<StartBuild />} />
                 <Route path="/terms&conditions" exact element={<TC />} />
                 <Route path="/privacy" exact element={<Privacy />} />
                 <Route path="/refund" exact element={<Refund />} />

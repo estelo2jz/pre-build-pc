@@ -25,7 +25,7 @@ const TopHeader = () => {
           </div>
         </div>
         <div className="top-header__bottom">
-          <Link to="/products" className="top-header__btn top-header__btn--primary">
+          <Link to="/startbuild" className="top-header__btn top-header__btn--primary">
             START YOUR BUILD
           </Link>
           <Link to="/products" className="top-header__btn top-header__btn--secondary">
