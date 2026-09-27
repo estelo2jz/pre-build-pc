@@ -44,7 +44,9 @@ export default function Details() {
         <div className="details__top-btn-container">
           <div className="details__top-btns">
             <div className="details__top-btn-customize">
-              <button><span><IoMdSettings /></span>CUSTOMIZE</button>
+              <Link to={`/customize/${id}`}>
+                <button><span><IoMdSettings /></span>CUSTOMIZE</button>
+              </Link>
             </div>
             <div className="details__top-btn-save">
               <button><span><BiPaperPlane /></span>SAVE&EMAIL</button>

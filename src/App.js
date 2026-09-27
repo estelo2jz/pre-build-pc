@@ -3,7 +3,7 @@ import Header from "./components/Header/Header";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Cart from "./components/Products/Cart";
 import ScrollToTop from "./components/ScrollToTop";
-
+// import Modal from "./components/Modal/Modal" // Adjust path to your Modal component if needed
 import Home from "./components/Home/Home";
 
 // import Products from "./components/Products//Products";
@@ -14,6 +14,7 @@ import Details from "./components/Products/Details/Details";
 import Checkout from "./components/Products/Chechout";
 import Shipping from "./components/Products/Shipping";
 import Payment from "./components/Products/Payment";
+import Customize from "./components/Products/Customize";
 import TransactionComplete from "./components/Products/TransactionComplete";
 
 import Login from "./components/pages/Login/Login";
@@ -52,6 +53,7 @@ function App() {
                 <Route path="/checkout" exact element={<Checkout />} />
                 <Route path="/shipping" exact element={<Shipping />} />
                 <Route path="/payment" exact element={<Payment />} />
+                <Route path="/customize/:id" exact element={<Customize />} />
                 <Route path="/terms&conditions" exact element={<TC />} />
                 <Route path="/privacy" exact element={<Privacy />} />
                 <Route path="/refund" exact element={<Refund />} />

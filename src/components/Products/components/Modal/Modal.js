@@ -1,8 +1,7 @@
 import React from "react";
-import {Link} from "react-router-dom";
-import styles from "../Modal/Modal.module.scss";
-// import { RiCloseLine } from "react-icons/ri";
+import { Link } from "react-router-dom";
 import { AiOutlineShoppingCart } from "react-icons/ai";
+import styles from "../Modal/Modal.module.scss";
 import './modalll.scss';
 
 const Modal = ({ setIsOpen }) => {
@@ -11,30 +10,37 @@ const Modal = ({ setIsOpen }) => {
       <div className={styles.darkBG} onClick={() => setIsOpen(false)} />
       <div className={styles.centered}>
         <div className={styles.modal}>
+          
           <div className={styles.modalHeader}>
+            <span className="modal-icon">🛒</span>
             <h5 className={styles.heading}>Thank You!</h5>
           </div>
-          {/* <button className={styles.closeBtn} onClick={() => setIsOpen(false)}>
-            <RiCloseLine style={{ marginBottom: "-3px" }} />
-          </button> */}
-          <div className={styles.modalContent}>Item added to cart!</div>
+
+          <div className={styles.modalContent}>
+            Item successfully added to your cart!
+          </div>
+
           <div className={styles.modalActions}>
             <div className={styles.actionsContainer}>
-              <Link  to="/cart"> 
+              
+              <Link to="/cart" className="go-to-cart__link">
                 <div className="go-to-cart__container">
                   <button className="cancelBtn" onClick={() => setIsOpen(false)}>
-                    <AiOutlineShoppingCart />
+                    {/* <AiOutlineShoppingCart className="cart-icon" /> */}
+                    <span>View Cart</span>
                   </button>
                 </div>
               </Link> 
+
               <div className="close__container">
                 <button className="delete__Btn" onClick={() => setIsOpen(false)}>
                   Close
                 </button>
               </div>
-                {/* <AiOutlineShoppingCart /> */}
+
             </div>
           </div>
+
         </div>
       </div>
     </>
