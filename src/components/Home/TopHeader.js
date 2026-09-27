@@ -1,34 +1,39 @@
 import React from "react";
-import {Link} from 'react-router-dom';
-import { Parallax } from 'react-parallax';
+import { Link } from "react-router-dom";
+import { Parallax } from "react-parallax";
 
 import "./styles/TopHeader.scss";
 import "./styles/parallax.scss";
-import TopBG from '../../assets/images/home/homeBg3.jpg';
-
+import TopBG from "../../assets/images/home/homeBg3.jpg";
 
 const TopHeader = () => {
   return (
-<Parallax className="image top-header" blur={0} bgImage={TopBG} strength={800} bgImageStyle={{minheight: "100vh"}}>
+    <Parallax 
+      className="image top-header" 
+      blur={0} 
+      bgImage={TopBG} 
+      strength={800} 
+      bgImageStyle={{ minHeight: "100vh", objectFit: "cover" }}
+    >
       <div className="top-header__container">
         <div className="top-header__heading">
           <div className="top-header__heading-top">
-            <p>GAMING PCS</p>
+            <span className="top-header__badge">GAMING PCS</span>
           </div>
           <div className="top-header__heading-bottom">
-            <p>Optimized for your budget.</p>
+            <h1>Optimized for your budget.</h1>
           </div>
         </div>
         <div className="top-header__bottom">
-          <Link to="/products" className="top-header__build">
-            <button>START YOUR BUILD</button>
+          <Link to="/products" className="top-header__btn top-header__btn--primary">
+            START YOUR BUILD
           </Link>
-          <Link to="/products" className="top-header__best">
-            <button>BEST SELLERS</button>
+          <Link to="/products" className="top-header__btn top-header__btn--secondary">
+            BEST SELLERS
           </Link>
         </div>
       </div>
-      </Parallax>
+    </Parallax>
   );
 };
 

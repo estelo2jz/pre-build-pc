@@ -1,17 +1,15 @@
 // Variables
 $bg-dark: #0f172a;
-$bg-card: #1e293b;
 $accent-cyan: #38bdf8;
 $text-light: #f8fafc;
 $text-muted: #94a3b8;
 
-.review-section {
+.bestsellers-section {
   width: 100%;
   background-color: $bg-dark;
   padding: 6rem 2rem;
   color: $text-light;
   position: relative;
-  overflow: hidden;
 
   &__container {
     max-width: 1200px;

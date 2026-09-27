@@ -1,11 +1,35 @@
+// Variables
+$transition-smooth: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+$bg-alt: #f8fafc;
+$text-main: #0f172a;
+$accent-glow: rgba(56, 189, 248, 0.15);
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .home {
   display: flex;
   flex-direction: column;
   width: 100%;
+  overflow-x: hidden;
+  background-color: #0f172a;
+  color: $text-main;
 
   &__section {
     width: 100%;
-    padding: 4rem 1.5rem;
+    // padding: 5rem 2rem;
+    opacity: 0;
+    animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    animation-delay: calc(var(--delay, 1) * 0.15s);
+    transition: $transition-smooth;
 
     @media screen and (max-width: 768px) {
       padding: 3rem 1rem;
@@ -14,22 +38,43 @@
 
   &__header,
   &__footer {
-    padding: 0;
+    padding: 0; // Header and Footer typically manage their own full-bleed layouts
+  }
+
+  &__pricing {
+    background: linear-gradient(180deg, #ffffff 0%, $bg-alt 100%);
+    position: relative;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(0,0,0,0.06), transparent);
+    }
+  }
+
+  &__review {
+    background-color: #ffffff;
   }
 
   &__bestsellers {
-  }
-
-  &__checkout {
-    background: #f5f5f5;
+    background-color: $bg-alt;
+    border-top: 1px solid rgba(0, 0, 0, 0.04);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.04);
   }
 
   &__follow {
-    color: #000000;
-  }
+    color: $text-main;
+    background: #ffffff;
+    text-align: center;
+    position: relative;
 
-  &__pricing,
-  &__review {
-    background-color: #fff;
+    &:hover {
+      box-shadow: inset 0 0 40px $accent-glow;
+    }
   }
 }
